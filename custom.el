@@ -62,3 +62,62 @@ inversion of gas-comment-region"
           (delete-char 1))
       (next-line))
     (goto-char end)))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+   ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#657b83"])
+ '(background-color "#002b36")
+ '(background-mode dark)
+ '(cursor-color "#839496")
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-eighties)))
+ '(custom-safe-themes
+   (quote
+    ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
+ '(fci-rule-color "#073642")
+ '(foreground-color "#839496")
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#dc322f")
+     (40 . "#cb4b16")
+     (60 . "#b58900")
+     (80 . "#859900")
+     (100 . "#2aa198")
+     (120 . "#268bd2")
+     (140 . "#d33682")
+     (160 . "#6c71c4")
+     (180 . "#dc322f")
+     (200 . "#cb4b16")
+     (220 . "#b58900")
+     (240 . "#859900")
+     (260 . "#2aa198")
+     (280 . "#268bd2")
+     (300 . "#d33682")
+     (320 . "#6c71c4")
+     (340 . "#dc322f")
+     (360 . "#cb4b16"))))
+ '(vc-annotate-very-old-color nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; Setting English Font
+(set-face-attribute 'default nil :font "Inconsolata 14")
+;; Chinese Font
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+                    charset (font-spec :family "Hiragino Sans GB"
+                                       :size 14)))
+(setq default-frame-alist
+      '((top . 0)(left . 50)(width . 160)(height . 45)))
+
+(require 'color-theme-sanityinc-tomorrow)
+(color-theme-sanityinc-tomorrow-night)

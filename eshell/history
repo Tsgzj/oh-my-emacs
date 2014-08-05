@@ -1,0 +1,10 @@
+pdftex
+which pdftex
+echo $PATH
+xelatex
+rcup
+$PATH
+echo $PATH
+pdftex
+/usr/texbin/pdftex
+which pdftex

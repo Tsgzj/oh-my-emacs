@@ -8,3 +8,8 @@ echo $PATH
 pdftex
 /usr/texbin/pdftex
 which pdftex
+xelatex assignment.tex
+which xelatex
+echo $PATH
+rcup
+/usr/texbin/xelatex assignment.

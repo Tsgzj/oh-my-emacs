@@ -75,10 +75,10 @@ inversion of gas-comment-region"
  '(background-color "#002b36")
  '(background-mode dark)
  '(cursor-color "#839496")
- '(custom-enabled-themes (quote (sanityinc-tomorrow-blue)))
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
  '(custom-safe-themes
    (quote
-    ("82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
+    ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
  '(fci-rule-color "#073642")
  '(foreground-color "#839496")
  '(vc-annotate-background nil)
@@ -120,10 +120,76 @@ inversion of gas-comment-region"
 (setq default-frame-alist
       '((top . 0)(left . 50)(width . 160)(height . 45)))
 
-(require 'color-theme-sanityinc-tomorrow)
-(color-theme-sanityinc-tomorrow-night)
+;;(require 'color-theme-sanityinc-tomorrow)
+;;(color-theme-sanityinc-tomorrow-night)
+(require 'color-theme-sanityinc-solarized)
+(color-theme-sanityinc-solarized-light)
+;;(load-theme 'solarized-light)
+;;(color-theme-solarized-light)
 
 (exec-path-from-shell-initialize)
+
+;;pretty symbol
+;; (defconst prettify-symbols-alist
+;;   '(("lambda"  . ?λ)
+;;     (">="  . ?≥)
+;;     ("<="  . ?≤)
+;;     ("and" . ?∧)
+;;     ("or"  . ?∨)
+;;     ("not" . ?¬)
+;;     ("nil" . ?∅)))
+(defconst prettify-symbols-alist nil)
+
+(add-hook 'emacs-lisp-mode-hook
+          (lambda ()
+            (push '("lambda"  . ?λ) prettify-symbols-alist)))
+
+(add-hook 'scheme-mode-hook
+          (lambda ()
+            (push '("lambda" . ?λ) prettify-symbols-alist)
+            (push '(">="  . ?≥ ) prettify-symbols-alist)
+            (push '("<="  . ?≤ ) prettify-symbols-alist)
+            (push '("and" . ?∧ ) prettify-symbols-alist)
+            (push '("nil" . ?∅ ) prettify-symbols-alist)
+            (push '("or"  . ?∨ ) prettify-symbols-alist)
+            (push '("not" . ?¬  ) prettify-symbols-alist)))
+
+(add-hook 'common-lisp-mode-hook
+          (lambda ()
+            (push '("lambda"  . ?λ) prettify-symbols-alist)
+            (push '(">="  . ?≥ ) prettify-symbols-alist)
+            (push '("<="  . ?≤ ) prettify-symbols-alist)
+            (push '("and" . ?∧ ) prettify-symbols-alist)
+            (push '("or"  . ?∨ ) prettify-symbols-alist)
+            (push '("nil" . ?∅ ) prettify-symbols-alist)
+            (push '("not" . ?¬  ) prettify-symbols-alist)))
+
+(add-hook 'ruby-mode-hook
+          (lambda ()
+            (push '("lambda"  . ?λ) prettify-symbols-alist)
+            (push '(">="  . ?≥ ) prettify-symbols-alist)
+            (push '("<="  . ?≤ ) prettify-symbols-alist)
+            (push '("nil" . ?∅ ) prettify-symbols-alist)
+            (push '("and" . ?∧ ) prettify-symbols-alist)
+            (push '("or"  . ?∨ ) prettify-symbols-alist)
+            (push '("not" . ?¬  ) prettify-symbols-alist)))
+
+(global-prettify-symbols-mode t)
+;;(prettify-symbols-mode t)
+
+;;fill-column-indicator
+(load-file "~/.emacs.d/fill-column-indicator.el")
+(require 'fill-column-indicator)
+(setq fci-rule-column 80)
+(add-hook 'ruby-mode-hook 'fci-mode)
+(add-hook 'common-lisp-mode-hook 'fci-mode)
+(add-hook 'scheme-mode-hook 'fci-mode)
+(add-hook 'c-mode-hook 'fci-mode)
+
+
+
+;;(prettify-symbols-mode t)
+
 
 (global-set-key (kbd "C-c C-d") 'dash-at-point)
 

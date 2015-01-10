@@ -111,14 +111,14 @@ inversion of gas-comment-region"
  )
 
 ;; Setting English Font
-(set-face-attribute 'default nil :font "Inconsolata 14")
+(set-face-attribute 'default nil :font "Inconsolata 16")
 ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
                     charset (font-spec :family "Hiragino Sans GB"
-                                       :size 14)))
+                                       :size 16)))
 (setq default-frame-alist
-      '((top . 0)(left . 50)(width . 160)(height . 45)))
+      '((top . 0)(left . 50)(width . 120)(height . 45)))
 
 ;;(require 'color-theme-sanityinc-tomorrow)
 ;;(color-theme-sanityinc-tomorrow-night)

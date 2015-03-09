@@ -1,11 +1,11 @@
 #+TITLE: Oh My Emacs GUI
 #+OPTIONS: toc:nil num:nil ^:nil
 
-This is part of the [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
+This is part of [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
 
 This file contains some experimental packages, which may be:
 - not stable enough
-- usable, with some minor annoying problems
+- usable, with some minor annoying problems, however
 - young packages without long time testing and validating.
 
 Load necessary packages as you like.
@@ -17,7 +17,7 @@ Load necessary packages as you like.
 
 #+NAME: experimental-prerequisites
 #+CAPTION: Prerequisites for ome-experimental module
-|         | Windows | Ubuntu/Debian/Mint | ArchLinux | Fedora | Mac OS X | Mandatory? |
+| Package | Windows | Ubuntu/Debian/Mint | ArchLinux | Fedora | Mac OS X | Mandatory? |
 |---------+---------+--------------------+-----------+--------+----------+------------|
 | [[http://www.stack.nl/~dimitri/doxygen/][Doxygen]] |         | doxygen            |           |        |          | No         |
 
@@ -34,10 +34,11 @@ Note:
 
 #+NAME: experimental-el-get-packages
 #+CAPTION: El-get packages for ome-experimental module
-|                  | Status       | Description                                           |
+| Package          | Status       | Description                                           |
 |------------------+--------------+-------------------------------------------------------|
 | [[http://www.emacswiki.org/emacs/LaCarte][lacarte]]          | Recommended  | Access menubar in minibuffer command loop.            |
 | [[http://www.emacswiki.org/emacs/SrSpeedbar][SrSpeedbar]]       | Experimental | Make [[http://www.gnu.org/software/emacs/manual/html_node/speedbar/index.html][Speedbar]] show in same frame.                     |
+| [[https://github.com/m2ym/yascroll-el][yascroll]]        | Required | Eye candy for Emacs scroll bar.        |
 | [[https://github.com/aspiers/smooth-scrolling][smooth-scrolling]] | Recommended  | Emacs smooth scrolling package.                       |
 | [[https://github.com/nflath/hungry-delete][hungry-delete]]    | Experimental | Enables hungry deletion in all modes.                 |
 | [[http://doxymacs.sourceforge.net/][doxymacs]]         | Experimental | Literate comments for cc-mode.                        |
@@ -45,6 +46,7 @@ Note:
 | [[https://github.com/emacsmirror/pos-tip][pos-tip]]          | Experimental | Show tooltip at point                                 |
 | [[https://github.com/flycheck/flycheck-pos-tip][flycheck-pos-tip]] | Experimental | Flycheck errors display in tooltip                    |
 | [[http://www.gnu.org/software/gettext/manual/html_node/PO-Mode.html][po-mode]]          | Experimental | Emacs's PO File Editor                                |
+| [[https://github.com/zk/emacs-dirtree][emacs-dirtree]]    | Experimental | Directory tree views in Emacs                         |
 
 Note:
 - [[http://doxymacs.sourceforge.net/][doxymacs]]: There're many Mac OS users having problems building with this
@@ -121,12 +123,27 @@ idea. =sr-speedbar= solves this problem, however, it brings some new problems:
 (ome-install 'sr-speedbar)
 #+END_SRC
 
+* Yascroll
+  :PROPERTIES:
+  :CUSTOM_ID: yascroll
+  :END:
+
+[[https://github.com/m2ym/yascroll-el][yascroll.el]] is Yet Another Scroll Bar Mode for GNU Emacs.
+
+#+NAME: yascroll
+#+BEGIN_SRC emacs-lisp
+(defun ome-yascroll-setup ()
+  (global-yascroll-bar-mode 1))
+
+(ome-install 'yascroll)
+#+END_SRC
+
 * Smooth-scrolling
   :PROPERTIES:
   :CUSTOM_ID: smooth-scrolling
   :END:
 
-Make emacs scroll smoothly.
+Make emacs scroll smoothly. *WARNING*: This makes your emacs slow.
 
 #+NAME: smooth-scrolling
 #+BEGIN_SRC emacs-lisp
@@ -210,6 +227,7 @@ If you like, you can even integrate Doxygen to CMake workflow, see [[http://maje
 (ome-install 'doxymacs)
 #+END_SRC
 
+
 * Pos-tip
   :PROPERTIES:
   :CUSTOM_ID: pos-tip
@@ -276,4 +294,21 @@ I just gave up. Since for any questions in =po-mode=, you can just type =?= or
     (add-hook 'po-mode-hook 'turn-off-evil-mode)))
 
 (ome-install 'po-mode)
+#+END_SRC
+
+* emacs-dirtree
+  :PROPERTIES:
+  :CUSTOM_ID: emacs-dirtree
+  :END:
+
+[[https://github.com/zk/emacs-dirtree][emacs-dirtree]] provide a long lost directory browser for Emacs. However, this
+package didn't update for a long time, so I only put this in ome-experimental
+module, and you can load this package by put `(ome-load
+"modules/ome-experimental.org" "emacs-dirtree")` in oh-my-emacs startup file.
+
+#+NAME: emacs-dirtree
+#+BEGIN_SRC emacs-lisp
+(defun ome-emacs-dirtree-setup ())
+
+(ome-install 'emacs-dirtree)
 #+END_SRC

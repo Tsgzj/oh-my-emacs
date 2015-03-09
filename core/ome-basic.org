@@ -1,7 +1,7 @@
 #+TITLE: Oh My Emacs Basic
 #+OPTIONS: toc:nil num:nil ^:nil
 
-This is part of the [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
+This is part of [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
 
 * Prerequisites
   :PROPERTIES:
@@ -10,41 +10,50 @@ This is part of the [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
 
 #+NAME: basic-prerequisites
 #+CAPTION: Prerequisites for ome-basic module
-|            | Windows | Ubuntu/Debian/Mint | ArchLinux | Fedora | Mac OS X | Mandatory? |
+| Package    | Windows | Ubuntu/Debian/Mint | ArchLinux | Fedora | Mac OS X | Mandatory? |
 |------------+---------+--------------------+-----------+--------+----------+------------|
 | [[http://aspell.net/][GNU Aspell]] |         | aspell, aspell-en  |           |        |          |            |
 
-* El-get Packages
+* El-get packages
   :PROPERTIES:
   :CUSTOM_ID: basic-el-get-packages
   :END:
 
 #+NAME: basic-el-get-packages
 #+CAPTION: el-get packages for ome-basic module
-|                  | Status      | Description                                       |
-|------------------+-------------+---------------------------------------------------|
-| saveplace        | Builtin     | Save cursor place in opened files.                |
-| recentf          | Builtin     | Maintains a recent opened file list.              |
-| uniquify         | Builtin     | Better differentiate buffers with same file name. |
-| auto-fill-mode   | Builtin     | We should still obey the 80-characters rule.      |
-| [[https://github.com/flycheck/flycheck][flycheck]]         | Recommended | aka "Flymake done right"                          |
+| Package              | Status      | Description                                                               |
+|----------------------+-------------+---------------------------------------------------------------------------|
+| saveplace            | Builtin     | Save cursor place in opened files.                                        |
+| recentf              | Builtin     | Maintains a recent opened file list.                                      |
+| uniquify             | Builtin     | Better differentiate buffers with same file name.                         |
+| auto-fill-mode       | Builtin     | We should still obey the 80-characters rule.                              |
+| [[https://github.com/purcell/exec-path-from-shell][exec-path-from-shell]] | Required    | ensure environment variables inside Emacs the same as in the user's shell |
+| [[https://github.com/flycheck/flycheck][flycheck]]             | Recommended | aka "Flymake done right"                                                  |
+| [[https://github.com/editorconfig/editorconfig-emacs][editorconfig]]         | Recommended | [[http://editorconfig.org][EditorConfig]] plugin for emacs                                             |
+| [[https://github.com/zk-phi/indent-guide][indent-guide]]         | Recommended | Show vertical lines to guide indentation                                  |
 
 * Some Basic Settings
   :PROPERTIES:
   :CUSTOM_ID: basic
   :END:
 
+Sometimes you find weird thing in OS X's Emacs that a command works in your
+shell but not in Emacs. Thus you cannot install some el-get packages such as
+[[http://www.gnu.org/software/auctex/][auctex]].
+
+Thanks [[https://github.com/purcell/exec-path-from-shell][purcell/exec-path-from-shell]], it solves this problem perfectly.
+
+#+NAME: exec-path-from-shell
+#+BEGIN_SRC emacs-lisp
+(defun ome-exec-path-from-shell-setup ()
+  (when (memq window-system '(mac ns))
+    (exec-path-from-shell-initialize)))
+
+(ome-install 'exec-path-from-shell)
+#+END_SRC
+
 #+NAME: basic
 #+BEGIN_SRC emacs-lisp
-;; fix the mac PATH variable
-(defun ome-set-exec-path-from-shell-PATH ()
-  (let ((path-from-shell (shell-command-to-string "$SHELL -i -c 'echo $PATH'")))
-    (setenv "PATH" path-from-shell)
-    (setq exec-path (split-string path-from-shell path-separator))))
-
-(when (eq system-type 'darwin)
-  (when window-system (ome-set-exec-path-from-shell-PATH)))
-
 ;; set environment coding system
 (set-language-environment "UTF-8")
 ;; auto revert buffer globally
@@ -109,20 +118,95 @@ This is part of the [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
   :CUSTOM_ID: mac
   :END:
 
+** Installation
+
 There're multiple [[http://wikemacs.org/index.php/Installing_Emacs_on_OS_X][choices]] to install Emacs on Mac OS X. I prefer [[http://brew.sh/][Homebrew]], and
 got my Emacs with =brew install emacs --cocoa=. This version of emacs even has
 native [[http://batsov.com/articles/2012/12/09/emacs-24-dot-3-introduces-native-osx-full-screen-support/][full screen support]].
 
+You'd better remove the outdated OS X's emacs to avoid conflicts with the new
+one.
+
+#+BEGIN_SRC sh
+sudo rm /usr/bin/emacs
+sudo rm -rf /usr/share/emacs
+#+END_SRC
+
+** Keybindings
+
 Another problem with emacs on Mac OX X is the keybindings to =Meta= and
-=Control=. Since most of the macbooks lack the right =Control= key, I prefer
-to bind Mac's =Command= and =Option= key to Emacs's =Meta= and =Control= key,
+=Control=. Since most of the macbooks lack the right =Control= key, I prefer to
+bind Mac's =Command= and =Option= key to Emacs's =Meta= and =Control= key,
 respectively.
 
+However, sometimes, people would like to use an exteranl keyboard as the main
+input, so we need a switch between the "Mac" keys and "PC" keys via =M-x
+ome-switch-mac-keys=.
+
 #+BEGIN_SRC emacs-lisp
+(defvar mac-keys-p nil)
+
+(defun ome-switch-mac-keys ()
+  (interactive)
+  (if mac-keys-p
+      (progn
+        (setq mac-command-modifier 'super)
+        (setq mac-option-modifier 'meta)
+        (setq mac-keys-p nil)
+        (message "turn off Mac OS X's control/meta."))
+    (progn
+      (setq mac-command-modifier 'meta)
+      (setq mac-option-modifier 'control)
+      (setq mac-keys-p t)
+      (message "turn on Mac OS X's control/meta."))))
+
 (when (eq system-type 'darwin)
-  (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier 'control))
+  (ome-switch-mac-keys))
 #+END_SRC
+
+** Homebrew
+
+Lots of oh-my-emacs packages depends on external tools/libs/packages, which can
+be installed by apt(Ubuntu/Debian/Mint), yum(Fedora), homebrew(ala, Mac OS
+X). However, unlike other linux distributions, Mac OS X often has two different
+package collections, one is the system builtin, the other is something like
+homebrew. Sometimes, there're conflicts that makes you think that you have got
+the latest packages while actually emacs still use the system's builtin,
+outdated packages. So we need some special settings for this.
+
+Many el-get packages(such as [[http://common-lisp.net/project/slime/][slime]] in ome-common-lisp module) need [[http://www.gnu.org/software/texinfo/][texinfo]]. You
+can get latest texinfo by:
+
+#+BEGIN_SRC sh
+brew install texinfo
+#+END_SRC
+
+then you must do something to make texinfo become emacs's good friend.
+#+BEGIN_SRC sh
+brew link texinfo --force
+#+END_SRC
+
+* File encoding
+
+By default, emacs will detect file encoding according to an encoding priority
+list when opening a file, you can get your file encoding information by =C-h
+C=, aka =(describe-coding-system)=. However, sometimes this encoding priority
+list may not be proper for you, in this case, you can change this encoding
+priority list by =(set-coding-system-priority &rest coding-systems)=.
+
+For example, if you are Chinese and often have to work with Windows text
+document, then =(set-coding-system-priority 'utf-8 'chinese-gb18030)= may be
+the right solution for you to avoid garbled text. This statement tells emacs
+first try to open a chinese text file with utf-8 encoding, if failed, then try
+to open again with [[http://en.wikipedia.org/wiki/GB_18030][gb18030]] encoding. This will works for most Chinese users.
+
+If you want to change the file encoding temporarily when opening a file,
+=M-x revert-buffer-with-coding-system=.
+
+Text encoding is a complex topic, check emacs [[https://www.gnu.org/software/emacs/manual/html_node/emacs/International.html][manual]] for internal details.
+
+Check https://github.com/xiaohanyu/oh-my-emacs/issues/132 for detailed
+discussion.
 
 * Auto-fill Mode
   :PROPERTIES:
@@ -264,6 +348,55 @@ extension for GNU Emacs 24.
 
 (ome-install 'flycheck)
 #+END_SRC
+
+* EditorConfig
+  :PROPERTIES:
+  :CUSTOM_ID: editorconfig
+  :END:
+
+We live in a world with multiple editors or IDEs, and often we need
+collaboration with others. We can tune our emacs as best as we could. However,
+we still need a consistent, cross-editor, cross IDEs way to set some basic
+editor style.
+
+Fortunately, there comes [[http://editorconfig.org/][EditorConfig]]. EditorConfig helps developers define and
+maintain consistent coding styles between different editors and IDEs. The
+EditorConfig project consists of a file format for defining coding styles and a
+collection of text editor plugins that enable editors to read the file format
+and adhere to defined styles. EditorConfig files are easily readable and they
+work nicely with version control systems.
+
+You need to install =editorconfig= before you use the emacs package, check
+[[https://github.com/editorconfig/editorconfig-core-c/blob/master/INSTALL.md#installing-from-a-binary-package][Installation]].
+
+#+NAME: editorconfig
+#+BEGIN_SRC emacs-lisp
+(defun ome-editorconfig-setup ()
+  (require 'editorconfig))
+
+(ome-install 'editorconfig)
+#+END_SRC
+
+* Indent-guide
+  :PROPERTIES:
+  :CUSTOM_ID: indent-guide
+  :END:
+
+Often we work with indented code, and it's better for our friend, the Emacs
+editor, to provide some indentation guide for us. Most of the builtin
+indentation features or third-party packages provide static indentation guide,
+which may be not good in some cases. Fortunately, a smart guy write a dynamic
+[[https://github.com/zk-phi/indent-guide][indent-guide]] package for us. It's amazing.
+
+#+NAME: indent-guide
+#+BEGIN_SRC emacs-lisp
+(defun ome-indent-guide-setup ()
+  (require 'indent-guide))
+
+(ome-install 'indent-guide)
+#+END_SRC
+
+[[https://github.com/zk-phi/indent-guide][indent-guide]]
 
 * Todo
 ** Flycheck

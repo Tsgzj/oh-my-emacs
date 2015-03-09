@@ -1,7 +1,7 @@
 #+TITLE: Oh My Emacs Advanced
 #+OPTIONS: toc:2 num:nil ^:nil
 
-This is part of the [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
+This is part of [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
 
 This file contains some advanced features or packages which could make emacs
 look unlike emacs. So ensure you have some basic knowledge and experience
@@ -32,7 +32,7 @@ Notes:
 
 #+NAME: advanced-el-get-packages
 #+CAPTION: El-get packages matrix for ome-advanced module
-|                  | Status      | Description                                   |
+| Package          | Status      | Description                                   |
 |------------------+-------------+-----------------------------------------------|
 | [[http://gitorious.org/evil][evil]]             | Required    | Finally, the Emacs OS get a good editor.      |
 | [[https://github.com/cofi/evil-leader][evil-leader]]      | Required    | <leader> key for evil.                        |
@@ -40,7 +40,8 @@ Notes:
 | [[https://github.com/magnars/expand-region.el][expand-region.el]] | Recommended | Expand and select.                            |
 | [[git://gitorious.org/vimpulse/vimpulse.git][vimpulse]]         | Deprecated  | Use evil instead.                             |
 | [[http://www.gnu.org/software/emacs/manual/html_node/viper/][viper]]            | Deprecated  | Use evil instead.                             |
-| [[https://github.com/jhelwig/ack-and-a-half][ack-and-a-half]]   | Recommended | Yet another emacs front-end to ack.           |
+| [[https://github.com/Wilfred/ag.el][ag.el]]            | Recommended | Better than ack.                              |
+| [[https://github.com/jhelwig/ack-and-a-half][ack-and-a-half]]   | Deprecated  | Yet another emacs front-end to ack.           |
 | [[https://github.com/winterTTr/ace-jump-mode][ace-jump-mode]]    | Recommended | A quick cursor location minor mode for emacs. |
 
 * Evil
@@ -77,13 +78,21 @@ Emacs session.
 #+NAME: evil
 #+BEGIN_SRC emacs-lisp
 (defun ome-evil-setup ()
+  (define-key evil-insert-state-map (kbd "C-[") 'evil-force-normal-state)
   (setq evil-auto-indent t)
   (setq evil-regexp-search t)
   (setq evil-want-C-i-jump t)
-  (add-hook 'text-mode-hook 'turn-on-evil-mode)
-  (add-hook 'prog-mode-hook 'turn-on-evil-mode)
-  (add-hook 'comint-mode-hook 'turn-on-evil-mode)
-  (add-hook 'Info-mode-hook 'turn-off-evil-mode))
+  (mapc
+   (lambda (mode-hook)
+     (add-hook mode-hook 'turn-on-evil-mode))
+   '(text-mode-hook
+     prog-mode-hook
+     comint-mode-hook
+     conf-mode-hook))
+  (mapc
+   (lambda (mode-hook)
+     (add-hook mode-hook 'turn-off-evil-mode))
+   '(Info-mode-hook)))
 
 (ome-install 'evil)
 #+END_SRC
@@ -121,29 +130,43 @@ editing your document at your fingertips.
       "e" 'find-file
       "b" 'switch-to-buffer))
   (eval-after-load "helm"
-    (evil-leader/set-key
-      "f" 'helm-for-files
-      "l" 'helm-locate
-      "c" 'helm-colors
-      "y" 'helm-show-kill-ring
-      "t" 'helm-top
-      "m" 'helm-man-woman
-      "j" 'helm-M-x
-      "e" 'helm-find-files
-      "b" 'helm-buffers-list))
+    (progn
+      (require 'helm-projectile)
+      (evil-leader/set-key
+        "f" 'helm-for-files
+        "l" 'helm-locate
+        "c" 'helm-colors
+        "y" 'helm-show-kill-ring
+        "t" 'helm-top
+        "m" 'helm-man-woman
+        "o" 'helm-occur
+        "j" 'helm-M-x
+        "e" 'helm-find-files
+        "b" 'helm-buffers-list
+        "h" 'helm-projectile-find-file
+        "r" 'helm-recentf
+        "H" 'helm-projectile)))
   (eval-after-load "expand-region"
     (progn
       (setq expand-region-contract-fast-key "z")
       (evil-leader/set-key "xx" 'er/expand-region)))
   (eval-after-load "magit"
     (evil-leader/set-key "g" 'magit-status))
+  (eval-after-load "quickrun"
+    (evil-leader/set-key "q" 'quickrun))
   (eval-after-load "git-gutter-mode"
     (evil-leader/set-key
       "s" 'git-gutter:stage-hunk
       "n" 'git-gutter:next-hunk
       "p" 'git-gutter:previous-hunk))
   (evil-leader/set-key
-    "k" 'kill-buffer)
+    "k" 'kill-buffer
+    "d" 'dired
+    "z" 'repeat
+    "0" 'delete-window
+    "1" 'delete-other-windows
+    "2" 'split-window-below
+    "3" 'split-window-right)
   (global-evil-leader-mode))
 
 (ome-install 'evil-leader)
@@ -238,29 +261,6 @@ By default, =<Leader>= is =<SPC>=, so you can use =<SPC> c= to activate
       "l" 'ace-jump-line-mode)))
 
 (ome-install 'ace-jump-mode)
-#+END_SRC
-
-* Ack-and-a-half
-  :PROPERTIES:
-  :CUSTOM_ID: ack-and-a-ha
-  :END:
-
-As we all know, Emacs is a good text editor. However, in some cases, we may
-spend most of our time to text reading instead of editing. As an advanced Emacs
-user, you may know [[http://www.gnu.org/software/emacs/manual/html_node/emacs/Grep-Searching.html][grep-find]], and you may also know that you can jump to the
-next matching item by =M-g n=, oh, that's cool, really. But you still need to
-specify what type of file to search. You don't want to touch binary files with
-Emacs, ha? And, certainly you do want to ignore some hidden files such as files
-and directories used by various version control system. So there comes [[http://beyondgrep.com/][ack]],
-which works as expected.
-
-With the help of [[https://github.com/jhelwig/ack-and-a-half][ack-and-a-half]], just go to the right place, then =M-x ack=,
-you'll get all you need. Enjoy it.
-
-#+NAME: ack-and-a-half
-#+BEGIN_SRC emacs-lisp
-(when (or (executable-find "ack") (executable-find "ack-grep"))
-  (ome-install 'ack-and-a-half))
 #+END_SRC
 
 * ag

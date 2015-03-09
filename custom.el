@@ -136,6 +136,8 @@ inversion of gas-comment-region"
 ;;(color-theme-sanityinc-solarized-light)
 ;;(load-theme 'solarized-light)
 ;;(color-theme-solarized-light)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/cyberpunk-theme.el")
+;;(load-theme 'cyberpunk t)
 
 (exec-path-from-shell-initialize)
 
@@ -156,43 +158,25 @@ inversion of gas-comment-region"
 
 (add-hook 'scheme-mode-hook
           (lambda ()
-            (push '("lambda" . ?λ) prettify-symbols-alist)
-            (push '(">="  . ?≥ ) prettify-symbols-alist)
-            (push '("<="  . ?≤ ) prettify-symbols-alist)
-            (push '("and" . ?∧ ) prettify-symbols-alist)
-            (push '("nil" . ?∅ ) prettify-symbols-alist)
-            (push '("or"  . ?∨ ) prettify-symbols-alist)
-            (push '("not" . ?¬  ) prettify-symbols-alist)))
+            (push '("lambda" . ?λ) prettify-symbols-alist)))
 
 (add-hook 'common-lisp-mode-hook
           (lambda ()
-            (push '("lambda"  . ?λ) prettify-symbols-alist)
-            (push '(">="  . ?≥ ) prettify-symbols-alist)
-            (push '("<="  . ?≤ ) prettify-symbols-alist)
-            (push '("and" . ?∧ ) prettify-symbols-alist)
-            (push '("or"  . ?∨ ) prettify-symbols-alist)
-            (push '("nil" . ?∅ ) prettify-symbols-alist)
-            (push '("not" . ?¬  ) prettify-symbols-alist)))
+            (push '("lambda"  . ?λ) prettify-symbols-alist)))
 
 (add-hook 'ruby-mode-hook
           (lambda ()
-            (push '("lambda"  . ?λ) prettify-symbols-alist)
-            (push '(">="  . ?≥ ) prettify-symbols-alist)
-            (push '("<="  . ?≤ ) prettify-symbols-alist)
-            (push '("nil" . ?∅ ) prettify-symbols-alist)
-            (push '("and" . ?∧ ) prettify-symbols-alist)
-            (push '("or"  . ?∨ ) prettify-symbols-alist)
-            (push '("not" . ?¬  ) prettify-symbols-alist)))
+            (push '("lambda"  . ?λ) prettify-symbols-alist)))
 
 (add-hook 'racket-mode-hook
           (lambda ()
-            (push '("lambda"  . ?λ) prettify-symbols-alist)
-            (push '(">="  . ?≥ ) prettify-symbols-alist)
-            (push '("<="  . ?≤ ) prettify-symbols-alist)
-            (push '("nil" . ?∅ ) prettify-symbols-alist)
-            (push '("and" . ?∧ ) prettify-symbols-alist)
-            (push '("or"  . ?∨ ) prettify-symbols-alist)
-            (push '("not" . ?¬  ) prettify-symbols-alist)))
+            (push '("lambda"  . ?λ) prettify-symbols-alist)))
+            ;;(push '(">="  . ?≥ ) prettify-symbols-alist)
+            ;;(push '("<="  . ?≤ ) prettify-symbols-alist)
+            ;;(push '("nil" . ?∅ ) prettify-symbols-alist)
+            ;;(push '("and" . ?∧ ) prettify-symbols-alist)
+            ;;(push '("or"  . ?∨ ) prettify-symbols-alist)
+            ;;(push '("not" . ?¬  ) prettify-symbols-alist)))
 
 (global-prettify-symbols-mode t)
 ;;(prettify-symbols-mode t)

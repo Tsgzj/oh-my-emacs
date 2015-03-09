@@ -9,6 +9,7 @@
 
 ;;; You email address
 (setq user-mail-address "swx@tsgzj.me")
+(setq user-full-name "Wenxiang Sun")
 
 ;;; Calendar settings
 ;; you can use M-x sunrise-sunset to get the sun time
@@ -19,7 +20,7 @@
 ;; defulat frame size
 ;; to avoid buffer go over the screen
 (setq default-frame-alist
-'((top . 0)(left . 50)(width . 160)(height . 45)))
+'((top . 0)(left . 50)(width . 120)(height . 40)))
 
 ;;(set-language-environment "japanese")
 
@@ -126,13 +127,13 @@ inversion of gas-comment-region"
   (set-fontset-font (frame-parameter nil 'font)
                     charset (font-spec :family "Hiragino Sans GB"
                                        :size 16)))
-(setq default-frame-alist
-      '((top . 0)(left . 50)(width . 120)(height . 45)))
+;;(setq default-frame-alist
+;;      '((top . 0)(left . 50)(width . 120)(height . 45)))
 
-;;(require 'color-theme-sanityinc-tomorrow)
-;;(color-theme-sanityinc-tomorrow-night)
-(require 'color-theme-sanityinc-solarized)
-(color-theme-sanityinc-solarized-light)
+(require 'color-theme-sanityinc-tomorrow)
+(color-theme-sanityinc-tomorrow-night)
+;;(require 'color-theme-sanityinc-solarized)
+;;(color-theme-sanityinc-solarized-light)
 ;;(load-theme 'solarized-light)
 ;;(color-theme-solarized-light)
 
@@ -199,7 +200,7 @@ inversion of gas-comment-region"
 ;;fill-column-indicator
 (load-file "~/.emacs.d/fill-column-indicator.el")
 (require 'fill-column-indicator)
-(setq fci-rule-column 80)
+(setq fci-rule-column 72)
 (add-hook 'ruby-mode-hook 'fci-mode)
 (add-hook 'common-lisp-mode-hook 'fci-mode)
 (add-hook 'scheme-mode-hook 'fci-mode)
@@ -227,3 +228,5 @@ inversion of gas-comment-region"
 (require 'package)
 (add-to-list 'package-archives
              '("melpa". "heep://mepla.milkbox.net/packages/") t)
+
+(load-file "~/.emacs.d/gnu.el")

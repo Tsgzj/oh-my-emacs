@@ -13,3 +13,24 @@ which xelatex
 echo $PATH
 rcup
 /usr/texbin/xelatex assignment.
+ls
+cd blog
+ls
+cd document
+cd Documents/Blog/
+ls
+cd myBlog
+ls
+cd source
+ls
+cd _drafts
+ls
+cd ..
+ls
+cd _posts
+ls
+pwd
+pwd > pbcopy
+ls
+rm pbcopy
+pwd

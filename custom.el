@@ -34,6 +34,14 @@
 ;; show time
 (display-time-mode t)
 
+(add-hook 'text-mode-hook 'turn-off-evil-mode)
+(add-hook 'prog-mode-hook 'turn-on-evil-mode)
+(add-hook 'comint-mode-hook 'turn-off-evil-mode)
+(add-hook 'conf-mode-hook 'turn-on-evil-mode)
+(add-hook 'Info-mode-hook 'turn-off-evil-mode)
+(add-hook 'LaTeX-mode-hook 'turn-off-evil-mode)
+(add-hook 'org-mode-hook 'turn-off-evil-mode)
+
 ;;; Some tiny tool functions
 (defun replace-all-chinese-quote ()
   (interactive)
@@ -82,12 +90,16 @@ inversion of gas-comment-region"
  '(background-color "#002b36")
  '(background-mode dark)
  '(cursor-color "#839496")
- '(custom-enabled-themes (quote (sanityinc-solarized-light)))
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
  '(custom-safe-themes
    (quote
     ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
  '(fci-rule-color "#073642")
  '(foreground-color "#839496")
+ '(haskell-notify-p t)
+ '(haskell-stylish-on-save t)
+ '(haskell-tags-on-save t)
+ '(org-agenda-files (quote ("~/gtd.org")))
  '(racket-mode-pretty-lambda t)
  '(racket-program "/Applications/Racket/bin/racket")
  '(raco-program "/Applications/Racket/bin/raco")
@@ -213,4 +225,142 @@ inversion of gas-comment-region"
 (add-to-list 'package-archives
              '("melpa". "heep://mepla.milkbox.net/packages/") t)
 
-(load-file "~/.emacs.d/gnu.el")
+;; org-gtd
+(require 'org)
+(require 'remember)
+
+
+;; I want files with the extension ".org" to open in org-mode.
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+
+;; I keep almost everything in one big org file.
+(defvar org-gtd-file "~/Dropbox/GTD/gtd.org")
+
+;; I open my gtd file when I hit C-c g
+(defun gtd ()
+  "Open the GTD file."
+  (interactive)
+  (find-file org-gtd-file))
+
+;; Some basic keybindings.
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cr" 'org-remember)
+(global-set-key "\C-cg" 'gtd)
+
+;; This seems like a good basic set of keywords to start out with:
+(setq org-todo-keywords '((type "TODO" "NEXT" "WAITING" "DONE")))
+
+;; Some projects need their own org files, but I still want them to
+;; show up in my agenda.
+(defvar org-gtd-other-files)
+
+(setf org-gtd-other-files (list "~/Dropbox/GTD/eon.org"))
+
+(setf org-agenda-files (cons org-gtd-file org-gtd-other-files))
+
+;; When I'm using org to track issues in a project, I use these
+;; keywords on a file-local basis:
+
+;; #+SEQ_TODO: TODO | DONE
+;; #+SEQ_TODO: REPORT BUG KNOWNCAUSE | FIXED
+;; #+SEQ_TODO: | CANCELLED
+
+;; The lisp version is:
+
+;; (setq org-todo-keywords '((sequence "TODO" | "DONE")
+;;   			  (sequence "REPORT" "BUG" "KNOWNCAUSE" | "FIXED")
+;; 			  (sequence | "CANCELLED")))
+
+;; Easy basic searches. Get a quick view of nextactions, etc
+
+(setq org-agenda-custom-commands
+      '(("w" todo "WAITING" nil)
+	("n" todo "NEXT" nil)
+	("d" "Agenda + Next Actions" ((agenda) (todo "NEXT")))))
+
+;; I use org's tag feature to implement contexts.
+
+(setq org-tag-alist '(("SCHOOL" . ?s)
+		      ("COMPUTER" . ?c)
+		      ("MAIL" . ?m)
+		      ("HOME" . ?h)
+		      ("PLACE" . ?f)
+		      ("READING" . ?r)
+              ("WRITING" . ?w)
+              ("LOWENERGY" . ?l)
+              ("PHONE" . ?p)))
+
+;; I like to color-code task types.
+
+(setf org-todo-keyword-faces '(("NEXT" . (:foreground "yellow" :background "red" :bold t :weight bold))
+			       ("TODO" . (:foreground "cyan" :background "steelblue" :bold t :weight bold))
+			       ("WAITING" . (:foreground "yellow" :background "magenta2" :bold t :weight bold))
+			       ("DONE" . (:foreground "gray50" :background "gray30" :bold t
+			       :weight bold))))
+
+;; I put the archive in a separate file, because the gtd file will
+;; probably already get pretty big just with current tasks.
+
+(setq org-archive-location "%s_archive::")
+
+;; Remember support. This creates several files:
+;;
+;;   ~/todo.org      Where remembered TODO's are stored.
+;;   ~/journal.org   Timestamped journal entries.
+;;   ~/remember.org  All other notes
+
+;; and a keybinding of "C-c r" for making quick notes from any buffer.
+
+;; These bits of Remembered information must eventually be reviewed
+;; and filed somewhere (perhaps in gtd.org, or in a project-specific
+;; org file.) The out-of-sight, out-of-mind rule applies here---if I
+;; don't review these auxiliary org-files, I'll probably forget what's
+;; in them.
+
+;;(require 'remember)
+;;(setq org-reverse-note-order t)  ;; note at beginning of file by default.
+;;(setq org-default-notes-file "~/remember.org")
+;;(setq remember-annotation-functions '(org-remember-annotation))
+;;(setq remember-handler-functions '(org-remember-handler))
+;;(add-hook 'remember-mode-hook 'org-remember-apply-template)
+;;
+;;(setq org-remember-templates
+;;      '((?t "* TODO %?\n  %i\n  %a" "~/todo.org")
+;;        (?j "* %U %?\n\n  %i\n  %a" "~/journal.org")
+;;        (?i "* %^{Title}\n  %i\n  %a" "~/remember.org" "New Ideas")))
+;;
+;;(global-set-key "\C-cr" 'org-remember)
+;;(global-set-key [(f12)] 'org-remember)
+
+;; My preferences. These are less related to GTD, and more to my
+;; particular setup. They are included here for completeness, and so
+;; that new org users can see a complete example org-gtd
+;; configuration.
+
+(setq org-return-follows-link t)
+(setq org-hide-leading-stars t)
+;;(setf org-tags-column -65)
+(setf org-special-ctrl-a/e t)
+
+(setq org-log-done t)
+(setq org-deadline-warning-days 14)
+(setq org-fontify-emphasized-text t)
+(setq org-fontify-done-headline t)
+(setq org-agenda-include-all-todo nil)
+(setq org-directory "~/")
+(setq org-export-html-style "<link rel=stylesheet href=\"../e/freeshell2.css\" type=\"text/css\">")
+(setq org-export-with-section-numbers nil)
+(setq org-export-with-toc nil)
+(setq org-adapt-indentation nil)
+
+;; widen category field a little
+(setq org-agenda-prefix-format "  %-17:c%?-12t% s")
+
+;; fix new keybinding that clobbers mine
+(add-hook 'org-mode-hook (lambda ()
+			   (local-set-key [(control tab)] 'other-window)))
+
+(provide 'org-gtd)
+
+(org-agenda)

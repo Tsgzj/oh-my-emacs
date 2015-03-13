@@ -364,5 +364,3 @@ inversion of gas-comment-region"
 (provide 'org-gtd)
 
 (org-agenda)
-
-(toggle-menu-bar-mode-from-frame)

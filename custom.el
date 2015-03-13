@@ -133,12 +133,12 @@ inversion of gas-comment-region"
  )
 
 ;; Setting English Font
-(set-face-attribute 'default nil :font "Inconsolata 16")
-;; Chinese Font
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font (frame-parameter nil 'font)
-                    charset (font-spec :family "Hiragino Sans GB"
-                                       :size 16)))
+;; (set-face-attribute 'default nil :font "Source Code Pro 16")
+;; ;; Chinese Font
+;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;   (set-fontset-font (frame-parameter nil 'font)
+;;                     charset (font-spec :family "Source Han Sans"
+;;                                        :size 16)))
 ;;(setq default-frame-alist
 ;;      '((top . 0)(left . 50)(width . 120)(height . 45)))
 
@@ -364,3 +364,5 @@ inversion of gas-comment-region"
 (provide 'org-gtd)
 
 (org-agenda)
+
+(toggle-menu-bar-mode-from-frame)

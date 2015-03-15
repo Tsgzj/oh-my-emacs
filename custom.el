@@ -5,7 +5,7 @@
 
 ;; For example, oh-my-emacs disables menu-bar-mode by default. If you want it
 ;; back, just put following code here.
-(menu-bar-mode t)
+;; (menu-bar-mode t)
 
 ;;; You email address
 (setq user-mail-address "swx@tsgzj.me")
@@ -133,12 +133,12 @@ inversion of gas-comment-region"
  )
 
 ;; Setting English Font
-;; (set-face-attribute 'default nil :font "Source Code Pro 16")
+(set-face-attribute 'default nil :font "Source Code Pro 11")
 ;; ;; Chinese Font
-;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
-;;   (set-fontset-font (frame-parameter nil 'font)
-;;                     charset (font-spec :family "Source Han Sans"
-;;                                        :size 16)))
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+   (set-fontset-font (frame-parameter nil 'font)
+                     charset (font-spec :family "Source Han Sans"
+                                        :size 11)))
 ;;(setq default-frame-alist
 ;;      '((top . 0)(left . 50)(width . 120)(height . 45)))
 

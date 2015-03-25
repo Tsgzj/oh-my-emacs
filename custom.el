@@ -101,8 +101,8 @@ inversion of gas-comment-region"
  '(haskell-tags-on-save t)
  '(org-agenda-files (quote ("~/gtd.org")))
  '(racket-mode-pretty-lambda t)
- '(racket-program "/Applications/Racket/bin/racket")
- '(raco-program "/Applications/Racket/bin/raco")
+ '(racket-program "/usr/bin/racket")
+ '(raco-program "/usr/bin/raco")
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -138,7 +138,7 @@ inversion of gas-comment-region"
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
    (set-fontset-font (frame-parameter nil 'font)
                      charset (font-spec :family "Source Han Sans"
-                                        :size 11)))
+                                        :size 24)))
 ;;(setq default-frame-alist
 ;;      '((top . 0)(left . 50)(width . 120)(height . 45)))
 
@@ -182,7 +182,10 @@ inversion of gas-comment-region"
 
 (add-hook 'racket-mode-hook
           (lambda ()
-            (push '("lambda"  . ?λ) prettify-symbols-alist)))
+            (push '("lambda"  . ?λ) prettify-symbols-alist)
+            (auto-complete-mode t)
+            (turn-off-smartparens-mode)
+            (autopair-mode t)))
             ;;(push '(">="  . ?≥ ) prettify-symbols-alist)
             ;;(push '("<="  . ?≤ ) prettify-symbols-alist)
             ;;(push '("nil" . ?∅ ) prettify-symbols-alist)
@@ -207,13 +210,10 @@ inversion of gas-comment-region"
 
 ;;(prettify-symbols-mode t)
 
-
-(global-set-key (kbd "C-c C-d") 'dash-at-point)
-
-(setq scheme-program-name "/usr/local/bin/scheme")
-(setq geiser-guile-binary "/usr/local/bin/guile")
-(setq geiser-racket-binary "/usr/local/bin/racket")
-(setq geiser-default-implementation 'racket)
+;; (setq scheme-program-name "/usr/local/bin/scheme")
+;; (setq geiser-guile-binary "/usr/local/bin/guile")
+;; (setq geiser-racket-binary "/usr/local/bin/racket")
+;; (setq geiser-default-implementation 'racket)
 
 
 (require 'window-numbering)
@@ -363,4 +363,12 @@ inversion of gas-comment-region"
 
 (provide 'org-gtd)
 
-(org-agenda)
+;;rust-mode
+(add-to-list 'load-path "~/.emacs.d/rust-mode/")
+(autoload 'rust-mode "rust-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+(add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))
+
+(global-highlight-parentheses-mode)
+
+(server-start)

@@ -363,4 +363,4 @@ inversion of gas-comment-region"
 
 (provide 'org-gtd)
 
-(org-agenda)
+(global-flycheck-mode t)

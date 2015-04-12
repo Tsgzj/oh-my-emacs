@@ -133,7 +133,7 @@ inversion of gas-comment-region"
  )
 
 ;; Setting English Font
-(set-face-attribute 'default nil :font "Source Code Pro 11")
+(set-face-attribute 'default nil :font "Consolas 11")
 ;; ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
    (set-fontset-font (frame-parameter nil 'font)
@@ -370,5 +370,6 @@ inversion of gas-comment-region"
 (add-to-list 'auto-mode-alist '("\\.rkt\\'" . racket-mode))
 
 (global-highlight-parentheses-mode)
+(global-flycheck-mode t)
 
 (server-start)

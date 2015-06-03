@@ -34,3 +34,26 @@ pwd > pbcopy
 ls
 rm pbcopy
 pwd
+ls
+ls
+sl
+lear
+clear
+ls
+cd /tmp/LogMeIn/
+ls
+cd ..
+ls
+vim adb.log
+jjjjclearlear
+clear
+ls
+ls
+open haxm_silent_run.log
+ls
+ruby
+irb
+racket
+(car '(1 2 3 4))
+ls
+emacs brewrelink.sh

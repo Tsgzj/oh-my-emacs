@@ -413,4 +413,56 @@ inversion of gas-comment-region"
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-mode 1)
 
+
+;; Java Eclim
+(require 'eclim)
+(global-eclim-mode)
+
+(require 'auto-complete-config)
+(ac-config-default)
+(require 'ac-emacs-eclim-source)
+(ac-emacs-eclim-config)
+
+(require 'company)
+(require 'company-emacs-eclim)
+(company-emacs-eclim-setup)
+(global-company-mode t)
+
+
+;; Make company mode and yasnippet work together
+
+
+(defun check-expansion ()
+  (save-excursion
+    (if (looking-at "\\_>") t
+      (backward-char 1)
+      (if (looking-at "\\.") t
+	(backward-char 1)
+	(if (looking-at "->") t nil)))))
+
+(defun do-yas-expand ()
+  (let ((yas/fallback-behavior 'return-nil))
+    (yas/expand)))
+
+(defun tab-indent-or-complete ()
+  (interactive)
+  (if (minibufferp)
+      (minibuffer-complete)
+    (if (or (not yas/minor-mode)
+	    (null (do-yas-expand)))
+	(if (check-expansion)
+	    (company-complete-common)
+	  (indent-for-tab-command)))))
+
+(defun bind-tab-properly ()
+  "Binds tab to tab-indent-or-complete, overwritting yas and company bindings"
+  (interactive)
+  ;;overwrite yas and company tab mappings
+  (define-key yas-minor-mode-map (kbd "<tab>") 'tab-indent-or-complete)
+  (define-key yas-minor-mode-map (kbd "TAB") 'tab-indent-or-complete)
+  (define-key company-active-map [tab] 'tab-indent-or-complete)
+  (define-key company-active-map (kbd "TAB") 'tab-indent-or-complete))
+
+(add-hook 'company-mode-hook 'bind-tab-properly)
+
 (server-start)

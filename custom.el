@@ -186,7 +186,6 @@ inversion of gas-comment-region"
 (add-hook 'ruby-mode-hook
           (lambda ()
             (push '("lambda"  . ?λ) prettify-symbols-alist)))
-
 (add-hook 'racket-mode-hook
           (lambda ()
             (push '("lambda"  . ?λ) prettify-symbols-alist)))
@@ -205,7 +204,6 @@ inversion of gas-comment-region"
 (require 'fill-column-indicator)
 (setq fci-rule-column 72)
 (add-hook 'ruby-mode-hook 'fci-mode)
-(add-hook 'ruby-mode-hook 'robe-mode)
 (add-hook 'common-lisp-mode-hook 'fci-mode)
 (add-hook 'scheme-mode-hook 'fci-mode)
 (add-hook 'c-mode-hook 'fci-mode)
@@ -425,10 +423,14 @@ inversion of gas-comment-region"
 (global-company-mode t)
 
 ;; Robe-company-mode
-(eval-after-load 'company
-  '(push 'company-robe company-backends))
 (require 'rvm)
 (rvm-use-default)
+(defadvice inf-ruby-console-auto (before activate-rvm-for-robe activate)
+  (rvm-activate-corresponding-ruby))
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
+(require 'robe)
+(add-hook 'ruby-mode-hook 'robe-mode)
 
 ;; Make company mode and yasnippet work together
 (defun check-expansion ()

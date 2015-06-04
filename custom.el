@@ -41,6 +41,7 @@
 (add-hook 'Info-mode-hook 'turn-off-evil-mode)
 (add-hook 'LaTeX-mode-hook 'turn-off-evil-mode)
 (add-hook 'org-mode-hook 'turn-off-evil-mode)
+(add-hook 'eshell-mode-hook 'turn-off-evil-mode)
 
 ;;; Some tiny tool functions
 (defun replace-all-chinese-quote ()
@@ -204,12 +205,14 @@ inversion of gas-comment-region"
 (require 'fill-column-indicator)
 (setq fci-rule-column 72)
 (add-hook 'ruby-mode-hook 'fci-mode)
+(add-hook 'ruby-mode-hook 'robe-mode)
 (add-hook 'common-lisp-mode-hook 'fci-mode)
 (add-hook 'scheme-mode-hook 'fci-mode)
 (add-hook 'c-mode-hook 'fci-mode)
 (add-hook 'racket-mode-hook 'fci-mode)
 
 
+(global-auto-complete-mode -1)
 
 ;;(prettify-symbols-mode t)
 
@@ -413,25 +416,21 @@ inversion of gas-comment-region"
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-mode 1)
 
-
 ;; Java Eclim
 (require 'eclim)
-(global-eclim-mode)
-
-(require 'auto-complete-config)
-(ac-config-default)
-(require 'ac-emacs-eclim-source)
-(ac-emacs-eclim-config)
 
 (require 'company)
 (require 'company-emacs-eclim)
 (company-emacs-eclim-setup)
 (global-company-mode t)
 
+;; Robe-company-mode
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
+(require 'rvm)
+(rvm-use-default)
 
 ;; Make company mode and yasnippet work together
-
-
 (defun check-expansion ()
   (save-excursion
     (if (looking-at "\\_>") t
@@ -464,5 +463,8 @@ inversion of gas-comment-region"
   (define-key company-active-map (kbd "TAB") 'tab-indent-or-complete))
 
 (add-hook 'company-mode-hook 'bind-tab-properly)
+(add-hook 'java-mode-hook 'eclim-mode)
+
+(toggle-frame-fullscreen)
 
 (server-start)

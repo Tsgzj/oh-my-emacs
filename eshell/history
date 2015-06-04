@@ -57,3 +57,44 @@ racket
 (car '(1 2 3 4))
 ls
 emacs brewrelink.sh
+ls
+ls
+cd Program/fuzzer/
+ls
+cd set
+ls
+cd src
+ls
+cd fuzzer
+ls
+emacs FuzzSDK.java
+cd  ~/.emacs.d/
+ls
+ls
+ls
+cd Tools
+cd Tomcat/
+ls
+cd webapps/
+ls
+rm Sample/
+fuck
+rm -rf Sample
+ls
+cd Fuzzer/
+ls
+cd ..
+rm -rf Fuzzer/
+rm -rf Assert/
+ls
+ls
+ruby Randomtest.rb
+ruby Randomtest.rb
+ruby Randomtest.rb
+ruby Randomtest.rb
+ruby Randomtest.rb
+ruby Randomtest.rb
+ruby Randomtest.rb
+ruby Randomtest.rb
+ruby Randomtest.rb
+ruby Randomtest.rb

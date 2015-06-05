@@ -147,7 +147,7 @@ inversion of gas-comment-region"
  '(font-latex-sectioning-1-face ((t (:inherit font-latex-sectioning-2-face :height 1.1 :family "Essential PragmetaPro"))))
  '(font-latex-slide-title-face ((t (:inherit (variable-pitch font-lock-type-face) :weight bold :height 1.2 :family "Essential PragmetaPro"))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#969896"))))
- '(font-lock-comment-face ((t (:foreground "#969896")))))
+ '(font-lock-comment-face ((t (:foreground "#969896" :slant normal)))))
 
 ;;(setq default-frame-alist
 ;;      '((top . 0)(left . 50)(width . 120)(height . 45)))
@@ -406,6 +406,7 @@ inversion of gas-comment-region"
 (define-key evil-normal-state-map "Q" 'call-last-kbd-macro)
 (define-key evil-visual-state-map "Q" 'call-last-kbd-macro)
 (define-key evil-normal-state-map (kbd "TAB") 'evil-undefine)
+(define-key evil-normal-state-map "ZZ" 'evil-save-and-close)
 
 (defun evil-undefine ()
  (interactive)

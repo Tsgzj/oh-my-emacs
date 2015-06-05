@@ -133,9 +133,11 @@ inversion of gas-comment-region"
 ;; Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
-                    charset (font-spec :family "Hiragino Sans GB"
-                                       :size 16)))
+                    charset (font-spec :family "Hiragino Mincho ProN W3")))
 
+;;(dolist (charset '(kana))
+;;  (set-fontset-font (frame-parameter nil 'font)
+;;                    charset (font-spec :family "Songti SC")))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -146,6 +148,7 @@ inversion of gas-comment-region"
  '(font-latex-slide-title-face ((t (:inherit (variable-pitch font-lock-type-face) :weight bold :height 1.2 :family "Essential PragmetaPro"))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#969896"))))
  '(font-lock-comment-face ((t (:foreground "#969896")))))
+
 ;;(setq default-frame-alist
 ;;      '((top . 0)(left . 50)(width . 120)(height . 45)))
 

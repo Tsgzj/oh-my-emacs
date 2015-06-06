@@ -436,6 +436,16 @@ inversion of gas-comment-region"
 (require 'robe)
 (add-hook 'ruby-mode-hook 'robe-mode)
 
+;; rust-mode
+(add-to-list 'load-path "~/.emacs.d/custom/rust-mode/")
+(autoload 'rust-mode "rust-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+(setq racer-rust-src-path "/usr/local/src/rust/src/")
+(setq racer-cmd "/usr/local/src/racer/target/release/racer")
+(add-to-list 'load-path "/usr/local/src/racer/editors/emacs")
+(eval-after-load "rust-mode" '(require 'racer))
+
+
 ;; Make company mode and yasnippet work together
 (defun check-expansion ()
   (save-excursion

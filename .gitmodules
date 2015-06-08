@@ -1,0 +1,3 @@
+[submodule "custom/rust-mode"]
+	path = custom/rust-mode
+	url = git@github.com:rust-lang/rust-mode.git

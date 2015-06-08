@@ -1,3 +1,6 @@
 [submodule "custom/rust-mode"]
 	path = custom/rust-mode
 	url = git@github.com:rust-lang/rust-mode.git
+[submodule "custom/flycheck-rust"]
+	path = custom/flycheck-rust
+	url = git@github.com:flycheck/flycheck-rust.git

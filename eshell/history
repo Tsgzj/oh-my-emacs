@@ -1,18 +1,3 @@
-pdftex
-which pdftex
-echo $PATH
-xelatex
-rcup
-$PATH
-echo $PATH
-pdftex
-/usr/texbin/pdftex
-which pdftex
-xelatex assignment.tex
-which xelatex
-echo $PATH
-rcup
-/usr/texbin/xelatex assignment.
 ls
 cd blog
 ls
@@ -98,3 +83,46 @@ ruby Randomtest.rb
 ruby Randomtest.rb
 ruby Randomtest.rb
 ruby Randomtest.rb
+ls
+rustc hello_world.rs 
+ls
+./hello_world 
+rustc hello_world.rs 
+rustc hello_world.rs 
+./hello_world 
+ls
+mkdir guess_game
+mv hello_world.rs guess_game/
+ls
+rm hello_world
+ls
+cd guess_game/
+ls
+cd ..
+mv hello_world.rs ./
+ls
+rm -rf guess_game/
+cargo new guessing_game --bin
+ls
+cd guessing_game/
+ls
+cd src/
+ls
+cd..
+cd..
+cd ..
+ls
+cargo build
+cargo build
+cargo build
+ls
+cargo run
+cargo build
+cargo run
+cargo run
+cargo run
+cargo run
+cargo build
+cargo build & cargo run
+cargo build
+cargo run

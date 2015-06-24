@@ -1,22 +1,4 @@
 ls
-cd blog
-ls
-cd document
-cd Documents/Blog/
-ls
-cd myBlog
-ls
-cd source
-ls
-cd _drafts
-ls
-cd ..
-ls
-cd _posts
-ls
-pwd
-pwd > pbcopy
-ls
 rm pbcopy
 pwd
 ls
@@ -126,3 +108,21 @@ cargo build
 cargo build & cargo run
 cargo build
 cargo run
+cargo build
+cargo run
+cd ..
+cd ..
+cargo new philosopher
+rm -rf philosopher
+cargo new philosopher --bin
+cd philosopher
+cargo build
+cargo run
+cargo run
+cargo build
+cargo run
+cargo build
+cargo run
+cargo build
+cargo run
+gcloud compute ssh mfas-wen-emr2

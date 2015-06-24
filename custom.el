@@ -486,6 +486,17 @@ inversion of gas-comment-region"
 (add-hook 'company-mode-hook 'bind-tab-properly)
 (add-hook 'java-mode-hook 'eclim-mode)
 
+;; indent-guide
+(require 'indent-guide)
+(indent-guide-global-mode)
+
+
+;; helm-do-ag
+(global-unset-key (kdb "C-c c g") 'helm-do-grep)
+(global-set-key (kbd "C-c c g") 'helm-do-ag)
+
 (toggle-frame-fullscreen)
+
+
 
 (server-start)

@@ -1,128 +1,128 @@
-ls
-rm pbcopy
-pwd
-ls
-ls
-sl
-lear
-clear
-ls
-cd /tmp/LogMeIn/
-ls
-cd ..
-ls
-vim adb.log
-jjjjclearlear
-clear
-ls
-ls
-open haxm_silent_run.log
-ls
-ruby
+irb UAFTLV.rb 
+irb UAFTLV.rb 
+irb UAFTLV.rb 
+irb UAFTLV.rb 
+irb UAFTLV.rb 
+irb UAFTLV.rb 
+irb UAFTLV.rb 
+irb 
 irb
-racket
-(car '(1 2 3 4))
+irb UAFTLV.rb
+irb UAFTLV.rb
+irb UAFTLV.rb
+irb UAFTLV.rb
+irb UAFTLV.rb
+irb UAFTLV.rb
+irb UAFTLV.rb
+irb UAFTLV.rb
+irb UAFTLV.rb
+irb UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.tb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
 ls
-emacs brewrelink.sh
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb
+ruby UAFTLV.rb 
+ruby UAFTLV.rb
+ruby UAFTLV.rb
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+irb
+cd 
+cd program/Rust/
 ls
+cd guessing_game/
+cargo run
+ cd ..
 ls
-cd Program/fuzzer/
+cargo new embed
+cd embed
 ls
-cd set
 ls
 cd src
 ls
-cd fuzzer
-ls
-emacs FuzzSDK.java
-cd  ~/.emacs.d/
-ls
-ls
-ls
-cd Tools
-cd Tomcat/
-ls
-cd webapps/
-ls
-rm Sample/
-fuck
-rm -rf Sample
-ls
-cd Fuzzer/
-ls
-cd ..
-rm -rf Fuzzer/
-rm -rf Assert/
-ls
-ls
-ruby Randomtest.rb
-ruby Randomtest.rb
-ruby Randomtest.rb
-ruby Randomtest.rb
-ruby Randomtest.rb
-ruby Randomtest.rb
-ruby Randomtest.rb
-ruby Randomtest.rb
-ruby Randomtest.rb
-ruby Randomtest.rb
-ls
-rustc hello_world.rs 
-ls
-./hello_world 
-rustc hello_world.rs 
-rustc hello_world.rs 
-./hello_world 
-ls
-mkdir guess_game
-mv hello_world.rs guess_game/
-ls
-rm hello_world
-ls
-cd guess_game/
-ls
-cd ..
-mv hello_world.rs ./
-ls
-rm -rf guess_game/
-cargo new guessing_game --bin
-ls
-cd guessing_game/
-ls
-cd src/
-ls
-cd..
-cd..
 cd ..
 ls
-cargo build
-cargo build
-cargo build
+cd ..
 ls
-cargo run
-cargo build
-cargo run
-cargo run
-cargo run
-cargo run
-cargo build
-cargo build & cargo run
-cargo build
-cargo run
-cargo build
-cargo run
+cd guessing_game
+ls
+cd src
+ls
 cd ..
 cd ..
-cargo new philosopher
-rm -rf philosopher
-cargo new philosopher --bin
-cd philosopher
-cargo build
-cargo run
-cargo run
-cargo build
-cargo run
-cargo build
-cargo run
-cargo build
-cargo run
-gcloud compute ssh mfas-wen-emr2
+:w

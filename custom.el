@@ -35,13 +35,13 @@
 (display-time-mode t)
 
 (add-hook 'text-mode-hook 'turn-off-evil-mode)
-(add-hook 'prog-mode-hook 'turn-on-evil-mode)
-(add-hook 'comint-mode-hook 'turn-off-evil-mode)
-(add-hook 'conf-mode-hook 'turn-on-evil-mode)
-(add-hook 'Info-mode-hook 'turn-off-evil-mode)
+;;(add-hook 'prog-mode-hook 'turn-on-evil-mode)
+;;(add-hook 'comint-mode-hook 'turn-off-evil-mode)
+;;(add-hook 'conf-mode-hook 'turn-on-evil-mode)
+;;(add-hook 'Info-mode-hook 'turn-off-evil-mode)
 (add-hook 'LaTeX-mode-hook 'turn-off-evil-mode)
 (add-hook 'org-mode-hook 'turn-off-evil-mode)
-(add-hook 'eshell-mode-hook 'turn-off-evil-mode)
+(add-)hookxu 'eshell-mode-hook 'turn-off-evil-mode)
 
 ;;; Some tiny tool functions
 (defun replace-all-chinese-quote ()
@@ -55,7 +55,7 @@
 ;; Comment function for GAS assembly language
 (defun gas-comment-region (start end)
   "Comment region for AT&T syntax assembly language The default
-comment-char for gas is ';', we need '#' instead"
+   comment-char for gas is ';', we need '#' instead"
   (interactive "r")
   (setq end (copy-marker end t))
   (save-excursion
@@ -375,6 +375,8 @@ inversion of gas-comment-region"
 
 (global-flycheck-mode t)
 
+(evil-mode 1)
+
 (define-key evil-normal-state-map "\C-e" 'evil-end-of-line)
 (define-key evil-insert-state-map "\C-e" 'end-of-line)
 (define-key evil-visual-state-map "\C-e" 'evil-end-of-line)
@@ -492,11 +494,22 @@ inversion of gas-comment-region"
 
 
 ;; helm-do-ag
-(global-unset-key (kdb "C-c c g") 'helm-do-grep)
+(global-unset-key (kbd "C-c c g"))
 (global-set-key (kbd "C-c c g") 'helm-do-ag)
 
+
+;; esc quits
+;;; esc quits
+(define-key evil-normal-state-map [escape] 'keyboard-quit)
+(define-key evil-visual-state-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+
+(menu-bar-mode 0)
+
 (toggle-frame-fullscreen)
-
-
 
 (server-start)

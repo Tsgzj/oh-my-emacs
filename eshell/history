@@ -3,8 +3,6 @@ irb UAFTLV.rb
 irb UAFTLV.rb 
 irb UAFTLV.rb 
 irb UAFTLV.rb 
-irb UAFTLV.rb 
-irb UAFTLV.rb 
 irb 
 irb
 irb UAFTLV.rb
@@ -107,7 +105,7 @@ cd program/Rust/
 ls
 cd guessing_game/
 cargo run
- cd ..
+cd ..
 ls
 cargo new embed
 cd embed
@@ -126,3 +124,5 @@ ls
 cd ..
 cd ..
 :w
+man command
+comman command

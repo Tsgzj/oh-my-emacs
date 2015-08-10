@@ -41,7 +41,7 @@
 ;;(add-hook 'Info-mode-hook 'turn-off-evil-mode)
 (add-hook 'LaTeX-mode-hook 'turn-off-evil-mode)
 (add-hook 'org-mode-hook 'turn-off-evil-mode)
-(add-)hookxu 'eshell-mode-hook 'turn-off-evil-mode)
+(add-hook 'eshell-mode-hook 'turn-off-evil-mode)
 
 ;;; Some tiny tool functions
 (defun replace-all-chinese-quote ()
@@ -153,13 +153,31 @@ inversion of gas-comment-region"
 ;;      '((top . 0)(left . 50)(width . 120)(height . 45)))
 
 (require 'color-theme-sanityinc-tomorrow)
-(color-theme-sanityinc-tomorrow-night)
-;;(require 'color-theme-sanityinc-solarized)
+(color-theme-sanityinc-solarized-light)
 ;;(color-theme-sanityinc-solarized-light)
 ;;(load-theme 'solarized-light)
 ;;(color-theme-solarized-light)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/cyberpunk-theme.el")
 ;;(load-theme 'cyberpunk t)
+;; ;; <Color theme initialization code>
+;; (setq current-theme '(color-theme-sanityinc-solarized-light))
+
+
+
+
+;; (defun synchronize-theme
+;;     (setq hour
+;;         (string-to-number
+;;             (substring current-time-string 11 13)))
+;;     (if (member hour (number-sequence 6 17))
+;;         (setq now '(color-theme-sanityinc-solarized-light))
+;;         (setq now '(color-theme-sanityinc-tomorrow-night)))
+;;     (if (eq now current-theme)
+;;         nil
+;;       (setq current-theme now))
+;;     (eval now)) ;; end of (defun ...
+
+;; (run-with-timer 0 3600 synchronize-theme)
 
 (exec-path-from-shell-initialize)
 
@@ -507,6 +525,29 @@ inversion of gas-comment-region"
 (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+
+;; neo-tree
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+ (defun neotree-project-dir ()
+    "Open NeoTree using the git root."
+    (interactive)
+    (let ((project-dir (ffip-project-root))
+          (file-name (buffer-file-name)))
+      (if project-dir
+          (progn
+            (neotree-dir project-dir)
+            (neotree-find file-name))
+        (message "Could not find git project root."))))
+
+  (define-key evil-normal-state-map (kbd "C-c C-p") 'neotree-project-dir)
+
+ (add-hook 'neotree-mode-hook
+            (lambda ()
+              (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+              (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+              (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+              (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
 (menu-bar-mode 0)
 

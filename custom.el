@@ -392,6 +392,8 @@ inversion of gas-comment-region"
 (provide 'org-gtd)
 
 (global-flycheck-mode t)
+(add-to-list 'flycheck-checkers 'swift)
+(setq flycheck-swift-sdk-path "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk")
 
 (evil-mode 1)
 

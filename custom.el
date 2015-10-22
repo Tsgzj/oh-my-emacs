@@ -553,6 +553,9 @@ inversion of gas-comment-region"
 
 (menu-bar-mode 0)
 
+(setq browse-url-browser-function nil
+      browse-url-generic-program nil)
+
 (toggle-frame-fullscreen)
 
 (server-start)

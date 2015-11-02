@@ -102,8 +102,8 @@ inversion of gas-comment-region"
  '(haskell-tags-on-save t)
  '(org-agenda-files (quote ("~/gtd.org")))
  '(racket-mode-pretty-lambda t)
- '(racket-program "/Applications/Racket/bin/racket")
- '(raco-program "/Applications/Racket/bin/raco")
+ '(racket-program "/Applications/Racket v6.2.1//bin/racket")
+ '(raco-program "/Applications/Racket v6.2.1/bin/raco")
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -456,7 +456,10 @@ inversion of gas-comment-region"
 (eval-after-load 'company
   '(push 'company-robe company-backends))
 (require 'robe)
-(add-hook 'ruby-mode-hook 'robe-mode)
+(require 'rcodetools)
+(add-hook 'ruby-mode-hook
+          'robe-mode
+          (define-key ruby-mode-map (kbd "C-c C-c") 'xmp))
 
 ;; rust-mode
 (add-to-list 'load-path "~/.emacs.d/custom/rust-mode/")

@@ -476,7 +476,7 @@ inversion of gas-comment-region"
 (load-file "~/.emacs.d/custom/dash.el")
 (setq racer-rust-src-path "/usr/local/src/rust/src/")
 (setq racer-cmd "/usr/local/src/racer/target/release/racer")
-(load-file "~/.emacs.d/custom/emacs-racer/racer.el")
+;;(load-file "~/.emacs.d/custom/emacs-racer/racer.el")
 (require 'racer)
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'rust-mode-hook #'eldoc-mode)

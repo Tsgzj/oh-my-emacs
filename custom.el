@@ -221,7 +221,7 @@ inversion of gas-comment-region"
 ;;(prettify-symbols-mode t)
 
 ;;fill-column-indicator
-(load-file "~/.emacs.d/fill-column-indicator.el")
+;;(load-file "~/.emacs.d/fill-column-indicator.el")
 (require 'fill-column-indicator)
 (setq fci-rule-column 72)
 (add-hook 'ruby-mode-hook 'fci-mode)
@@ -462,7 +462,7 @@ inversion of gas-comment-region"
           (define-key ruby-mode-map (kbd "C-c C-c") 'xmp))
 
 ;; rust-mode
-(add-to-list 'load-path "~/.emacs.d/custom/rust-mode/")
+;; (add-to-list 'load-path "~/.emacs.d/custom/rust-mode/")
 (autoload 'rust-mode "rust-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
 

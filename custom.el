@@ -455,8 +455,10 @@ inversion of gas-comment-region"
   (rvm-activate-corresponding-ruby))
 (eval-after-load 'company
   '(push 'company-robe company-backends))
-(require 'robe)
-(require 'rcodetools)
+(eval-after-load "ruby-mode"
+  (lambda ()
+    '(require 'robe)
+    '(require 'rcodetools)))
 (add-hook 'ruby-mode-hook
           'robe-mode
           (define-key ruby-mode-map (kbd "C-c C-c") 'xmp))
@@ -471,10 +473,14 @@ inversion of gas-comment-region"
 (add-hook 'flycheck-mode-hook 'flycheck-rust-setup)
 
 ;; racer
+(load-file "~/.emacs.d/custom/dash.el")
 (setq racer-rust-src-path "/usr/local/src/rust/src/")
 (setq racer-cmd "/usr/local/src/racer/target/release/racer")
-(add-to-list 'load-path "/usr/local/src/racer/editors/emacs")
-(eval-after-load "rust-mode" '(require 'racer))
+(load-file "~/.emacs.d/custom/emacs-racer/racer.el")
+(require 'racer)
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'rust-mode-hook #'eldoc-mode)
+;;(add-hook 'racer-mode-hook #'company-mode)
 
 ;; Make company mode and yasnippet work together
 (defun check-expansion ()
@@ -508,8 +514,10 @@ inversion of gas-comment-region"
   (define-key company-active-map [tab] 'tab-indent-or-complete)
   (define-key company-active-map (kbd "TAB") 'tab-indent-or-complete))
 
+
 (add-hook 'company-mode-hook 'bind-tab-properly)
 (add-hook 'java-mode-hook 'eclim-mode)
+(setq company-tooltip-align-annotations t)
 
 ;; indent-guide
 (require 'indent-guide)

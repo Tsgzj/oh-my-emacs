@@ -40,7 +40,7 @@
 ;;(add-hook 'conf-mode-hook 'turn-on-evil-mode)
 ;;(add-hook 'Info-mode-hook 'turn-off-evil-mode)
 (add-hook 'LaTeX-mode-hook 'turn-off-evil-mode)
-(add-hook 'org-mode-hook 'turn-off-evil-mode)
+(add-hook 'org-mode-hook 'turn-on-evil-mode)
 (add-hook 'eshell-mode-hook 'turn-off-evil-mode)
 
 ;;; Some tiny tool functions

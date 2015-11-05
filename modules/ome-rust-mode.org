@@ -1,0 +1,33 @@
+#+TITLE: Oh My Emacs Rust
+#+OPTIONS: toc:2 num:nil ^:nil
+
+This is part of [[https://github.com/xiaohanyu/oh-my-emacs][oh-my-emacs]].
+
+This file contains some settings [[https://www.rust-lang.org/][Rust]] programming language.
+
+* Prerequisites
+  :PROPERTIES:
+  :CUSTOM_ID: rust-prerequisites
+  :END:
+
+#+NAME: scheme-prerequisites
+#+CAPTION: Prerequisites for ome-scheme module
+| Package | Windows | Ubuntu/Debian/Mint | ArchLinux | Fedora | Mac OS X | Mandatory? |
+|---------+---------+--------------------+-----------+--------+----------+------------|
+| racer   |         |                    |           |        |          | Yes        |
+
+* El-get packages
+  :PROPERTIES:
+  :CUSTOM_ID: rust-el-get-packages
+  :END:
+
+#+NAME: scheme-el-get-packages
+#+CAPTION: El-get packages for ome-scheme module
+| Package     | Status   | Description                                    |
+|-------------+----------+------------------------------------------------|
+| rust-mode   | Required | Geiser to Scheme is what slime to Common Lisp. |
+| emacs-racer | Required | Auto-complete backend for geiser.              |
+
+* Rust
+  :PROPERTIES:
+  :CUSTOM_ID:

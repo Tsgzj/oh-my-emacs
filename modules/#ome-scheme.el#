@@ -1,0 +1,15 @@
+(defun ome-geiser-setup ()
+  (setq geiser-default-implementation 'guile)
+  (setq geiser-guile-load-init-file-p t))
+
+(defun ome-ac-geiser-setup ()
+  (add-hook 'geiser-mode-hook 'ac-geiser-setup)
+  (add-hook 'geiser-repl-mode-hook 'ac-geiser-setup)
+  (eval-after-load "auto-complete"
+    '(add-to-list 'ac-modes 'geiser-repl-mode)))
+
+(when (or (executable-find "guile") (executable-find "racket"))
+  (ome-install 'geiser)
+  (ome-install 'ac-geiser))
+
+;;(ome-install 'quack)

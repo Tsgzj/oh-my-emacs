@@ -1,0 +1,128 @@
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+ruby UAFTLV.rb 
+irb
+cd 
+cd program/Rust/
+ls
+cd guessing_game/
+cargo run
+cd ..
+ls
+cargo new embed
+cd embed
+ls
+ls
+cd src
+ls
+cd ..
+ls
+cd ..
+ls
+cd guessing_game
+ls
+cd src
+ls
+cd ..
+cd ..
+:w
+man command
+comman command
+make 
+make
+make demo
+j swift  
+cd Program/swift/Wrapper_Demo/
+ls
+rm Makefile\~
+ls
+make
+./demo 
+make clean
+make
+./demo
+cd ..
+ls
+cd ..
+ls
+cd Rust
+ls
+cargo QR_retriever
+man cargo
+cargo new QR_retriever
+cd QR_retriever/
+ls
+cd src/
+ls
+cd ..
+ls
+cd ..
+ls
+rm -rf QR_retriever/
+cargo new QR_retriver --bin
+cd QR_retriver/
+ls
+cd src/
+ls
+cd ..
+open Cargo.toml 
+ls -la
+cd ..
+ls
+ls -la
+cd 
+ls -la
+ls
+ruby main.rb 
+irb 
+rvm list
+rvm use ruby-head
+irb
+cd ..
+ls
+cd QRcode
+ls
+rvm use ruby-head
+irb
+ruby -version
+rvm use ruby-head
+rvm
+rvm list
+rvm use ruby-head
+js fail.txt
+xmpfilter
+xmpfilter
+echo $PATH
+echo $PATH
+xmpfilter
+echo $PATH
+echo $PATH
+echo $PATH
+export $PATH = $PATH:/Users/Sun/.rvm/gems/ruby-head
+echo $PATH
+export PATH = $PATH:/Users/Sun/.rvm/gems/ruby-head
+echo $PATH
+echo $PATH
+echo $PATH
+xmpfilter
+echo $PATH
+echo $PATH
+rvm list
+rvm use ruby-head
+echo $PATH
+echo $PATH
+xmpfilter
+ls
+cd program/rust
+ls
+rm test.rb
+rustc test.rs
+ls
+./test
+emacs
+rustc test.rs
+./test 

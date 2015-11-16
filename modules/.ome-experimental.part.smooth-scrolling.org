@@ -1,0 +1,11 @@
+* Smooth-scrolling
+  :PROPERTIES:
+  :CUSTOM_ID: smooth-scrolling
+  :END:
+
+Make emacs scroll smoothly.
+
+#+NAME: smooth-scrolling
+#+BEGIN_SRC emacs-lisp
+(ome-install 'smooth-scrolling)
+#+END_SRC

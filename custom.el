@@ -34,6 +34,8 @@
 ;; show time
 (display-time-mode t)
 
+;;(whitespace-mode t)
+
 (add-hook 'text-mode-hook 'turn-off-evil-mode)
 ;;(add-hook 'prog-mode-hook 'turn-on-evil-mode)
 ;;(add-hook 'comint-mode-hook 'turn-off-evil-mode)
@@ -91,7 +93,7 @@ inversion of gas-comment-region"
  '(background-color "#002b36")
  '(background-mode dark)
  '(cursor-color "#839496")
- '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
+ '(custom-enabled-themes (quote (sanityinc-solarized-light)))
  '(custom-safe-themes
    (quote
     ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" default)))
@@ -101,6 +103,15 @@ inversion of gas-comment-region"
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
  '(org-agenda-files (quote ("~/gtd.org")))
+ '(org-emphasis-alist
+   (quote
+    (("*" bold)
+     ("/" italic)
+     ("_" underline)
+     ("=" org-verbatim verbatim)
+     ("~" org-code verbatim)
+     ("+"
+      (:strike-through t)))))
  '(racket-mode-pretty-lambda t)
  '(racket-program "/Applications/Racket v6.2.1//bin/racket")
  '(raco-program "/Applications/Racket v6.2.1/bin/raco")
@@ -125,7 +136,18 @@ inversion of gas-comment-region"
      (320 . "#6c71c4")
      (340 . "#dc322f")
      (360 . "#cb4b16"))))
- '(vc-annotate-very-old-color nil))
+ '(vc-annotate-very-old-color nil)
+ '(whitespace-display-mappings
+   (quote
+    ((space-mark 32
+                 [183]
+                 [46])
+     (space-mark 160
+                 [164]
+                 [95])
+     (tab-mark 9
+               [187 9]
+               [92 9])))))
 
 
 ;; Setting English Font
@@ -147,7 +169,11 @@ inversion of gas-comment-region"
  '(font-latex-sectioning-1-face ((t (:inherit font-latex-sectioning-2-face :height 1.1 :family "Essential PragmetaPro"))))
  '(font-latex-slide-title-face ((t (:inherit (variable-pitch font-lock-type-face) :weight bold :height 1.2 :family "Essential PragmetaPro"))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#969896"))))
- '(font-lock-comment-face ((t (:foreground "#969896" :slant normal)))))
+ '(font-lock-comment-face ((t (:foreground "#969896" :slant normal))))
+ '(whitespace-hspace ((t (:foreground "lightgray"))))
+ '(whitespace-indentation ((t (:background "yellow" :foreground "firebrick"))))
+ '(whitespace-line ((t (:background "Yellow" :foreground "magenta1"))))
+ '(whitespace-space ((t (:foreground "lightgray")))))
 
 ;;(setq default-frame-alist
 ;;      '((top . 0)(left . 50)(width . 120)(height . 45)))
@@ -222,13 +248,14 @@ inversion of gas-comment-region"
 
 ;;fill-column-indicator
 ;;(load-file "~/.emacs.d/fill-column-indicator.el")
-(require 'fill-column-indicator)
-(setq fci-rule-column 72)
-(add-hook 'ruby-mode-hook 'fci-mode)
-(add-hook 'common-lisp-mode-hook 'fci-mode)
-(add-hook 'scheme-mode-hook 'fci-mode)
-(add-hook 'c-mode-hook 'fci-mode)
-(add-hook 'racket-mode-hook 'fci-mode)
+;;(require 'fill-column-indicator)
+;;(setq fci-rule-column 72)
+(add-hook 'ruby-mode-hook 'whitespace-mode)
+(add-hook 'common-lisp-mode-hook 'whitespace-mode)
+(add-hook 'scheme-mode-hook 'whitespace-mode)
+(add-hook 'c-mode-hook 'whitespace-mode)
+(add-hook 'racket-mode-hook 'whitespace-mode)
+(add-hook 'rust-mode-hook 'whitespace-mode)
 
 
 (global-auto-complete-mode -1)

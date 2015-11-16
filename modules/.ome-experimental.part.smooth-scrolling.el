@@ -1,0 +1,1 @@
+(ome-install 'smooth-scrolling)

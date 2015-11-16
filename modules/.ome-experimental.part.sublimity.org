@@ -1,0 +1,24 @@
+* Sublimity
+  :PROPERTIES:
+  :CUSTOM_ID: sublimity
+  :END:
+
+As a long-history editor, emacs lacks some "modern" features established by
+other "modern" editors, among which [[http://www.sublimetext.com/][sublime]] is one of the most famous and
+popular. To tell the truth, the minimap and smooth-scrolling looks really
+charming and attractive. There're various attempts trying to bring these
+features to emacs, such as [[http://www.emacswiki.org/emacs/MiniMap][minimap.el]], but none of them work perfectly.
+
+[[https://github.com/zk-phi/sublimity][sublimity]] is just another attemp, it's not perfect, however, IMHO, it's better
+than others.
+
+After installing sublimity, type =M-x sublimity-mode= to enable it.
+
+#+NAME: sublimity
+#+BEGIN_SRC emacs-lisp
+  (defun ome-sublimity-setup ()
+    (require 'sublimity-scroll)
+    (require 'sublimity-map))
+
+  (ome-install 'sublimity)
+#+END_SRC

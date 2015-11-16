@@ -1,0 +1,552 @@
+;;; -*- coding: utf-8 -*-
+(("/Users/Sun/Program/java/interview.java" . 400)
+ ("/Users/Sun/Program/java/Wei.java" . 542)
+ ("/Users/Sun/.ssh/config" . 7782)
+ ("/Users/Sun/.emacs.d/.recentf" . 2914)
+ ("/Users/Sun/Program/racket/church_numerals/"
+  (dired-filename . "/Users/Sun/Program/racket/church_numerals/church_numerals.rkt"))
+ ("/Users/Sun/Program/racket/church_numerals/church_numerals_test.rkt" . 1448)
+ ("/Users/Sun/Documents/pl.txt" . 281505)
+ ("/Users/Sun/Program/racket/church_numerals/church_numerals.rkt" . 2258)
+ ("/Users/Sun/program/racket/test.rkt" . 5150)
+ ("/Users/Sun/Documents/Latex/cv.tex" . 3393)
+ ("/Users/Sun/Documents/blog/myblog/source/_posts/lambda_caculus_and_church_encoding.md" . 457)
+ ("/Users/Sun/Documents/cv_newest_version.tex" . 3156)
+ ("/Users/Sun/Documents/PL.txt" . 277994)
+ ("/Users/Sun/program/racket/church_numerals/church_numerals.rkt" . 1791)
+ ("/Users/Sun/Program/Racket/church_numerals/church_numerals_test.rkt" . 385)
+ ("/Users/Sun/Documents/Blog/myBlog/source/_posts/"
+  (dired-filename . "/Users/Sun/Documents/Blog/myBlog/source/_posts/lambda_caculus_and_church_numerals.md~"))
+ ("/Users/Sun/program/rust/test.rs" . 154)
+ ("/Users/Sun/.revive.el" . 1810)
+ ("/Users/Sun/.emacs.d/custom.el" . 1080)
+ ("/Users/Sun/program/rust/philosopher/"
+  (dired-filename . "/Users/Sun/program/rust/philosopher/src"))
+ ("/Users/Sun/program/rust/philosopher/src/"
+  (dired-filename . "/Users/Sun/program/rust/philosopher/src/main.rs"))
+ ("/Users/Sun/program/rust/philosopher/src/main.rs" . 1363)
+ ("/Users/Sun/documents/blog/myblog/source/_posts/"
+  (dired-filename . "/Users/Sun/documents/blog/myblog/source/_posts/lambda_caculus_and_church_numerals.md"))
+ ("/Users/Sun/.emacs.d/modules/ome-haskell.org" . 4228)
+ ("/Users/Sun/.emacs.d/modules/ome-scheme.org" . 822)
+ ("/Users/Sun/.emacs.d/modules/ome-rust-mode.org" . 1140)
+ ("/Users/Sun/.emacs.d/el-get/.loaddefs.el" . 343339)
+ ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/lisp/files.el.gz" . 31202)
+ ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/lisp/international/mule.el.gz" . 11344)
+ ("/Users/Sun/.emacs.d/core/ome-org.el" . 1125)
+ ("/Users/Sun/.emacs.d/el-get/el-get/recipes/"
+  (dired-filename . "/Users/Sun/.emacs.d/el-get/el-get/recipes/2048.el.rcp"))
+ ("/Users/Sun/.emacs.d/el-get/el-get/recipes/yasnippet.rcp" . 304)
+ ("/Users/Sun/.emacs.d/el-get/el-get/recipes/yasnippets.rcp" . 165)
+ ("/Users/Sun/.emacs.d/el-get/el-get/recipes/emacs-racer.rcp" . 164)
+ ("/Users/Sun/.emacs.d/el-get/el-get/recipes/ac-helm.rcp" . 125)
+ ("/Users/Sun/.emacs.d/init.el" . 8)
+ ("/Users/Sun/.emacs.d/custom/emacs-racer/racer.el" . 2024)
+ ("/Users/Sun/SVN/trunk/ATG/UAF_Message_Generation_Tool/conformance_app/iOS/Conformance/Conformance/testcase.plist" . 4752)
+ ("/Users/Sun/.oh-my-zsh/"
+  (dired-filename . "/Users/Sun/.oh-my-zsh/themes"))
+ ("/Users/Sun/.oh-my-zsh/themes/"
+  (dired-filename . "/Users/Sun/.oh-my-zsh/themes/pmcgee.zsh-theme"))
+ ("/Users/Sun/.oh-my-zsh/themes/pmcgee.zsh-theme" . 64)
+ ("/Users/Sun/.mytheme.zsh-theme" . 520)
+ ("/Users/Sun/program/PL/"
+  (dired-filename . "/Users/Sun/program/PL/10.rkt"))
+ ("/Users/Sun/program/PL/10.rkt" . 223)
+ ("/Users/Sun/program/PL/11.rkt" . 2096)
+ ("/Users/Sun/program/PL/5.rkt" . 10014)
+ ("/Users/Sun/.emacs.d/url/cookies" . 371)
+ ("/Users/Sun/SVN/trunk/atg/mds/install_mds/install.py" . 10494)
+ ("/usr/local/texlive/2015/texmf-dist/tex/latex/fontspec/fontspec.sty" . 1054)
+ ("/Users/Sun/Documents/_region_.tex" . 2565)
+ ("/Users/Sun/.pentadactylrc" . 3099)
+ ("/Users/Sun/.pentadactylrc~" . 1195)
+ ("/Users/Sun/.vimperatorrc" . 4090)
+ ("/Users/Sun/.pentadactyl/"
+  (dired-filename . "/Users/Sun/.pentadactyl/colors"))
+ ("/Users/Sun/.pentadactyl/colors/"
+  (dired-filename . "/Users/Sun/.pentadactyl/colors/solarized-dark.penta"))
+ ("/Users/Sun/.pentadactyl/colors/solarized-dark.penta" . 2541)
+ ("/Users/Sun/Program/Rust/philosopher/src/main.rs" . 1215)
+ ("/Users/Sun/svn/trunk/qa/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Qrcodeloop.java"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/input"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/input/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/TC_QR1000.csv"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/TC_auth1000.csv" . 60)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/TC_QR1000.csv" . 162)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Authloop.java" . 1328)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Qrcodeloop.java" . 1420)
+ ("/Users/Sun/Program/sinatra/QRcode/"
+  (dired-filename . "/Users/Sun/Program/sinatra/QRcode/main.rb"))
+ ("/Users/Sun/Program/sinatra/QRcode/main.rb" . 23)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/TC_QR.csv" . 89)
+ ("/Users/Sun/Program/sinatra/"
+  (dired-filename . "/Users/Sun/Program/sinatra/stringer"))
+ ("/Users/Sun/Program/sinatra/minarun/"
+  (dired-filename . "/Users/Sun/Program/sinatra/minarun/app.rb"))
+ ("/Users/Sun/NNL/EMR2/SQLinj/"
+  (dired-filename . "/Users/Sun/NNL/EMR2/SQLinj/Server"))
+ ("/Users/Sun/NNL/EMR2/SQLinj/Server/"
+  (dired-filename . "/Users/Sun/NNL/EMR2/SQLinj/Server/test.rb"))
+ ("/Users/Sun/NNL/EMR2/SQLinj/Server/UAFTLV.rb" . 1280)
+ ("/Users/Sun/NNL/EMR2/SQLinj/Server/app.rb" . 151)
+ ("/Users/Sun/Program/python/TripadvisorReview/"
+  (dired-filename . "/Users/Sun/Program/python/TripadvisorReview/TripadvisorReview"))
+ ("/Users/Sun/Program/python/TripadvisorReview/TripadvisorReview/"
+  (dired-filename . "/Users/Sun/Program/python/TripadvisorReview/TripadvisorReview/spiders"))
+ ("/Users/Sun/Program/python/TripadvisorReview/TripadvisorReview/spiders/"
+  (dired-filename . "/Users/Sun/Program/python/TripadvisorReview/TripadvisorReview/spiders/Tadv_spider.py"))
+ ("/Users/Sun/Program/python/TripadvisorReview/TripadvisorReview/spiders/Tadv_spider.py" . 2634)
+ ("/Users/Sun/Program/python/TripadvisorReview/TripadvisorReview/output/"
+  (dired-filename . "/Users/Sun/Program/python/TripadvisorReview/TripadvisorReview/output/items.json"))
+ ("/Users/Sun/Program/python/TripadvisorReview/TripadvisorReview/output/items.json" . 4416)
+ ("/Users/Sun/Program/"
+  (dired-filename . "/Users/Sun/Program/swift"))
+ ("/Users/Sun/Program/swift/Wrapper_Demo/DemoCpp.h" . 228)
+ ("/Users/Sun/Program/swift/"
+  (dired-filename . "/Users/Sun/Program/swift/Wrapper_Demo"))
+ ("/Users/Sun/Program/swift/Wrapper_Demo/"
+  (dired-filename . "/Users/Sun/Program/swift/Wrapper_Demo/main.swft"))
+ ("/Users/Sun/Program/swift/Wrapper_Demo/DemoCpp.cpp" . 92)
+ ("/Users/Sun/SVN/trunk/qa/IOS_Instrument_Automation_Framework/Scripts/IOS8/Run1000.js" . 352)
+ ("/Users/Sun/SVN/trunk/qa/IOS_Instrument_Automation_Framework/Scripts/IOS8/TutorialApp.js" . 1699)
+ ("/Users/Sun/Downloads/"
+  (dired-filename . "/Users/Sun/Downloads/results"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/test/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/test/.."))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/android/SampleApp.java" . 9724)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/migration/Tc1392.java" . 1615)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/migration/Tc1065.java" . 1563)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/InstallAndRunAll.sh" . 120)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/installMFAC.sh" . 3369)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/driver/HybridDriver.java" . 2496)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/driver/AndDaemon.java" . 6097)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/util/CSVParser.java" . 1791)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/util/Controller.java" . 2218)
+ ("/Users/Sun/NNL/EMR2/"
+  (dired-filename . "/Users/Sun/NNL/EMR2/SQLinj"))
+ ("/Users/Sun/.emacs.d/"
+  (dired-filename . "/Users/Sun/.emacs.d/custom.el"))
+ ("/Users/Sun/.emacs.d/auto/ome.el" . 270)
+ ("/Users/Sun/.emacs.d/el-get/ctable/readme.md" . 3957)
+ ("/Users/Sun/SVN/trunk/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa"))
+ ("/Users/Sun/SVN/trunk/qa/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation"))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/installAndRunAll.bat"))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/installAndRunAll.bat" . 391)
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/InstallAndRunAll.sh" . 1111)
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/installMFAC.sh" . 4949)
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/input/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/input/Tutorialapp"))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/input/Tutorialapp/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/input/Tutorialapp/TC_auth1000.csv"))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/noknok/automation/operations/android/tutorialapp/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/noknok/automation/operations/android/tutorialapp/.."))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/noknok/automation/operations/android/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/noknok/automation/operations/android/.."))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/noknok/automation/operations/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/noknok/automation/operations/.."))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/noknok/automation/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/noknok/automation/.."))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/noknok/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/noknok/.."))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/classes/com/.."))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/classes/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/classes/.."))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/src/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/src/com"))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok"))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/automation"))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/automation/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/automation/operations"))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/automation/operations/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android"))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp"))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/"
+  (dired-filename . "/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Auth.java"))
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Authloop.java" . 2611)
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/installAndRun1.bat" . 151)
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/installMFAC.bat" . 3762)
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Auth.java" . 2899)
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/input/Tutorialapp/TC3485.csv" . 409)
+ ("/Users/Sun/.emacs.d/elpa/csv-mode-1.4/csv-mode-autoloads.el" . 2150)
+ ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/lisp/subr.el.gz" . 11415)
+ ("/Users/Sun/program/Ruby/"
+  (dired-filename . "/Users/Sun/program/Ruby/Sudoku.rb"))
+ ("/Users/Sun/program/Ruby/Sudoku.rb" . 5056)
+ ("/Users/Sun/program/Python/TripadvisorReview/TripadvisorReview/spiders/Tadv_spider.py" . 178)
+ ("/Users/Sun/program/Python/Tripadvisor/"
+  (dired-filename . "/Users/Sun/program/Python/Tripadvisor/tripadvisor-scraper"))
+ ("/Users/Sun/program/Python/Tripadvisor/tripadvisor-scraper/"
+  (dired-filename . "/Users/Sun/program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper"))
+ ("/Users/Sun/program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/"
+  (dired-filename . "/Users/Sun/program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot"))
+ ("/Users/Sun/program/Python/TripadvisorReview/"
+  (dired-filename . "/Users/Sun/program/Python/TripadvisorReview/TripadvisorReview"))
+ ("/Users/Sun/program/Python/TripadvisorReview/TripadvisorReview/"
+  (dired-filename . "/Users/Sun/program/Python/TripadvisorReview/TripadvisorReview/items.py"))
+ ("/Users/Sun/program/Python/TripadvisorReview/TripadvisorReview/items.py" . 197)
+ ("/Users/Sun/program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/"
+  (dired-filename . "/Users/Sun/program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/spiders"))
+ ("/Users/Sun/program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/spiders/"
+  (dired-filename . "/Users/Sun/program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/spiders/tripadvisor-restaurant.py"))
+ ("/Users/Sun/program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/spiders/tripadvisor-restaurant.py" . 1979)
+ ("/Users/Sun/program/python/TripadvisorReview/"
+  (dired-filename . "/Users/Sun/program/python/TripadvisorReview/TripadvisorReview"))
+ ("/Users/Sun/program/python/TripadvisorReview/TripadvisorReview/"
+  (dired-filename . "/Users/Sun/program/python/TripadvisorReview/TripadvisorReview/spiders"))
+ ("/Users/Sun/program/python/TripadvisorReview/TripadvisorReview/spiders/"
+  (dired-filename . "/Users/Sun/program/python/TripadvisorReview/TripadvisorReview/spiders/Tadv_spider.py"))
+ ("/Users/Sun/program/python/TripadvisorReview/TripadvisorReview/spiders/Tadv_spider.py" . 844)
+ ("/Users/Sun/Program/Python/"
+  (dired-filename . "/Users/Sun/Program/Python/TripadvisorReview"))
+ ("/Users/Sun/Program/Python/TripadvisorReview/"
+  (dired-filename . "/Users/Sun/Program/Python/TripadvisorReview/TripadvisorReview"))
+ ("/Users/Sun/Program/Python/TripadvisorReview/TripadvisorReview/spiders/"
+  (dired-filename . "/Users/Sun/Program/Python/TripadvisorReview/TripadvisorReview/spiders/Tadv_spider.py"))
+ ("/Users/Sun/Program/Python/TripadvisorReview/TripadvisorReview/"
+  (dired-filename . "/Users/Sun/Program/Python/TripadvisorReview/TripadvisorReview/items.json"))
+ ("/Users/Sun/Program/Python/TripadvisorReview/TripadvisorReview/spiders/Tadv_spider.py" . 1312)
+ ("/Users/Sun/Program/fuzzer/src/fuzzer/FuzzFcParams.java" . 2650)
+ ("/Users/Sun/Program/fuzzer/src/messagehandler/"
+  (dired-filename . "/Users/Sun/Program/fuzzer/src/messagehandler/V1MessageHandler.java"))
+ ("/Users/Sun/Program/fuzzer/src/messagehandler/V1MessageHandler.java" . 5275)
+ ("/Users/Sun/Program/fuzzer/src/fuzzer/FuzzSDK.java" . 191)
+ ("/Users/Sun/Program/fuzzer/src/fuzzer/FuzzProtocolMessage.java" . 505)
+ ("/Users/Sun/Program/fuzzer/"
+  (dired-filename . "/Users/Sun/Program/fuzzer/src"))
+ ("/Users/Sun/NNL/emr2/Fuzz/"
+  (dired-filename . "/Users/Sun/NNL/emr2/Fuzz/Tomcat"))
+ ("/Users/Sun/NNL/emr2/Fuzz/Tomcat/"
+  (dired-filename . "/Users/Sun/NNL/emr2/Fuzz/Tomcat/webapps"))
+ ("/Users/Sun/NNL/emr2/Fuzz/Tomcat/webapps/"
+  (dired-filename . "/Users/Sun/NNL/emr2/Fuzz/Tomcat/webapps/Fuzzer"))
+ ("/Users/Sun/NNL/emr2/Fuzz/Tomcat/webapps/Fuzzer/"
+  (dired-filename . "/Users/Sun/NNL/emr2/Fuzz/Tomcat/webapps/Fuzzer/WEB-INF"))
+ ("/Users/Sun/NNL/emr2/Fuzz/Tomcat/webapps/Fuzzer/WEB-INF/"
+  (dired-filename . "/Users/Sun/NNL/emr2/Fuzz/Tomcat/webapps/Fuzzer/WEB-INF/web.xml"))
+ ("/Users/Sun/NNL/emr2/Fuzz/Tomcat/webapps/Fuzzer/WEB-INF/web.xml" . 40)
+ ("/Users/Sun/Program/fuzzer/src/assertservlet/Assert.java" . 540)
+ ("/Users/Sun/Program/fuzzer/src/fuzzer/FuzzInput.java" . 17)
+ ("/Users/Sun/Program/fuzzer/src/fuzzer/"
+  (dired-filename . "/Users/Sun/Program/fuzzer/src/fuzzer/.."))
+ ("/Users/Sun/Program/fuzzer/src/assertservlet/"
+  (dired-filename . "/Users/Sun/Program/fuzzer/src/assertservlet/Assert.java"))
+ ("/Users/Sun/Program/fuzzer/src/util/MessageGenerator.java" . 332)
+ ("/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/output/" . 352)
+ ("/Users/Sun/Program/PL/1.rkt" . 3374)
+ ("/Users/Sun/Program/PL/4.rkt" . 837)
+ ("/Users/Sun/Program/PL/RecursionNumber.rkt" . 395)
+ ("/Users/Sun/Program/Python/TripadvisorReview/TripadvisorReview/settings.py" . 3077)
+ ("/Users/Sun/Program/Python/tutorial/"
+  (dired-filename . "/Users/Sun/Program/Python/tutorial/tutorial"))
+ ("/Users/Sun/Program/Python/tutorial/tutorial/"
+  (dired-filename . "/Users/Sun/Program/Python/tutorial/tutorial/spiders"))
+ ("/Users/Sun/Program/Python/tutorial/tutorial/spiders/"
+  (dired-filename . "/Users/Sun/Program/Python/tutorial/tutorial/spiders/__init__.py"))
+ ("/Users/Sun/Program/Python/tutorial/tutorial/spiders/dmoz_spider.py" . 592)
+ ("/Users/Sun/Program/Python/tutorial/tutorial/items.py" . 283)
+ ("/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/items.py" . 694)
+ ("/Users/Sun/Program/Python/TripadvisorReview/TripadvisorReview/run.sh" . 154)
+ ("/Users/Sun/Program/Python/TripadvisorReview/TripadvisorReview/items.py" . 342)
+ ("/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/"
+  (dired-filename . "/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper"))
+ ("/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/"
+  (dired-filename . "/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot"))
+ ("/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/"
+  (dired-filename . "/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/spiders"))
+ ("/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/spiders/"
+  (dired-filename . "/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/spiders/dmoz.py"))
+ ("/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/spiders/dmoz.py" . 566)
+ ("/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/spiders/tripadvisor-restaurant.py" . 219)
+ ("/Users/Sun/Program/Python/Tripadvisor/" . 248)
+ ("/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/tripadvisorbot/spiders/crawlerhelper.py" . 775)
+ ("/Users/Sun/Program/fuzzer/src/fuzzer/FuzzAssertions.java" . 4309)
+ ("/Users/Sun/Program/fuzzer/src/"
+  (dired-filename . "/Users/Sun/Program/fuzzer/src/util"))
+ ("/Users/Sun/Program/fuzzer/src/util/"
+  (dired-filename . "/Users/Sun/Program/fuzzer/src/util/TLVToJSON.java"))
+ ("/Users/Sun/Program/fuzzer/src/util/Constants.java" . 2591)
+ ("/Users/Sun/Program/fuzzer/src/util/TLVToJSON.java" . 2999)
+ ("/Users/Sun/Program/fuzzer/src/util/JSONToTLV.java" . 2721)
+ ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/etc/HELLO" . 824)
+ ("/Users/Sun/Program/Python/Tripadvisor/tripadvisor-scraper/tripadvisor-scraper/output/result.json" . 460)
+ ("/Users/Sun/program/Lisp/blood_pressure.lisp" . 1006)
+ ("/Users/Sun/Program/Ruby/1.rb" . 222)
+ ("/Users/Sun/.muttrc" . 400)
+ ("/Users/Sun/.getmail/gmailrc" . 189)
+ ("/Users/Sun/Program/Ruby/"
+  (dired-filename . "/Users/Sun/Program/Ruby/Randomtest.rb"))
+ ("/Users/Sun/Program/Ruby/Randomtest.rb" . 131)
+ ("/Users/Sun/Program/Ruby/Sudoku.rb" . 208)
+ ("/Users/Sun/Android/android-ndk-r10e/build/awk/extract-debuggable.awk" . 122)
+ ("/Users/Sun/Program/Ruby/FBWh.rb" . 533)
+ ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/etc/NEWS" . 252)
+ ("/Users/Sun/.emacs.d/elpa/hackernews-20150216.218/hackernews-autoloads.el" . 454)
+ ("/Users/Sun/program/ruby/1.rb" . 201)
+ ("/Users/Sun/program/rust/guessing_game/"
+  (dired-filename . "/Users/Sun/program/rust/guessing_game/src"))
+ ("/Users/Sun/program/rust/guessing_game/src/"
+  (dired-filename . "/Users/Sun/program/rust/guessing_game/src/main.rs"))
+ ("/Users/Sun/program/rust/guessing_game/Cargo.toml" . 121)
+ ("/Users/Sun/program/rust/guessing_game/src/main.rs" . 748)
+ ("/usr/local/src/rust/src/libstd/io/mod.rs" . 21063)
+ ("/Users/Sun/program/Ruby/Randomtest.rb" . 130)
+ ("/Users/Sun/program/Ruby/1.rb" . 266)
+ ("/Users/Sun/program/"
+  (dired-filename . "/Users/Sun/program/Rust"))
+ ("/Users/Sun/program/Rust/"
+  (dired-filename . "/Users/Sun/program/Rust/hello_world.rs"))
+ ("/Users/Sun/.emacs.d/elpa/flymake-rust-20141004.1552/flymake-rust-autoloads.el" . 241)
+ ("/Users/Sun/.zshrc" . 5459)
+ ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/etc/DEBUG" . 21)
+ ("/Users/Sun/.emacs.d/core/ome-gui.el" . 433)
+ ("/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/uri/common.rb" . 3506)
+ ("/Users/Sun/program/ruby/Randomtest.rb" . 115)
+ ("/Users/Sun/.emacs.d/core/ome-completion.el" . 711)
+ ("/Users/Sun/.emacs.d/core/ome-auto-mode.el" . 386)
+ ("/Users/Sun/Program/fuzzer/README" . 578)
+ ("/Users/Sun/Program/fuzzer/WebContent/WEB-INF/Operations/FINISH_AUTH/"
+  (dired-filename . "/Users/Sun/Program/fuzzer/WebContent/WEB-INF/Operations/FINISH_AUTH/device"))
+ ("/Users/Sun/Program/fuzzer/WebContent/WEB-INF/web.xml" . 822)
+ ("/Users/Sun/program/fuzzer/src/fuzzer/FuzzAssertions.java" . 228)
+ ("/Users/Sun/program/java/shortURL/"
+  (dired-filename . "/Users/Sun/program/java/shortURL/src"))
+ ("/Users/Sun/program/java/shortURL/src/"
+  (dired-filename . "/Users/Sun/program/java/shortURL/src/ShortURLGenerator.java"))
+ ("/Users/Sun/program/java/shortURL/src/ShortURLGenerator.java" . 37)
+ ("/Users/Sun/program/C/chinese.c" . 575)
+ ("/Users/Sun/Program/Lisp/blood_pressure.lisp" . 92)
+ ("/Users/Sun/.emacs.d/elpa/helm-projectile-20150513.1448/helm-projectile-autoloads.el" . 1861)
+ ("/Users/Sun/program/PL/1.rkt" . 3464)
+ ("/Users/Sun/.emacs.d/elpa/color-theme-sanityinc-solarized-20150328.1301/color-theme-sanityinc-solarized-autoloads.el" . 965)
+ ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/etc/PROBLEMS" . 31)
+ ("/Users/Sun/Library/Application Support/Firefox/Profiles/userChrome.css" . 79)
+ ("/Users/Sun/Documents/latex/cv.tex" . 2234)
+ ("/Users/Sun/Documents/cv_9.tex" . 2937)
+ ("/Users/Sun/.emacs.d/modules/ome-tex.el" . 2450)
+ ("/Users/Sun/Documents/LaTeX/cv.tex" . 6060)
+ ("/Users/Sun/Program/PL/"
+  (dired-filename . "/Users/Sun/Program/PL/10.rkt"))
+ ("/Users/Sun/Program/PL/10.rkt" . 957)
+ ("/Users/Sun/Program/PL/12.rkt" . 7904)
+ ("/Users/Sun/Program/C/chinese.c" . 575)
+ ("/Users/Sun/Dropbox/spr2015/wireless/NFC/"
+  (dired-filename . "/Users/Sun/Dropbox/spr2015/wireless/NFC/NFC.tex"))
+ ("/Users/Sun/Dropbox/spr2015/wireless/NFC/NFC.tex" . 6149)
+ ("/Users/Sun/.emacs.d/core/ome-basic.el" . 3797)
+ ("/Users/Sun/program/C/time.c" . 55)
+ ("/Users/Sun/Documents/LaTeX/_region_.tex" . 2440)
+ ("/Users/Sun/Documents/"
+  (dired-filename . "/Users/Sun/Documents/LaTeX"))
+ ("/Users/Sun/Documents/LaTeX/cjk_test.tex" . 37)
+ ("/Users/Sun/Documents/LaTeX/db_1.tex" . 159)
+ ("/Users/Sun/Desktop/"
+  (dired-filename . "/Users/Sun/Desktop/中文.tex"))
+ ("/Users/Sun/Documents/dissertation/start.tex" . 497)
+ ("/Users/Sun/Documents/dissertation/"
+  (dired-filename . "/Users/Sun/Documents/dissertation/NJUbachelor.cls"))
+ ("/Users/Sun/Documents/dissertation/NJUbachelor.cls" . 8115)
+ ("/Users/Sun/Documents/dissertation/NJUbachelor.bst" . 66)
+ ("/Users/Sun/Documents/LaTeX/"
+  (dired-filename . "/Users/Sun/Documents/LaTeX/cjk_test.tex"))
+ ("/Users/Sun/Documents/LaTeX/ch4.tex" . 5552)
+ ("/Users/Sun/Documents/LaTeX/cv/"
+  (dired-filename . "/Users/Sun/Documents/LaTeX/cv/resume.tex"))
+ ("/Users/Sun/Documents/LaTeX/résumé.tex" . 4484)
+ ("/Users/Sun/Documents/LaTeX/cv/resume.tex" . 4486)
+ ("/Users/Sun/Documents/LaTeX/cv/cv_9.tex" . 1881)
+ ("/Users/Sun/Documents/LaTeX/cv/cv_9 copy.tex" . 203)
+ ("/Users/Sun/Documents/LaTeX/cv/cv_6.tex" . 4009)
+ ("/Users/Sun/Documents/LaTeX/bd_2.tex" . 131)
+ ("/Users/Sun/.html" . 8939)
+ ("/Users/Sun/Desktop/.tex" . 1494)
+ ("/Users/Sun/.emacs.d/core/ome-advanced.el" . 196)
+ ("/Users/Sun/.emacs.d/modules/ome-tex.org" . 9508)
+ ("/Users/Sun/.emacs.d/modules/ome-web.el" . 1448)
+ ("/Users/Sun/.emacs.d/elpa/cyberpunk-theme-20150308.935/cyberpunk-theme-autoloads.el" . 425)
+ ("/Users/Sun/.emacs.d/core/"
+  (dired-filename . "/Users/Sun/.emacs.d/core/ome-gui.el"))
+ ("/Users/Sun/.emacs.d/fill-column-indicator.el" . 8294)
+ ("/Users/Sun/.emacs.d/modules/ome-experimental.org" . 9145)
+ ("/Users/Sun/.emacs.d/modules/.ome-experimental.part.sublimity.el" . 98)
+ ("/Users/Sun/.emacs.d/core/ome-miscs.el" . 365)
+ ("/Users/Sun/.emacs.d/elpa/queue-0.1.1/queue-autoloads.el" . 334)
+ ("/Users/Sun/Documents/tmux-powerline/"
+  (dired-filename . "/Users/Sun/Documents/tmux-powerline/.DS_Store"))
+ ("/Users/Sun/Documents/Blog/"
+  (dired-filename . "/Users/Sun/Documents/Blog/myBlog"))
+ ("/Users/Sun/Documents/Blog/myBlog/"
+  (dired-filename . "/Users/Sun/Documents/Blog/myBlog/source"))
+ ("/Users/Sun/Documents/Blog/myBlog/source/_drafts/"
+  (dired-filename . "/Users/Sun/Documents/Blog/myBlog/source/_drafts/.."))
+ ("/Users/Sun/Documents/Blog/myBlog/source/"
+  (dired-filename . "/Users/Sun/Documents/Blog/myBlog/source/_posts"))
+ ("/Applications/Racket/collects/racket/match/gen-match.rkt" . 2455)
+ ("/Users/Sun/Program/PL/7.rkt" . 3104)
+ ("/Users/Sun/program/PL/7.rkt" . 2416)
+ ("/Users/Sun/program/Pl/4.rkt" . 956)
+ ("/Users/Sun/program/Pl/6.rkt" . 9279)
+ ("/Users/Sun/program/PL/4.rkt" . 12900)
+ ("/Users/"
+  (dired-filename . "/Users/Sun"))
+ ("/Users/Sun/"
+  (dired-filename . "/Users/Sun/.emacs.d"))
+ ("/Users/Sun/.emacs.d/el-get/"
+  (dired-filename . "/Users/Sun/.emacs.d/el-get/cider"))
+ ("/Users/Sun/.emacs.d/el-get/auto-complete/"
+  (dired-filename . "/Users/Sun/.emacs.d/el-get/auto-complete/etc"))
+ ("/Users/Sun/.emacs.d/el-get/auto-complete/etc/"
+  (dired-filename . "/Users/Sun/.emacs.d/el-get/auto-complete/etc/install.el"))
+ ("/Users/Sun/.emacs.d/el-get/auto-complete/doc/"
+  (dired-filename . "/Users/Sun/.emacs.d/el-get/auto-complete/doc/Makefile"))
+ ("/Users/Sun/.emacs.d/el-get/auto-complete/dict/"
+  (dired-filename . "/Users/Sun/.emacs.d/el-get/auto-complete/dict/java-mode"))
+ ("/Users/Sun/.emacs.d/el-get/auto-complete/dict/java-mode" . 141)
+ ("/Users/Sun/program/PL/README" . 52)
+ ("/Users/Sun/program/PL/3.rkt" . 551)
+ ("/Users/Sun/Library/"
+  (dired-filename . "/Users/Sun/Library/Racket"))
+ ("/Users/Sun/Library/Racket/"
+  (dired-filename . "/Users/Sun/Library/Racket/6.1.1"))
+ ("/Users/Sun/Library/Racket/6.1.1/"
+  (dired-filename . "/Users/Sun/Library/Racket/6.1.1/collects"))
+ ("/Users/Sun/Library/Racket/6.1.1/collects/"
+  (dired-filename . "/Users/Sun/Library/Racket/6.1.1/collects/pl"))
+ ("/Users/Sun/Library/Racket/6.1.1/collects/pl/"
+  (dired-filename . "/Users/Sun/Library/Racket/6.1.1/collects/pl/lang"))
+ ("/Users/Sun/Library/Racket/6.1.1/collects/pl/lang/"
+  (dired-filename . "/Users/Sun/Library/Racket/6.1.1/collects/pl/lang/utils.rkt"))
+ ("/Users/Sun/Library/Racket/6.1.1/collects/pl/lang/utils.rkt" . 2553)
+ ("/Users/Sun/Program/PL/3.rkt" . 749)
+ ("/Users/Sun/program/PL/2.rkt" . 921)
+ ("/Users/Sun/Dropbox/"
+  (dired-filename . "/Users/Sun/Dropbox/Fall 2014"))
+ ("/Users/Sun/Program/pintool/"
+  (dired-filename . "/Users/Sun/Program/pintool/.."))
+ ("/Users/Sun/Program/Euler/"
+  (dired-filename . "/Users/Sun/Program/Euler/03.rkt"))
+ ("/Users/Sun/Program/Euler/02.rkt" . 325)
+ ("/Users/Sun/Program/Euler/03.rkt" . 840)
+ ("/Users/Sun/program/PL/test.rkt" . 1446)
+ ("/Users/Sun/program/Euler/"
+  (dired-filename . "/Users/Sun/program/Euler/01.c"))
+ ("/Users/Sun/program/Euler/03.rkt" . 820)
+ ("/Users/Sun/program/Euler/02.rkt" . 238)
+ ("/Users/Sun/program/Euler/01.rkt" . 571)
+ ("/Users/Sun/program/sicp/chap1/31.scm" . 594)
+ ("/Users/Sun/program/sicp/chap1/29.scm" . 172)
+ ("/Users/Sun/program/sicp/chap1/30.scm" . 341)
+ ("/Users/Sun/.emacs.d/elpa/yafolding-20141202.2056/yafolding-autoloads.el" . 626)
+ ("/Users/Sun/.emacs.d/elpa/racket-mode-20150104.1325/racket-mode-autoloads.el" . 1623)
+ ("/Users/Sun/program/sicp/chap1/22.scm" . 831)
+ ("/Users/Sun/program/sicp/chap1/17.scm" . 287)
+ ("/Users/Sun/program/sicp/chap1/18.scm" . 454)
+ ("/Users/Sun/program/sicp/chap1/19.scm" . 428)
+ ("/Users/Sun/program/sicp/chap1/20.scm" . 232)
+ ("/Users/Sun/documents/LaTeX/"
+  (dired-filename . "/Users/Sun/documents/LaTeX/cv"))
+ ("/Users/Sun/documents/LaTeX/cv/"
+  (dired-filename . "/Users/Sun/documents/LaTeX/cv/.tex"))
+ ("/Users/Sun/documents/LaTeX/cv/cv_neu.tex" . 2053)
+ ("/Users/Sun/documents/LaTeX/cv/cv_neu.tex~" . 836)
+ ("/Users/Sun/documents/LaTeX/résumé.tex" . 4482)
+ ("/Users/Sun/Program/Git/cv/cv.tex" . 1100)
+ ("/Users/Sun/emacs_backup/"
+  (dired-filename . "/Users/Sun/emacs_backup/.emacs"))
+ ("/Users/Sun/emacs_backup/.emacs" . 11699)
+ ("/Users/Sun/.emacs.d/modules/ome-java.el" . 81)
+ ("/Users/Sun/.emacs.d/modules/ome-ruby.el" . 1612)
+ ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/lisp/custom.el.gz" . 6762)
+ ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/lisp/emacs-lisp/package.el.gz" . 44638)
+ ("/Users/Sun/.emacs.d/modules/ome-scheme.el" . 116)
+ ("/Users/Sun/.emacs.d/el-get/geiser/"
+  (dired-filename . "/Users/Sun/.emacs.d/el-get/geiser/.git"))
+ ("/Users/Sun/Program/sicp/"
+  (dired-filename . "/Users/Sun/Program/sicp/.git"))
+ ("/Users/Sun/program/pintool/"
+  (dired-filename . "/Users/Sun/program/pintool/Project"))
+ ("/Users/Sun/program/pintool/Project/"
+  (dired-filename . "/Users/Sun/program/pintool/Project/report"))
+ ("/Users/Sun/program/pintool/Project/report/"
+  (dired-filename . "/Users/Sun/program/pintool/Project/report/project.tex"))
+ ("/Users/Sun/program/pintool/Project/report/project.tex" . 7846)
+ ("/Users/Sun/program/pintool/Project/report/proposal.tex" . 3743)
+ ("/Users/Sun/Program/pintool/Project/"
+  (dired-filename . "/Users/Sun/Program/pintool/Project/vp"))
+ ("/Users/Sun/Program/pintool/Project/vp/"
+  (dired-filename . "/Users/Sun/Program/pintool/Project/vp/cache.cpp"))
+ ("/Users/Sun/Program/pintool/Project/report/project.tex" . 18684)
+ ("/Users/Sun/Dropbox/MailAttachment/beamer/default.sty" . 858)
+ ("/Users/Sun/Dropbox/MailAttachment/beamer/CA.tex" . 2874)
+ ("/Users/Sun/Program/Pintool/Project/vp/cache.h" . 1324)
+ ("/Users/Sun/Program/Pintool/Project/vp/cache.cpp" . 1046)
+ ("/Users/Sun/Program/Pintool/Project/vp/stride-predictor.h" . 3548)
+ ("/Users/Sun/Program/Pintool/Project/vp/last_value.cpp" . 1395)
+ ("/Users/Sun/Program/Pintool/Project/report/proposal.tex" . 4033)
+ ("/Users/Sun/Program/Pintool/Project/evaluation/"
+  (dired-filename . "/Users/Sun/Program/Pintool/Project/evaluation/localitytool"))
+ ("/Users/Sun/Program/Pintool/Project/evaluation/localitytool/"
+  (dired-filename . "/Users/Sun/Program/Pintool/Project/evaluation/localitytool/locality.cpp"))
+ ("/Users/Sun/Program/Pintool/Project/evaluation/localitytool/locality.cpp" . 1906)
+ ("/Users/Sun/Program/Pintool/Project/vp/two-level.cpp" . 1430)
+ ("/Users/Sun/Program/Pintool/Project/plot/test.tex" . 1714)
+ ("/Users/Sun/Program/Pintool/Project/vp/two-level-predictor.h" . 1311)
+ ("/Users/Sun/Program/Pintool/Project/vp/hybrid.cpp" . 1762)
+ ("/Users/Sun/Program/Pintool/Project/vp/evaluate.cpp" . 1470)
+ ("/Users/Sun/Program/Pintool/Project/vp/common.h" . 14)
+ ("/Users/Sun/Program/Pintool/Project/"
+  (dired-filename . "/Users/Sun/Program/Pintool/Project/vp"))
+ ("/Users/Sun/Program/Pintool/Project/vp/"
+  (dired-filename . "/Users/Sun/Program/Pintool/Project/vp/cache.cpp"))
+ ("/Users/Sun/Program/pintool/Project/vp/common.h" . 20)
+ ("/Users/Sun/Program/pintool/Project/vp/cache.cpp" . 487)
+ ("/Users/Sun/Program/pintool/Project/vp/cache.h" . 755)
+ ("/Users/Sun/Program/pintool/Project/evaluation/"
+  (dired-filename . "/Users/Sun/Program/pintool/Project/evaluation/pintools"))
+ ("/Users/Sun/Program/pintool/Project/evaluation/pintools/"
+  (dired-filename . "/Users/Sun/Program/pintool/Project/evaluation/pintools/.DS_Store"))
+ ("/Users/Sun/Program/pintool/Project/report/proposal.tex" . 3989)
+ ("/Users/Sun/program/pintool/source/tools/ManualExamples/"
+  (dired-filename . "/Users/Sun/program/pintool/source/tools/ManualExamples/itrace.cpp"))
+ ("/Users/Sun/program/pintool/source/tools/SimpleExamples/"
+  (dired-filename . "/Users/Sun/program/pintool/source/tools/SimpleExamples/opcodemix.cpp"))
+ ("/Users/Sun/program/pintool/source/tools/SimpleExamples/opcodemix.cpp" . 1823)
+ ("/Users/Sun/program/pintool/source/tools/ManualExamples/itrace.cpp" . 2098)
+ ("/Users/Sun/program/pintool/source/"
+  (dired-filename . "/Users/Sun/program/pintool/source/tools"))
+ ("/Users/Sun/program/pintool/source/tools/"
+  (dired-filename . "/Users/Sun/program/pintool/source/tools/ManualExamples"))
+ ("/Users/Sun/program/pintool/source/tools/SimpleExamples/pinatrace.cpp" . 5192)
+ ("/Users/Sun/program/pintool/source/include/pin/pin.H" . 2047)
+ ("/Users/Sun/program/pintool/source/include/pin/gen/"
+  (dired-filename . "/Users/Sun/program/pintool/source/include/pin/gen/ins_syscall_ia32_unix.PH"))
+ ("/Users/Sun/Program/pintool/source/"
+  (dired-filename . "/Users/Sun/Program/pintool/source/tools"))
+ ("/Users/Sun/Program/pintool/source/tools/"
+  (dired-filename . "/Users/Sun/Program/pintool/source/tools/SimpleExamples"))
+ ("/Users/Sun/Program/pintool/source/tools/ManualExamples/"
+  (dired-filename . "/Users/Sun/Program/pintool/source/tools/ManualExamples/itrace.cpp")))

@@ -1,0 +1,1 @@
+("~/.emacs.d/" "~/program/PL/" "~/Program/PL/" "~/Documents/Blog/myBlog/" "~/program/Pl/" "~/.emacs.d/el-get/auto-complete/" "~/Program/" "~/program/" "~/Program/Euler/" "~/program/Euler/" "~/program/sicp/" "~/emacs_backup/" "~/Program/sicp/" "~/Program/Git/cv/" "~/.emacs.d/el-get/geiser/" "~/.emacs.d/el-get/yasnippet/snippets/" "~/emacs.d_backup/" "~/Program/Ruby/")

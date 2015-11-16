@@ -97,6 +97,11 @@
    (:name deferred :description "Simple asynchronous functions for emacs lisp." :type github :pkgname "kiwanami/emacs-deferred"))
  (diminish status "installed" recipe
            (:name diminish :description "An Emacs package that diminishes the amount of space taken on the mode line by the names of minor modes." :type http :url "http://www.eskimo.com/~seldon/diminish.el" :features diminish))
+ (dockerfile-mode status "installed" recipe
+                  (:name dockerfile-mode :description "An emacs mode for handling Dockerfiles." :type github :pkgname "spotify/dockerfile-mode" :prepare
+                         (progn
+                           (add-to-list 'auto-mode-alist
+                                        '("Dockerfile\\'" . dockerfile-mode)))))
  (eclim status "installed" recipe
         (:name eclim :website "https://github.com/senny/emacs-eclim/" :description "This project brings some of the great eclipse features to emacs developers." :type github :pkgname "senny/emacs-eclim" :features eclim :depends
                (s)

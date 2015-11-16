@@ -1,25 +1,44 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/Sun/Program/java/interview.java" . 400)
+(("/Users/Sun/.emacs.d/custom.el" . 16973)
+ ("/Users/Sun/.emacs.d/.recentf" . 2997)
+ ("/Users/Sun/.emacs.d/modules/ome-cc.el" . 2550)
+ ("/Users/Sun/program/rust/test.rs" . 127)
+ ("/Users/Sun/.emacs.d/el-get/rcodetools/"
+  (dired-filename . "/Users/Sun/.emacs.d/el-get/rcodetools/rcodetools.el"))
+ ("/Users/Sun/.emacs.d/el-get/rcodetools/rcodetools.el" . 14002)
+ ("/Users/Sun/.emacs.d/core/ome-gui.el" . 1497)
+ ("/Users/Sun/program/racket/test.rkt" . 5805)
+ ("/Users/Sun/.emacs.d/el-get/.loaddefs.el" . 343992)
+ ("/Users/Sun/.emacs.d/core/"
+  (dired-filename . "/Users/Sun/.emacs.d/core/ome-gui.el"))
+ ("/Users/Sun/program/racket/church_numerals/"
+  (dired-filename . "/Users/Sun/program/racket/church_numerals/church_numerals.rkt"))
+ ("/Users/Sun/program/racket/church_numerals/church_numerals_test.rkt" . 1332)
+ ("/Users/Sun/documents/blog/myblog/source/_posts/lambda_caculus_and_church_encoding.md" . 1996)
+ ("/Users/Sun/NNL/Interview/Wei.java" . 542)
+ ("/Users/Sun/program/racket/church_numerals/church_numerals.rkt" . 2095)
+ ("/Users/Sun/program/PL/9.rkt" . 2056)
+ ("/Users/Sun/program/PL/7.rkt" . 7619)
+ ("/Users/Sun/program/git/hackernews-userstyles/"
+  (dired-filename . "/Users/Sun/program/git/hackernews-userstyles/hackernews-userstyles.css"))
+ ("/Users/Sun/Documents/PL.txt" . 278975)
+ ("/Users/Sun/program/git/hackernews-userstyles/hackernews-userstyles.css" . 2667)
+ ("/Users/Sun/Desktop/metadata.txt" . 32)
+ ("/Users/Sun/Program/java/interview.java" . 400)
  ("/Users/Sun/Program/java/Wei.java" . 542)
  ("/Users/Sun/.ssh/config" . 7782)
- ("/Users/Sun/.emacs.d/.recentf" . 2914)
  ("/Users/Sun/Program/racket/church_numerals/"
   (dired-filename . "/Users/Sun/Program/racket/church_numerals/church_numerals.rkt"))
  ("/Users/Sun/Program/racket/church_numerals/church_numerals_test.rkt" . 1448)
  ("/Users/Sun/Documents/pl.txt" . 281505)
  ("/Users/Sun/Program/racket/church_numerals/church_numerals.rkt" . 2258)
- ("/Users/Sun/program/racket/test.rkt" . 5150)
  ("/Users/Sun/Documents/Latex/cv.tex" . 3393)
  ("/Users/Sun/Documents/blog/myblog/source/_posts/lambda_caculus_and_church_encoding.md" . 457)
  ("/Users/Sun/Documents/cv_newest_version.tex" . 3156)
- ("/Users/Sun/Documents/PL.txt" . 277994)
- ("/Users/Sun/program/racket/church_numerals/church_numerals.rkt" . 1791)
  ("/Users/Sun/Program/Racket/church_numerals/church_numerals_test.rkt" . 385)
  ("/Users/Sun/Documents/Blog/myBlog/source/_posts/"
   (dired-filename . "/Users/Sun/Documents/Blog/myBlog/source/_posts/lambda_caculus_and_church_numerals.md~"))
- ("/Users/Sun/program/rust/test.rs" . 154)
  ("/Users/Sun/.revive.el" . 1810)
- ("/Users/Sun/.emacs.d/custom.el" . 1080)
  ("/Users/Sun/program/rust/philosopher/"
   (dired-filename . "/Users/Sun/program/rust/philosopher/src"))
  ("/Users/Sun/program/rust/philosopher/src/"
@@ -30,7 +49,6 @@
  ("/Users/Sun/.emacs.d/modules/ome-haskell.org" . 4228)
  ("/Users/Sun/.emacs.d/modules/ome-scheme.org" . 822)
  ("/Users/Sun/.emacs.d/modules/ome-rust-mode.org" . 1140)
- ("/Users/Sun/.emacs.d/el-get/.loaddefs.el" . 343339)
  ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/lisp/files.el.gz" . 31202)
  ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/lisp/international/mule.el.gz" . 11344)
  ("/Users/Sun/.emacs.d/core/ome-org.el" . 1125)
@@ -306,7 +324,6 @@
  ("/Users/Sun/Program/Ruby/FBWh.rb" . 533)
  ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/etc/NEWS" . 252)
  ("/Users/Sun/.emacs.d/elpa/hackernews-20150216.218/hackernews-autoloads.el" . 454)
- ("/Users/Sun/program/ruby/1.rb" . 201)
  ("/Users/Sun/program/rust/guessing_game/"
   (dired-filename . "/Users/Sun/program/rust/guessing_game/src"))
  ("/Users/Sun/program/rust/guessing_game/src/"
@@ -323,7 +340,6 @@
  ("/Users/Sun/.emacs.d/elpa/flymake-rust-20141004.1552/flymake-rust-autoloads.el" . 241)
  ("/Users/Sun/.zshrc" . 5459)
  ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/etc/DEBUG" . 21)
- ("/Users/Sun/.emacs.d/core/ome-gui.el" . 433)
  ("/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/uri/common.rb" . 3506)
  ("/Users/Sun/program/ruby/Randomtest.rb" . 115)
  ("/Users/Sun/.emacs.d/core/ome-completion.el" . 711)
@@ -388,8 +404,6 @@
  ("/Users/Sun/.emacs.d/modules/ome-tex.org" . 9508)
  ("/Users/Sun/.emacs.d/modules/ome-web.el" . 1448)
  ("/Users/Sun/.emacs.d/elpa/cyberpunk-theme-20150308.935/cyberpunk-theme-autoloads.el" . 425)
- ("/Users/Sun/.emacs.d/core/"
-  (dired-filename . "/Users/Sun/.emacs.d/core/ome-gui.el"))
  ("/Users/Sun/.emacs.d/fill-column-indicator.el" . 8294)
  ("/Users/Sun/.emacs.d/modules/ome-experimental.org" . 9145)
  ("/Users/Sun/.emacs.d/modules/.ome-experimental.part.sublimity.el" . 98)
@@ -407,7 +421,6 @@
   (dired-filename . "/Users/Sun/Documents/Blog/myBlog/source/_posts"))
  ("/Applications/Racket/collects/racket/match/gen-match.rkt" . 2455)
  ("/Users/Sun/Program/PL/7.rkt" . 3104)
- ("/Users/Sun/program/PL/7.rkt" . 2416)
  ("/Users/Sun/program/Pl/4.rkt" . 956)
  ("/Users/Sun/program/Pl/6.rkt" . 9279)
  ("/Users/Sun/program/PL/4.rkt" . 12900)
@@ -533,20 +546,4 @@
  ("/Users/Sun/program/pintool/source/tools/ManualExamples/"
   (dired-filename . "/Users/Sun/program/pintool/source/tools/ManualExamples/itrace.cpp"))
  ("/Users/Sun/program/pintool/source/tools/SimpleExamples/"
-  (dired-filename . "/Users/Sun/program/pintool/source/tools/SimpleExamples/opcodemix.cpp"))
- ("/Users/Sun/program/pintool/source/tools/SimpleExamples/opcodemix.cpp" . 1823)
- ("/Users/Sun/program/pintool/source/tools/ManualExamples/itrace.cpp" . 2098)
- ("/Users/Sun/program/pintool/source/"
-  (dired-filename . "/Users/Sun/program/pintool/source/tools"))
- ("/Users/Sun/program/pintool/source/tools/"
-  (dired-filename . "/Users/Sun/program/pintool/source/tools/ManualExamples"))
- ("/Users/Sun/program/pintool/source/tools/SimpleExamples/pinatrace.cpp" . 5192)
- ("/Users/Sun/program/pintool/source/include/pin/pin.H" . 2047)
- ("/Users/Sun/program/pintool/source/include/pin/gen/"
-  (dired-filename . "/Users/Sun/program/pintool/source/include/pin/gen/ins_syscall_ia32_unix.PH"))
- ("/Users/Sun/Program/pintool/source/"
-  (dired-filename . "/Users/Sun/Program/pintool/source/tools"))
- ("/Users/Sun/Program/pintool/source/tools/"
-  (dired-filename . "/Users/Sun/Program/pintool/source/tools/SimpleExamples"))
- ("/Users/Sun/Program/pintool/source/tools/ManualExamples/"
-  (dired-filename . "/Users/Sun/Program/pintool/source/tools/ManualExamples/itrace.cpp")))
+  (dired-filename . "/Users/Sun/program/pintool/source/tools/SimpleExamples/opcodemix.cpp")))

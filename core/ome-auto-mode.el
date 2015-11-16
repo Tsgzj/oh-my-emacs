@@ -9,6 +9,10 @@
 (when (executable-find "pacman")
   (ome-install 'pkgbuild-mode))
 
+(defun dockerfile-mode-setup ())
+
+(ome-install 'dockerfile-mode)
+
 (defun ome-wikipedia-mode-setup ()
   (add-to-list 'auto-mode-alist
                '("\\.wiki\\'" . wikipedia-mode)))

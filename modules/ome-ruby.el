@@ -10,7 +10,10 @@
   (add-to-list 'auto-mode-alist '("\\.thor\\'" . ruby-mode))
   (add-to-list 'auto-mode-alist '("Thorfile\\'" . ruby-mode))
   (add-to-list 'auto-mode-alist '("Vagrantfile\\'" . ruby-mode))
-  (add-to-list 'auto-mode-alist '("\\.jbuilder\\'" . ruby-mode)))
+  (add-to-list 'auto-mode-alist '("\\.jbuilder\\'" . ruby-mode))
+  (add-hook 'ruby-mode-hook
+            (lambda ()
+              (indent-guide-mode 1))))
 
 (ome-ruby-mode-setup)
 

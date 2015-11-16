@@ -482,10 +482,11 @@ inversion of gas-comment-region"
   (rvm-activate-corresponding-ruby))
 (eval-after-load 'company
   '(push 'company-robe company-backends))
-(eval-after-load "ruby-mode"
+(eval-after-load 'ruby-mode
   (lambda ()
-    '(require 'robe)
-    '(require 'rcodetools)))
+    (require 'robe)
+    (require 'rcodetools)))
+;;(require 'robe) (require 'rcodetools)
 (add-hook 'ruby-mode-hook
           'robe-mode
           (define-key ruby-mode-map (kbd "C-c C-c") 'xmp))

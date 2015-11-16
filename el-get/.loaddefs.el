@@ -2137,6 +2137,30 @@ what diminished modes would be on the mode-line if they were still minor.
 
 ;;;***
 
+;;;### (autoloads nil "dockerfile-mode/dockerfile-mode" "dockerfile-mode/dockerfile-mode.el"
+;;;;;;  (22090 7946 0 0))
+;;; Generated autoloads from dockerfile-mode/dockerfile-mode.el
+
+(autoload 'dockerfile-build-buffer "dockerfile-mode/dockerfile-mode" "\
+Build an image based upon the buffer
+
+\(fn IMAGE-NAME)" t nil)
+
+(autoload 'dockerfile-build-no-cache-buffer "dockerfile-mode/dockerfile-mode" "\
+Build an image based upon the buffer without cache
+
+\(fn IMAGE-NAME)" t nil)
+
+(autoload 'dockerfile-mode "dockerfile-mode/dockerfile-mode" "\
+A major mode to edit Dockerfiles.
+\\{dockerfile-mode-map}
+
+\(fn)" t nil)
+
+(add-to-list 'auto-mode-alist '("Dockerfile.*\\'" . dockerfile-mode))
+
+;;;***
+
 ;;;### (autoloads nil "eclim/eclim" "eclim/eclim.el" (21870 18807
 ;;;;;;  0 0))
 ;;; Generated autoloads from eclim/eclim.el
@@ -9766,67 +9790,66 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "haskell-mode/haskell-utils.el" "haskell-mode/w3m-haddock.el"
 ;;;;;;  "helm-project/helm-project.el" "helm-projectile/helm-projectile-autoloads.el"
 ;;;;;;  "helm-projectile/helm-projectile-pkg.el" "js2-mode/js2-old-indent.el"
-;;;;;;  "powerline/powerline-separators.el" "queue/queue-autoloads.el"
-;;;;;;  "queue/queue-pkg.el" "racket-mode/racket-collection.el" "racket-mode/racket-common.el"
-;;;;;;  "racket-mode/racket-complete.el" "racket-mode/racket-emacs-compat.el"
-;;;;;;  "racket-mode/racket-eval.el" "racket-mode/racket-font-lock.el"
-;;;;;;  "racket-mode/racket-indent.el" "racket-mode/racket-keywords-and-builtins.el"
-;;;;;;  "racket-mode/racket-mode-autoloads.el" "racket-mode/racket-mode-pkg.el"
-;;;;;;  "racket-mode/racket-tests.el" "racket-mode/racket-util.el"
-;;;;;;  "rainbow-mode/rainbow-mode-autoloads.el" "rainbow-mode/rainbow-mode-pkg.el"
-;;;;;;  "rcodetools/anything-rcodetools.el" "rcodetools/icicles-rcodetools.el"
-;;;;;;  "rcodetools/rcodetools.el" "rust-mode/rust-mode-tests.el"
-;;;;;;  "semi/site-lisp/semi/mail-mime-setup.el" "semi/site-lisp/semi/mime-bbdb.el"
-;;;;;;  "semi/site-lisp/semi/mime-image.el" "semi/site-lisp/semi/mime-mac.el"
-;;;;;;  "semi/site-lisp/semi/mime-partial.el" "semi/site-lisp/semi/mime-pgp.el"
-;;;;;;  "semi/site-lisp/semi/mime-setup.el" "semi/site-lisp/semi/mime-shr.el"
-;;;;;;  "semi/site-lisp/semi/mime-signature.el" "semi/site-lisp/semi/mime-vcard.el"
-;;;;;;  "semi/site-lisp/semi/mime-w3.el" "semi/site-lisp/semi/semi-def.el"
-;;;;;;  "semi/site-lisp/semi/semi-setup.el" "semi/site-lisp/semi/signature.el"
-;;;;;;  "seq/seq.el" "simple-httpd/simple-httpd-test.el" "skewer-mode/cache-table.el"
-;;;;;;  "skewer-mode/skewer-mode-pkg.el" "sml-mode/sml-mode-startup.el"
-;;;;;;  "sml-mode/sml-oldindent.el" "solarized-emacs/solarized-dark-theme.el"
-;;;;;;  "solarized-emacs/solarized-light-theme.el" "solarized-emacs/solarized-theme-pkg.el"
-;;;;;;  "solarized-emacs/solarized-theme-utils.el" "solarized-emacs/solarized-theme.el"
-;;;;;;  "wanderlust/site-lisp/wl/acap.el" "wanderlust/site-lisp/wl/elmo-access.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-archive.el" "wanderlust/site-lisp/wl/elmo-cache.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-date.el" "wanderlust/site-lisp/wl/elmo-dop.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-file.el" "wanderlust/site-lisp/wl/elmo-filter.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-flag.el" "wanderlust/site-lisp/wl/elmo-imap4.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-internal.el" "wanderlust/site-lisp/wl/elmo-localdir.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-localnews.el" "wanderlust/site-lisp/wl/elmo-maildir.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-map.el" "wanderlust/site-lisp/wl/elmo-mime.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-msgdb.el" "wanderlust/site-lisp/wl/elmo-multi.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-net.el" "wanderlust/site-lisp/wl/elmo-nntp.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-null.el" "wanderlust/site-lisp/wl/elmo-pipe.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-pop3.el" "wanderlust/site-lisp/wl/elmo-search.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-sendlog.el" "wanderlust/site-lisp/wl/elmo-signal.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-spam.el" "wanderlust/site-lisp/wl/elmo-util.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-vars.el" "wanderlust/site-lisp/wl/elmo-version.el"
-;;;;;;  "wanderlust/site-lisp/wl/elsp-bogofilter.el" "wanderlust/site-lisp/wl/elsp-bsfilter.el"
-;;;;;;  "wanderlust/site-lisp/wl/elsp-sa.el" "wanderlust/site-lisp/wl/elsp-spamoracle.el"
-;;;;;;  "wanderlust/site-lisp/wl/mmimap.el" "wanderlust/site-lisp/wl/modb-entity.el"
-;;;;;;  "wanderlust/site-lisp/wl/modb-legacy.el" "wanderlust/site-lisp/wl/modb-standard.el"
-;;;;;;  "wanderlust/site-lisp/wl/modb.el" "wanderlust/site-lisp/wl/pldap.el"
-;;;;;;  "wanderlust/site-lisp/wl/rfc2368.el" "wanderlust/site-lisp/wl/slp.el"
-;;;;;;  "wanderlust/site-lisp/wl/ssl.el" "wanderlust/site-lisp/wl/wl-acap.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-action.el" "wanderlust/site-lisp/wl/wl-addrbook.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-address.el" "wanderlust/site-lisp/wl/wl-batch.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-complete.el" "wanderlust/site-lisp/wl/wl-demo.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-e21.el" "wanderlust/site-lisp/wl/wl-expire.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-fldmgr.el" "wanderlust/site-lisp/wl/wl-folder.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-highlight.el" "wanderlust/site-lisp/wl/wl-mailto.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-message.el" "wanderlust/site-lisp/wl/wl-mime.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-news.el" "wanderlust/site-lisp/wl/wl-refile.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-score.el" "wanderlust/site-lisp/wl/wl-spam.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-summary.el" "wanderlust/site-lisp/wl/wl-template.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-thread.el" "wanderlust/site-lisp/wl/wl-util.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-vars.el" "wanderlust/site-lisp/wl/wl-version.el"
-;;;;;;  "wanderlust/utils/ptexinfmt.el" "wanderlust/utils/rfc2368.el"
-;;;;;;  "wanderlust/utils/ssl.el" "wanderlust/utils/wl-addrbook.el"
+;;;;;;  "queue/queue-autoloads.el" "queue/queue-pkg.el" "racket-mode/racket-collection.el"
+;;;;;;  "racket-mode/racket-common.el" "racket-mode/racket-complete.el"
+;;;;;;  "racket-mode/racket-emacs-compat.el" "racket-mode/racket-eval.el"
+;;;;;;  "racket-mode/racket-font-lock.el" "racket-mode/racket-indent.el"
+;;;;;;  "racket-mode/racket-keywords-and-builtins.el" "racket-mode/racket-mode-autoloads.el"
+;;;;;;  "racket-mode/racket-mode-pkg.el" "racket-mode/racket-tests.el"
+;;;;;;  "racket-mode/racket-util.el" "rainbow-mode/rainbow-mode-autoloads.el"
+;;;;;;  "rainbow-mode/rainbow-mode-pkg.el" "rcodetools/anything-rcodetools.el"
+;;;;;;  "rcodetools/icicles-rcodetools.el" "rcodetools/rcodetools.el"
+;;;;;;  "rust-mode/rust-mode-tests.el" "semi/site-lisp/semi/mail-mime-setup.el"
+;;;;;;  "semi/site-lisp/semi/mime-bbdb.el" "semi/site-lisp/semi/mime-image.el"
+;;;;;;  "semi/site-lisp/semi/mime-mac.el" "semi/site-lisp/semi/mime-partial.el"
+;;;;;;  "semi/site-lisp/semi/mime-pgp.el" "semi/site-lisp/semi/mime-setup.el"
+;;;;;;  "semi/site-lisp/semi/mime-shr.el" "semi/site-lisp/semi/mime-signature.el"
+;;;;;;  "semi/site-lisp/semi/mime-vcard.el" "semi/site-lisp/semi/mime-w3.el"
+;;;;;;  "semi/site-lisp/semi/semi-def.el" "semi/site-lisp/semi/semi-setup.el"
+;;;;;;  "semi/site-lisp/semi/signature.el" "seq/seq.el" "simple-httpd/simple-httpd-test.el"
+;;;;;;  "skewer-mode/cache-table.el" "skewer-mode/skewer-mode-pkg.el"
+;;;;;;  "sml-mode/sml-mode-startup.el" "sml-mode/sml-oldindent.el"
+;;;;;;  "solarized-emacs/solarized-dark-theme.el" "solarized-emacs/solarized-light-theme.el"
+;;;;;;  "solarized-emacs/solarized-theme-pkg.el" "solarized-emacs/solarized-theme-utils.el"
+;;;;;;  "solarized-emacs/solarized-theme.el" "wanderlust/site-lisp/wl/acap.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-access.el" "wanderlust/site-lisp/wl/elmo-archive.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-cache.el" "wanderlust/site-lisp/wl/elmo-date.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-dop.el" "wanderlust/site-lisp/wl/elmo-file.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-filter.el" "wanderlust/site-lisp/wl/elmo-flag.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-imap4.el" "wanderlust/site-lisp/wl/elmo-internal.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-localdir.el" "wanderlust/site-lisp/wl/elmo-localnews.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-maildir.el" "wanderlust/site-lisp/wl/elmo-map.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-mime.el" "wanderlust/site-lisp/wl/elmo-msgdb.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-multi.el" "wanderlust/site-lisp/wl/elmo-net.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-nntp.el" "wanderlust/site-lisp/wl/elmo-null.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-pipe.el" "wanderlust/site-lisp/wl/elmo-pop3.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-search.el" "wanderlust/site-lisp/wl/elmo-sendlog.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-signal.el" "wanderlust/site-lisp/wl/elmo-spam.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-util.el" "wanderlust/site-lisp/wl/elmo-vars.el"
+;;;;;;  "wanderlust/site-lisp/wl/elmo-version.el" "wanderlust/site-lisp/wl/elsp-bogofilter.el"
+;;;;;;  "wanderlust/site-lisp/wl/elsp-bsfilter.el" "wanderlust/site-lisp/wl/elsp-sa.el"
+;;;;;;  "wanderlust/site-lisp/wl/elsp-spamoracle.el" "wanderlust/site-lisp/wl/mmimap.el"
+;;;;;;  "wanderlust/site-lisp/wl/modb-entity.el" "wanderlust/site-lisp/wl/modb-legacy.el"
+;;;;;;  "wanderlust/site-lisp/wl/modb-standard.el" "wanderlust/site-lisp/wl/modb.el"
+;;;;;;  "wanderlust/site-lisp/wl/pldap.el" "wanderlust/site-lisp/wl/rfc2368.el"
+;;;;;;  "wanderlust/site-lisp/wl/slp.el" "wanderlust/site-lisp/wl/ssl.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-acap.el" "wanderlust/site-lisp/wl/wl-action.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-addrbook.el" "wanderlust/site-lisp/wl/wl-address.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-batch.el" "wanderlust/site-lisp/wl/wl-complete.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-demo.el" "wanderlust/site-lisp/wl/wl-e21.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-expire.el" "wanderlust/site-lisp/wl/wl-fldmgr.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-folder.el" "wanderlust/site-lisp/wl/wl-highlight.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-mailto.el" "wanderlust/site-lisp/wl/wl-message.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-mime.el" "wanderlust/site-lisp/wl/wl-news.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-refile.el" "wanderlust/site-lisp/wl/wl-score.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-spam.el" "wanderlust/site-lisp/wl/wl-summary.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-template.el" "wanderlust/site-lisp/wl/wl-thread.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-util.el" "wanderlust/site-lisp/wl/wl-vars.el"
+;;;;;;  "wanderlust/site-lisp/wl/wl-version.el" "wanderlust/utils/ptexinfmt.el"
+;;;;;;  "wanderlust/utils/rfc2368.el" "wanderlust/utils/ssl.el" "wanderlust/utils/wl-addrbook.el"
 ;;;;;;  "wanderlust/utils/wl-complete.el" "wanderlust/utils/wl-mailto.el"
 ;;;;;;  "yafolding/yafolding-autoloads.el" "yafolding/yafolding-pkg.el")
-;;;;;;  (22073 13007 11519 0))
+;;;;;;  (22090 7949 215293 0))
 
 ;;;***
 

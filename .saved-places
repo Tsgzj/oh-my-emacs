@@ -1,6 +1,69 @@
 ;;; -*- coding: utf-8 -*-
-(("/Users/Sun/.emacs.d/custom.el" . 16973)
- ("/Users/Sun/.emacs.d/.recentf" . 2997)
+(("/Users/Sun/.emacs.d/custom.el" . 10970)
+ ("/Users/Sun/.emacs.d/.recentf" . 3525)
+ ("/Users/Sun/Dropbox/GTD/gtd.org" . 280)
+ ("/Users/Sun/.emacs.d/ac-comphist.dat" . 2353)
+ ("/Users/Sun/program/git/racer/src/racer/"
+  (dired-filename . "/Users/Sun/program/git/racer/src/racer/matchers.rs"))
+ ("/Users/Sun/program/git/racer/src/racer/matchers.rs" . 1792)
+ ("/Users/Sun/svn/trunk/qa/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/util"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/util/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/util/ReportWriter.java"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/util/Updater.java" . 3381)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Qrcode.java" . 307)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/Operation.java" . 4502)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/TC_dereg.csv"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/TC_dereg.csv" . 60)
+ ("/Users/Sun/program/git/racer/"
+  (dired-filename . "/Users/Sun/program/git/racer/src"))
+ ("/Users/Sun/program/git/racer/src/"
+  (dired-filename . "/Users/Sun/program/git/racer/src/racer"))
+ ("/Users/Sun/program/git/racer/src/racer/core.rs" . 5672)
+ ("/Users/Sun/svn/trunk/ATG/Auth_Server/auth_service_infra/cookbooks/apache2/templates/default/apache2.conf.erb" . 5502)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/test/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/test/Main.java"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/android/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/android/SampleApp.java"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/android/SampleApp.java" . 12069)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/input/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/TC_QR1000.csv" . 161)
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/"
+  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Qrcodeloop.java"))
+ ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Qrcodeloop.java" . 1643)
+ ("/Users/Sun/NNL/EMR2/"
+  (dired-filename . "/Users/Sun/NNL/EMR2/SQLinj"))
+ ("/Users/Sun/NNL/EMR2/SQLinj/"
+  (dired-filename . "/Users/Sun/NNL/EMR2/SQLinj/Server"))
+ ("/Users/Sun/NNL/EMR2/SQLinj/Server/"
+  (dired-filename . "/Users/Sun/NNL/EMR2/SQLinj/Server/UAFTLV.rb"))
+ ("/Users/Sun/NNL/EMR2/SQLinj/Server/UAFTLV.rb" . 1580)
+ ("/Users/Sun/SVN/trunk/qa/QA_Automation/util/QRcode/main.rb" . 4549)
+ ("/Users/Sun/SVN/trunk/Client/iOS/TutorialApp/TutorialApp/Info.plist" . 327)
+ ("/Users/Sun/program/ruby/Randomtest.rb" . 176)
+ ("/Users/Sun/program/ruby/xmp-test.rb" . 369)
+ ("/Users/Sun/.emacs.d/el-get/.loaddefs.el" . 337029)
+ ("/Users/Sun/Documents/PL.txt" . 480086)
+ ("/Users/Sun/Documents/blog/myBlog/source/_posts/lambda_caculus_and_church_encoding.md" . 121)
+ ("/Users/Sun/program/racket/call_cc.rkt" . 544)
+ ("/Users/Sun/Documents/blog/myBlog/source/_posts/Using-xmp-with-Emacs-ruby-mode.md" . 903)
+ ("/Users/Sun/program/ruby/1.rb" . 200)
  ("/Users/Sun/.emacs.d/modules/ome-cc.el" . 2550)
  ("/Users/Sun/program/rust/test.rs" . 127)
  ("/Users/Sun/.emacs.d/el-get/rcodetools/"
@@ -8,7 +71,6 @@
  ("/Users/Sun/.emacs.d/el-get/rcodetools/rcodetools.el" . 14002)
  ("/Users/Sun/.emacs.d/core/ome-gui.el" . 1497)
  ("/Users/Sun/program/racket/test.rkt" . 5805)
- ("/Users/Sun/.emacs.d/el-get/.loaddefs.el" . 343992)
  ("/Users/Sun/.emacs.d/core/"
   (dired-filename . "/Users/Sun/.emacs.d/core/ome-gui.el"))
  ("/Users/Sun/program/racket/church_numerals/"
@@ -21,9 +83,7 @@
  ("/Users/Sun/program/PL/7.rkt" . 7619)
  ("/Users/Sun/program/git/hackernews-userstyles/"
   (dired-filename . "/Users/Sun/program/git/hackernews-userstyles/hackernews-userstyles.css"))
- ("/Users/Sun/Documents/PL.txt" . 278975)
  ("/Users/Sun/program/git/hackernews-userstyles/hackernews-userstyles.css" . 2667)
- ("/Users/Sun/Desktop/metadata.txt" . 32)
  ("/Users/Sun/Program/java/interview.java" . 400)
  ("/Users/Sun/Program/java/Wei.java" . 542)
  ("/Users/Sun/.ssh/config" . 7782)
@@ -85,32 +145,8 @@
   (dired-filename . "/Users/Sun/.pentadactyl/colors/solarized-dark.penta"))
  ("/Users/Sun/.pentadactyl/colors/solarized-dark.penta" . 2541)
  ("/Users/Sun/Program/Rust/philosopher/src/main.rs" . 1215)
- ("/Users/Sun/svn/trunk/qa/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation"))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/src/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com"))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok"))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation"))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations"))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android"))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp"))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Qrcodeloop.java"))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/input"))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/input/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp"))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/TC_QR1000.csv"))
  ("/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/TC_auth1000.csv" . 60)
- ("/Users/Sun/svn/trunk/qa/QA_Automation/input/Tutorialapp/TC_QR1000.csv" . 162)
  ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Authloop.java" . 1328)
- ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/operations/android/tutorialapp/Qrcodeloop.java" . 1420)
  ("/Users/Sun/Program/sinatra/QRcode/"
   (dired-filename . "/Users/Sun/Program/sinatra/QRcode/main.rb"))
  ("/Users/Sun/Program/sinatra/QRcode/main.rb" . 23)
@@ -119,11 +155,6 @@
   (dired-filename . "/Users/Sun/Program/sinatra/stringer"))
  ("/Users/Sun/Program/sinatra/minarun/"
   (dired-filename . "/Users/Sun/Program/sinatra/minarun/app.rb"))
- ("/Users/Sun/NNL/EMR2/SQLinj/"
-  (dired-filename . "/Users/Sun/NNL/EMR2/SQLinj/Server"))
- ("/Users/Sun/NNL/EMR2/SQLinj/Server/"
-  (dired-filename . "/Users/Sun/NNL/EMR2/SQLinj/Server/test.rb"))
- ("/Users/Sun/NNL/EMR2/SQLinj/Server/UAFTLV.rb" . 1280)
  ("/Users/Sun/NNL/EMR2/SQLinj/Server/app.rb" . 151)
  ("/Users/Sun/Program/python/TripadvisorReview/"
   (dired-filename . "/Users/Sun/Program/python/TripadvisorReview/TripadvisorReview"))
@@ -147,9 +178,6 @@
  ("/Users/Sun/SVN/trunk/qa/IOS_Instrument_Automation_Framework/Scripts/IOS8/TutorialApp.js" . 1699)
  ("/Users/Sun/Downloads/"
   (dired-filename . "/Users/Sun/Downloads/results"))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/test/"
-  (dired-filename . "/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/test/.."))
- ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/android/SampleApp.java" . 9724)
  ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/migration/Tc1392.java" . 1615)
  ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/migration/Tc1065.java" . 1563)
  ("/Users/Sun/svn/trunk/qa/QA_Automation/InstallAndRunAll.sh" . 120)
@@ -158,8 +186,6 @@
  ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/driver/AndDaemon.java" . 6097)
  ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/util/CSVParser.java" . 1791)
  ("/Users/Sun/svn/trunk/qa/QA_Automation/src/com/noknok/automation/util/Controller.java" . 2218)
- ("/Users/Sun/NNL/EMR2/"
-  (dired-filename . "/Users/Sun/NNL/EMR2/SQLinj"))
  ("/Users/Sun/.emacs.d/"
   (dired-filename . "/Users/Sun/.emacs.d/custom.el"))
  ("/Users/Sun/.emacs.d/auto/ome.el" . 270)
@@ -341,7 +367,6 @@
  ("/Users/Sun/.zshrc" . 5459)
  ("/usr/local/Cellar/emacs/24.4/share/emacs/24.4/etc/DEBUG" . 21)
  ("/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/uri/common.rb" . 3506)
- ("/Users/Sun/program/ruby/Randomtest.rb" . 115)
  ("/Users/Sun/.emacs.d/core/ome-completion.el" . 711)
  ("/Users/Sun/.emacs.d/core/ome-auto-mode.el" . 386)
  ("/Users/Sun/Program/fuzzer/README" . 578)
@@ -519,31 +544,4 @@
  ("/Users/Sun/Program/Pintool/Project/vp/cache.cpp" . 1046)
  ("/Users/Sun/Program/Pintool/Project/vp/stride-predictor.h" . 3548)
  ("/Users/Sun/Program/Pintool/Project/vp/last_value.cpp" . 1395)
- ("/Users/Sun/Program/Pintool/Project/report/proposal.tex" . 4033)
- ("/Users/Sun/Program/Pintool/Project/evaluation/"
-  (dired-filename . "/Users/Sun/Program/Pintool/Project/evaluation/localitytool"))
- ("/Users/Sun/Program/Pintool/Project/evaluation/localitytool/"
-  (dired-filename . "/Users/Sun/Program/Pintool/Project/evaluation/localitytool/locality.cpp"))
- ("/Users/Sun/Program/Pintool/Project/evaluation/localitytool/locality.cpp" . 1906)
- ("/Users/Sun/Program/Pintool/Project/vp/two-level.cpp" . 1430)
- ("/Users/Sun/Program/Pintool/Project/plot/test.tex" . 1714)
- ("/Users/Sun/Program/Pintool/Project/vp/two-level-predictor.h" . 1311)
- ("/Users/Sun/Program/Pintool/Project/vp/hybrid.cpp" . 1762)
- ("/Users/Sun/Program/Pintool/Project/vp/evaluate.cpp" . 1470)
- ("/Users/Sun/Program/Pintool/Project/vp/common.h" . 14)
- ("/Users/Sun/Program/Pintool/Project/"
-  (dired-filename . "/Users/Sun/Program/Pintool/Project/vp"))
- ("/Users/Sun/Program/Pintool/Project/vp/"
-  (dired-filename . "/Users/Sun/Program/Pintool/Project/vp/cache.cpp"))
- ("/Users/Sun/Program/pintool/Project/vp/common.h" . 20)
- ("/Users/Sun/Program/pintool/Project/vp/cache.cpp" . 487)
- ("/Users/Sun/Program/pintool/Project/vp/cache.h" . 755)
- ("/Users/Sun/Program/pintool/Project/evaluation/"
-  (dired-filename . "/Users/Sun/Program/pintool/Project/evaluation/pintools"))
- ("/Users/Sun/Program/pintool/Project/evaluation/pintools/"
-  (dired-filename . "/Users/Sun/Program/pintool/Project/evaluation/pintools/.DS_Store"))
- ("/Users/Sun/Program/pintool/Project/report/proposal.tex" . 3989)
- ("/Users/Sun/program/pintool/source/tools/ManualExamples/"
-  (dired-filename . "/Users/Sun/program/pintool/source/tools/ManualExamples/itrace.cpp"))
- ("/Users/Sun/program/pintool/source/tools/SimpleExamples/"
-  (dired-filename . "/Users/Sun/program/pintool/source/tools/SimpleExamples/opcodemix.cpp")))
+ ("/Users/Sun/Program/Pintool/Project/report/proposal.tex" . 4033))

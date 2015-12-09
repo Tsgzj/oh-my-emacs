@@ -6566,6 +6566,83 @@ Major mode for editing GitHub Flavored Markdown files.
 
 ;;;***
 
+;;;### (autoloads nil "names/names" "names/names.el" (22090 56664
+;;;;;;  0 0))
+;;; Generated autoloads from names/names.el
+
+(defvar names--inside-make-autoload nil "\
+Used in `make-autoload' to indicate we're making autoloads.")
+
+(autoload 'define-namespace "names/names" "\
+Inside the namespace NAME, execute BODY.
+NAME can be any symbol (not quoted), but it's highly recommended
+to use some form of separator (such as :, /, or -). For a
+complete description of this macro, please visit the frontpage
+with \\[names-view-manual].
+
+In summary, this macro has two main effects:
+
+1. Any definitions inside BODY will have NAME prepended to the
+symbol given. Ex:
+
+    (define-namespace foo-
+    (defvar bar 1 \"docs\")
+    )
+
+expands to
+
+    (defvar foo-bar 1 \"docs\")
+
+
+2. Any function calls and variable names get NAME prepended to
+them if such a variable or function exists. Ex:
+
+    (define-namespace foo:
+    (defun message (x y) nil)
+    (message \"%s\" my-var)
+    )
+
+expands to
+
+    (defun foo:message (x y) nil)
+    (foo:message \"%s\" my-var)
+
+Note how `message' is expanded to `foo:message' in the second
+form, because that function exists. Meanwhile, `bar' is left
+untouched because `foo:bar' is not a known variable name.
+
+===============================
+
+AUTOLOAD
+
+In order for `define-namespace' to work with \";;;###autoload\"
+comments must replace all instances of \";;;###autoload\" inside
+your `define-namespace' with `:autoload'.
+Afterwards, add an \";;;###autoload\" comment just above your
+`define-namespace'.
+
+===============================
+
+KEYWORDS
+
+Immediately after NAME you may add keywords which customize the
+behaviour of `define-namespace'. For a list of possible keywords
+and a description of their effects, see the variable
+`names--keyword-list'.
+
+\(fn NAME [KEYWORD ...] BODY)" nil t)
+
+(put 'define-namespace 'lisp-indent-function '(lambda (&rest x) 0))
+
+(eval-after-load 'find-func '(defadvice find-function-search-for-symbol (around names-around-find-function-search-for-symbol-advice (symbol type library) activate) "Make sure `find-function-search-for-symbol' understands namespaces." ad-do-it (ignore-errors (unless (cdr ad-return-value) (with-current-buffer (car ad-return-value) (search-forward-regexp "^(define-namespace\\_>") (skip-chars-forward "\n[:blank:]") (let* ((names--regexp (concat "\\`" (regexp-quote (symbol-name (read (current-buffer)))))) (short-symbol (let ((name (symbol-name symbol))) (when (string-match names--regexp name) (intern (replace-match "" nil nil name)))))) (when short-symbol (ad-set-arg 0 short-symbol) ad-do-it)))))))
+
+(defadvice make-autoload (around names-before-make-autoload-advice (form file &optional expansion) activate) "\
+Make sure `make-autoload' understands `define-namespace'.
+Use the `names--inside-make-autoload' variable to indicate to
+`define-namespace' that we're generating autoloads." (require (quote names)) (if (null (eq (car-safe form) (quote define-namespace))) ad-do-it (setq names--inside-make-autoload t) (setq form (macroexpand form)) (setq names--inside-make-autoload nil) (if (version< emacs-version "24.3") (setq ad-return-value (cons (quote progn) (mapcar (lambda (x) (names--make-autoload-compat x file)) (cdr form)))) (ad-set-arg 2 (quote expansion)) (ad-set-arg 0 form) ad-do-it)))
+
+;;;***
+
 ;;;### (autoloads nil "org-mode/contrib/lisp/htmlize" "org-mode/contrib/lisp/htmlize.el"
 ;;;;;;  (21520 48370 0 0))
 ;;; Generated autoloads from org-mode/contrib/lisp/htmlize.el
@@ -9718,138 +9795,6 @@ Yas minor mode is enabled in all buffers where
 See `yas-minor-mode' for more information on Yas minor mode.
 
 \(fn &optional ARG)" t nil)
-
-;;;***
-
-;;;### (autoloads nil nil ("ac-geiser/ac-geiser-pkg.el" "apel/site-lisp/apel/calist.el"
-;;;;;;  "apel/site-lisp/apel/filename.el" "apel/site-lisp/apel/install.el"
-;;;;;;  "apel/site-lisp/emu/apel-ver.el" "apel/site-lisp/emu/broken.el"
-;;;;;;  "apel/site-lisp/emu/emu.el" "apel/site-lisp/emu/inv-23.el"
-;;;;;;  "apel/site-lisp/emu/invisible.el" "apel/site-lisp/emu/mcharset.el"
-;;;;;;  "apel/site-lisp/emu/mcs-20.el" "apel/site-lisp/emu/mcs-e20.el"
-;;;;;;  "apel/site-lisp/emu/mule-caesar.el" "apel/site-lisp/emu/pccl-20.el"
-;;;;;;  "apel/site-lisp/emu/pccl.el" "apel/site-lisp/emu/pces-20.el"
-;;;;;;  "apel/site-lisp/emu/pces-e20.el" "apel/site-lisp/emu/pces.el"
-;;;;;;  "apel/site-lisp/emu/pcustom.el" "apel/site-lisp/emu/poe.el"
-;;;;;;  "apel/site-lisp/emu/poem-e20.el" "apel/site-lisp/emu/poem-e20_3.el"
-;;;;;;  "apel/site-lisp/emu/poem.el" "apel/site-lisp/emu/product.el"
-;;;;;;  "apel/site-lisp/emu/pym.el" "apel/site-lisp/emu/static.el"
-;;;;;;  "auctex/auctex.el" "auctex/auto-loads.el" "auctex/auto.el"
-;;;;;;  "auctex/lpath.el" "auctex/preview-latex.el" "auctex/prv-emacs.el"
-;;;;;;  "auctex/prv-install.el" "auctex/prv-xemacs.el" "auctex/tex-buf.el"
-;;;;;;  "auctex/tex-mik.el" "auctex/tex-site.el" "auctex/tex-style.el"
-;;;;;;  "auctex/tex-wizard.el" "auto-complete-clang/auto-complete-clang.el"
-;;;;;;  "auto-complete/auto-complete-pkg.el" "auto-indent-mode/auto-indent-test.el"
-;;;;;;  "cdlatex/cdlatex-autoloads.el" "cdlatex/cdlatex-pkg.el" "cider/cider-client.el"
-;;;;;;  "cider/cider-common.el" "cider/cider-compat.el" "cider/cider-doc.el"
-;;;;;;  "cider/cider-eldoc.el" "cider/cider-interaction.el" "cider/cider-overlays.el"
-;;;;;;  "cider/cider-popup.el" "cider/cider-repl.el" "cider/cider-resolve.el"
-;;;;;;  "cider/cider-stacktrace.el" "cider/cider-test.el" "cider/cider-util.el"
-;;;;;;  "cider/nrepl-client.el" "clojure-mode/clojure-mode-extra-font-locking.el"
-;;;;;;  "color-theme-sanityinc-solarized/color-theme-sanityinc-solarized-autoloads.el"
-;;;;;;  "color-theme-sanityinc-solarized/color-theme-sanityinc-solarized-pkg.el"
-;;;;;;  "color-theme-sanityinc-solarized/sanityinc-solarized-dark-theme.el"
-;;;;;;  "color-theme-sanityinc-solarized/sanityinc-solarized-light-theme.el"
-;;;;;;  "color-theme/color-theme-autoloads.el" "company-mode/company-capf.el"
-;;;;;;  "company-mode/company-clang.el" "company-mode/company-cmake.el"
-;;;;;;  "company-mode/company-eclim.el" "company-mode/company-template.el"
-;;;;;;  "company-mode/company-tests.el" "csv-mode/csv-mode-autoloads.el"
-;;;;;;  "csv-mode/csv-mode-pkg.el" "cyberpunk-theme/cyberpunk-theme-autoloads.el"
-;;;;;;  "cyberpunk-theme/cyberpunk-theme-pkg.el" "eclim/ac-emacs-eclim-source.el"
-;;;;;;  "eclim/company-emacs-eclim.el" "eclim/eclim-ant.el" "eclim/eclim-completion.el"
-;;;;;;  "eclim/eclim-java.el" "eclim/eclim-maven.el" "eclim/eclim-problems.el"
-;;;;;;  "eclim/eclimd.el" "eclim/emacs-eclim-pkg.el" "el-get/el-get-autoloading.el"
-;;;;;;  "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
-;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
-;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
-;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "emacs-powerline/powerline.el"
-;;;;;;  "fill-column-indicator/fci-osx-23-fix.el" "flim/site-lisp/flim/hex-util.el"
-;;;;;;  "flim/site-lisp/flim/hmac-def.el" "flim/site-lisp/flim/hmac-md5.el"
-;;;;;;  "flim/site-lisp/flim/hmac-sha1.el" "flim/site-lisp/flim/luna.el"
-;;;;;;  "flim/site-lisp/flim/lunit.el" "flim/site-lisp/flim/md4.el"
-;;;;;;  "flim/site-lisp/flim/md5.el" "flim/site-lisp/flim/mel-b-ccl.el"
-;;;;;;  "flim/site-lisp/flim/mel-b-el.el" "flim/site-lisp/flim/mel-g.el"
-;;;;;;  "flim/site-lisp/flim/mel-q-ccl.el" "flim/site-lisp/flim/mel-q.el"
-;;;;;;  "flim/site-lisp/flim/mel-u.el" "flim/site-lisp/flim/mime-def.el"
-;;;;;;  "flim/site-lisp/flim/mime.el" "flim/site-lisp/flim/mmbuffer.el"
-;;;;;;  "flim/site-lisp/flim/mmcooked.el" "flim/site-lisp/flim/mmexternal.el"
-;;;;;;  "flim/site-lisp/flim/mmgeneric.el" "flim/site-lisp/flim/ntlm.el"
-;;;;;;  "flim/site-lisp/flim/sasl-cram.el" "flim/site-lisp/flim/sasl-digest.el"
-;;;;;;  "flim/site-lisp/flim/sasl-ntlm.el" "flim/site-lisp/flim/sasl-scram.el"
-;;;;;;  "flim/site-lisp/flim/sasl.el" "flim/site-lisp/flim/sha1.el"
-;;;;;;  "flycheck/flycheck-ert.el" "flymake-easy/flymake-easy.el"
-;;;;;;  "flymake-rust/flymake-rust-autoloads.el" "flymake-rust/flymake-rust-pkg.el"
-;;;;;;  "flymake-rust/flymake-rust.el" "hackernews/hackernews-autoloads.el"
-;;;;;;  "hackernews/hackernews-pkg.el" "haskell-mode/haskell-bot.el"
-;;;;;;  "haskell-mode/haskell-checkers.el" "haskell-mode/haskell-collapse.el"
-;;;;;;  "haskell-mode/haskell-compat.el" "haskell-mode/haskell-complete-module.el"
-;;;;;;  "haskell-mode/haskell-debug.el" "haskell-mode/haskell-mode-autoloads.el"
-;;;;;;  "haskell-mode/haskell-package.el" "haskell-mode/haskell-presentation-mode.el"
-;;;;;;  "haskell-mode/haskell-process.el" "haskell-mode/haskell-repl.el"
-;;;;;;  "haskell-mode/haskell-sandbox.el" "haskell-mode/haskell-str.el"
-;;;;;;  "haskell-mode/haskell-utils.el" "haskell-mode/w3m-haddock.el"
-;;;;;;  "helm-project/helm-project.el" "helm-projectile/helm-projectile-autoloads.el"
-;;;;;;  "helm-projectile/helm-projectile-pkg.el" "js2-mode/js2-old-indent.el"
-;;;;;;  "queue/queue-autoloads.el" "queue/queue-pkg.el" "racket-mode/racket-collection.el"
-;;;;;;  "racket-mode/racket-common.el" "racket-mode/racket-complete.el"
-;;;;;;  "racket-mode/racket-emacs-compat.el" "racket-mode/racket-eval.el"
-;;;;;;  "racket-mode/racket-font-lock.el" "racket-mode/racket-indent.el"
-;;;;;;  "racket-mode/racket-keywords-and-builtins.el" "racket-mode/racket-mode-autoloads.el"
-;;;;;;  "racket-mode/racket-mode-pkg.el" "racket-mode/racket-tests.el"
-;;;;;;  "racket-mode/racket-util.el" "rainbow-mode/rainbow-mode-autoloads.el"
-;;;;;;  "rainbow-mode/rainbow-mode-pkg.el" "rcodetools/anything-rcodetools.el"
-;;;;;;  "rcodetools/icicles-rcodetools.el" "rcodetools/rcodetools.el"
-;;;;;;  "rust-mode/rust-mode-tests.el" "semi/site-lisp/semi/mail-mime-setup.el"
-;;;;;;  "semi/site-lisp/semi/mime-bbdb.el" "semi/site-lisp/semi/mime-image.el"
-;;;;;;  "semi/site-lisp/semi/mime-mac.el" "semi/site-lisp/semi/mime-partial.el"
-;;;;;;  "semi/site-lisp/semi/mime-pgp.el" "semi/site-lisp/semi/mime-setup.el"
-;;;;;;  "semi/site-lisp/semi/mime-shr.el" "semi/site-lisp/semi/mime-signature.el"
-;;;;;;  "semi/site-lisp/semi/mime-vcard.el" "semi/site-lisp/semi/mime-w3.el"
-;;;;;;  "semi/site-lisp/semi/semi-def.el" "semi/site-lisp/semi/semi-setup.el"
-;;;;;;  "semi/site-lisp/semi/signature.el" "seq/seq.el" "simple-httpd/simple-httpd-test.el"
-;;;;;;  "skewer-mode/cache-table.el" "skewer-mode/skewer-mode-pkg.el"
-;;;;;;  "sml-mode/sml-mode-startup.el" "sml-mode/sml-oldindent.el"
-;;;;;;  "solarized-emacs/solarized-dark-theme.el" "solarized-emacs/solarized-light-theme.el"
-;;;;;;  "solarized-emacs/solarized-theme-pkg.el" "solarized-emacs/solarized-theme-utils.el"
-;;;;;;  "solarized-emacs/solarized-theme.el" "wanderlust/site-lisp/wl/acap.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-access.el" "wanderlust/site-lisp/wl/elmo-archive.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-cache.el" "wanderlust/site-lisp/wl/elmo-date.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-dop.el" "wanderlust/site-lisp/wl/elmo-file.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-filter.el" "wanderlust/site-lisp/wl/elmo-flag.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-imap4.el" "wanderlust/site-lisp/wl/elmo-internal.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-localdir.el" "wanderlust/site-lisp/wl/elmo-localnews.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-maildir.el" "wanderlust/site-lisp/wl/elmo-map.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-mime.el" "wanderlust/site-lisp/wl/elmo-msgdb.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-multi.el" "wanderlust/site-lisp/wl/elmo-net.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-nntp.el" "wanderlust/site-lisp/wl/elmo-null.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-pipe.el" "wanderlust/site-lisp/wl/elmo-pop3.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-search.el" "wanderlust/site-lisp/wl/elmo-sendlog.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-signal.el" "wanderlust/site-lisp/wl/elmo-spam.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-util.el" "wanderlust/site-lisp/wl/elmo-vars.el"
-;;;;;;  "wanderlust/site-lisp/wl/elmo-version.el" "wanderlust/site-lisp/wl/elsp-bogofilter.el"
-;;;;;;  "wanderlust/site-lisp/wl/elsp-bsfilter.el" "wanderlust/site-lisp/wl/elsp-sa.el"
-;;;;;;  "wanderlust/site-lisp/wl/elsp-spamoracle.el" "wanderlust/site-lisp/wl/mmimap.el"
-;;;;;;  "wanderlust/site-lisp/wl/modb-entity.el" "wanderlust/site-lisp/wl/modb-legacy.el"
-;;;;;;  "wanderlust/site-lisp/wl/modb-standard.el" "wanderlust/site-lisp/wl/modb.el"
-;;;;;;  "wanderlust/site-lisp/wl/pldap.el" "wanderlust/site-lisp/wl/rfc2368.el"
-;;;;;;  "wanderlust/site-lisp/wl/slp.el" "wanderlust/site-lisp/wl/ssl.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-acap.el" "wanderlust/site-lisp/wl/wl-action.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-addrbook.el" "wanderlust/site-lisp/wl/wl-address.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-batch.el" "wanderlust/site-lisp/wl/wl-complete.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-demo.el" "wanderlust/site-lisp/wl/wl-e21.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-expire.el" "wanderlust/site-lisp/wl/wl-fldmgr.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-folder.el" "wanderlust/site-lisp/wl/wl-highlight.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-mailto.el" "wanderlust/site-lisp/wl/wl-message.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-mime.el" "wanderlust/site-lisp/wl/wl-news.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-refile.el" "wanderlust/site-lisp/wl/wl-score.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-spam.el" "wanderlust/site-lisp/wl/wl-summary.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-template.el" "wanderlust/site-lisp/wl/wl-thread.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-util.el" "wanderlust/site-lisp/wl/wl-vars.el"
-;;;;;;  "wanderlust/site-lisp/wl/wl-version.el" "wanderlust/utils/ptexinfmt.el"
-;;;;;;  "wanderlust/utils/rfc2368.el" "wanderlust/utils/ssl.el" "wanderlust/utils/wl-addrbook.el"
-;;;;;;  "wanderlust/utils/wl-complete.el" "wanderlust/utils/wl-mailto.el"
-;;;;;;  "yafolding/yafolding-autoloads.el" "yafolding/yafolding-pkg.el")
-;;;;;;  (22090 7949 215293 0))
 
 ;;;***
 

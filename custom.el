@@ -36,6 +36,7 @@
 
 ;;(whitespace-mode t)
 
+(setq whitespace-line-column 87)
 (add-hook 'text-mode-hook 'turn-off-evil-mode)
 ;;(add-hook 'prog-mode-hook 'turn-on-evil-mode)
 ;;(add-hook 'comint-mode-hook 'turn-off-evil-mode)
@@ -92,6 +93,11 @@ inversion of gas-comment-region"
    ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#657b83"])
  '(background-color "#002b36")
  '(background-mode dark)
+ '(compilation-message-face (quote default))
+ '(cua-global-mark-cursor-color "#2aa198")
+ '(cua-normal-cursor-color "#839496")
+ '(cua-overwrite-cursor-color "#b58900")
+ '(cua-read-only-cursor-color "#859900")
  '(cursor-color "#839496")
  '(custom-enabled-themes (quote (sanityinc-solarized-light)))
  '(custom-safe-themes
@@ -102,6 +108,30 @@ inversion of gas-comment-region"
  '(haskell-notify-p t)
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
+ '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
+ '(highlight-symbol-colors
+   (--map
+    (solarized-color-blend it "#002b36" 0.25)
+    (quote
+     ("#b58900" "#2aa198" "#dc322f" "#6c71c4" "#859900" "#cb4b16" "#268bd2"))))
+ '(highlight-symbol-foreground-color "#93a1a1")
+ '(highlight-tail-colors
+   (quote
+    (("#073642" . 0)
+     ("#546E00" . 20)
+     ("#00736F" . 30)
+     ("#00629D" . 50)
+     ("#7B6000" . 60)
+     ("#8B2C02" . 70)
+     ("#93115C" . 85)
+     ("#073642" . 100))))
+ '(hl-bg-colors
+   (quote
+    ("#7B6000" "#8B2C02" "#990A1B" "#93115C" "#3F4D91" "#00629D" "#00736F" "#546E00")))
+ '(hl-fg-colors
+   (quote
+    ("#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36" "#002b36")))
+ '(magit-diff-use-overlays nil)
  '(org-agenda-files (quote ("~/gtd.org")))
  '(org-emphasis-alist
    (quote
@@ -112,9 +142,14 @@ inversion of gas-comment-region"
      ("~" org-code verbatim)
      ("+"
       (:strike-through t)))))
+ '(pos-tip-background-color "#073642")
+ '(pos-tip-foreground-color "#93a1a1")
  '(racket-mode-pretty-lambda t)
  '(racket-program "/Applications/Racket v6.2.1//bin/racket")
  '(raco-program "/Applications/Racket v6.2.1/bin/raco")
+ '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#839496" 0.2))
+ '(term-default-bg-color "#002b36")
+ '(term-default-fg-color "#839496")
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -137,17 +172,21 @@ inversion of gas-comment-region"
      (340 . "#dc322f")
      (360 . "#cb4b16"))))
  '(vc-annotate-very-old-color nil)
+ '(weechat-color-list
+   (quote
+    (unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83")))
  '(whitespace-display-mappings
    (quote
     ((space-mark 32
-                 [183]
-                 [46])
+                 [45]
+                 [45])
      (space-mark 160
                  [164]
                  [95])
      (tab-mark 9
                [187 9]
-               [92 9])))))
+               [92 9]))))
+ '(whitespace-line-column 80))
 
 
 ;; Setting English Font
@@ -170,10 +209,12 @@ inversion of gas-comment-region"
  '(font-latex-slide-title-face ((t (:inherit (variable-pitch font-lock-type-face) :weight bold :height 1.2 :family "Essential PragmetaPro"))))
  '(font-lock-comment-delimiter-face ((t (:foreground "#969896"))))
  '(font-lock-comment-face ((t (:foreground "#969896" :slant normal))))
- '(whitespace-hspace ((t (:foreground "lightgray"))))
+ '(whitespace-hspace ((t (:foreground "gray79"))))
  '(whitespace-indentation ((t (:background "yellow" :foreground "firebrick"))))
  '(whitespace-line ((t (:background "Yellow" :foreground "magenta1"))))
- '(whitespace-space ((t (:foreground "lightgray")))))
+ '(whitespace-newline ((t (:foreground "gray79" :weight normal))))
+ '(whitespace-space ((t (:foreground "gray79"))))
+ '(whitespace-tab ((t (:background "beige" :foreground "gray79")))))
 
 ;;(setq default-frame-alist
 ;;      '((top . 0)(left . 50)(width . 120)(height . 45)))
@@ -271,7 +312,7 @@ inversion of gas-comment-region"
 (setq geiser-default-implementation 'racket)
 
 
-(require 'window-numbering)
+;;(require 'window-numbering)
 (window-numbering-mode 1)
 
 
@@ -462,9 +503,17 @@ inversion of gas-comment-region"
  (let (evil-mode-map-alist)
    (call-interactively (key-binding (this-command-keys)))))
 
+(defun toggle-whitespace-mode ()
+  "Toggle whitespace mode"
+  (interactive)
+  (if (bound-and-true-p whitespace-mode)
+      (whitespace-mode 0)
+    (whitespace-mode t)))
+
 ;;Exit insert mode by pressing j and then j quickly
-(setq key-chord-two-keys-delay 0.5)
+(setq key-chord-two-keys-delay 0.1)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+(key-chord-define-global "WW" 'toggle-whitespace-mode)
 (key-chord-mode 1)
 
 ;; Java Eclim
@@ -584,7 +633,7 @@ inversion of gas-comment-region"
   (define-key evil-normal-state-map (kbd "C-c C-p") 'neotree-project-dir)
 
  (add-hook 'neotree-mode-hook
-            (lambda ()
+           (lambda ()
               (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
               (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
               (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)

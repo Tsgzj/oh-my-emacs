@@ -1,256 +1,258 @@
-((("x" .
-   [1])
-  ("fci-mode" .
-   [1 0 0 0 0 0 0 0])
-  ("current-time" .
-   [1 0 0 0 0 0 0 0 0 0 0 0])
-  ("strptime" .
-   [0 0 0 0 1 0 0 0])
-  ("next_page_url" .
-   [2 0 0 0 0 0 0 0 0 1 0 1 0])
-  ("MAX_REVIEWS_PAGES" .
-   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("TadvSpider" .
-   [0 0 0 0 0 0 1 0 0 0])
-  ("BaseSpider" .
-   [0 0 0 0 1 0 0 0 0 0])
-  ("MySpider" .
-   [0 0 0 0 0 0 0 1])
-  ("items" .
-   [1 0 0 0 0])
-  ("TripadvisorReview" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("import" .
-   [0 0 0 0 0 1])
-  ("yield" .
-   [0 0 0 0 1])
-  ("extract" .
-   [1 0 0 0 0 0 3])
-  ("TripadvisorreviewItem" .
-   [0 0 0 0 2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 5])
-  ("item" .
-   [5 0 0 0])
-  ("xpath" .
-   [5 0 1 1 0])
-  ("sel" .
-   [4 0 0])
-  ("response" .
-   [5 0 0 0 1 0 1 0])
-  ("resource" .
-   [0 0 0 1 0 0 0 0])
-  ("self" .
-   [1 0 1 0])
-  ("parse" .
-   [1 0 0 0 0])
-  ("start_urls" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("allowed_domains" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("name" .
-   [1 0 0 0])
-  ("Spider" .
-   [0 0 0 1 0 0])
-  ("scrapy" .
-   [0 0 0 0 2 0])
-  ("Crawl" .
-   [0 0 0 1 0])
-  ("nil" .
-   [1 0 0])
-  ("global-auto-complete-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
-  ("auto-complete" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("turn-off-evil-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("eshell-mode-hook" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("myFile : File" .
-   [0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("File" .
-   [1 0 0 0])
-  ("java" .
-   [2 0 0 0])
-  ("imp" .
-   [1 0 0])
-  ("company-mode-hook" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
-  ("defun" .
-   [1 0 0 0 0])
-  ("def" .
-   [1 0 0])
-  ("global-company-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("company-emacs-eclim" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0])
-  ("company" .
-   [1 0 0 0 0 0 1])
-  ("ac-emacs-eclim-source" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0])
-  ("ac-config-default" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
-  ("auto-complete-config" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("autoarg" .
-   [0 0 0 0 1 0 0])
-  ("require" .
-   [3 0 0 0 0 1 2])
-  ("evil-beginning-of-line" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("evil-beginning-of-" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("evil-end-of-line" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("evil-backward-char" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("evil-forward-char" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("evil-forward-word" .
-   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("evil-next-line" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("evil-previous-line" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("evil-delete-char" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
-  ("kbd" .
-   [1 0 0])
-  ("evil-insert" .
-   [0 0 0 0 0 0 0 0 0 0 1])
-  ("define-key" .
-   [0 0 0 0 0 0 0 0 0 1])
-  ("font-size" .
-   [1 0 0 0 0 0 0 0 0])
-  ("PragmataPro" .
-   [1 0 0 0 3 0 1 0 0 0 0])
-  ("Essential" .
-   [3 0 0 0 1 1 0 0 0])
-  ("font-family" .
-   [1 0 0 0 0 0 0 0 0 1 0])
-  ("global-flycheck-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("flycheck-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("flycheck" .
-   [0 0 0 0 0 0 0 1])
-  ("org-agenda-mode" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("org-agenda-kill-all-agenda-buffers" .
-   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("org-agenda-show-log" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("LaTeX-" .
-   [0 0 0 1 0 0])
-  ("comint" .
+((("option" .
    [1 0 0 0 0 0])
-  ("prog" .
-   [1 0 0 0])
-  ("turn-on-evil-mode" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
-  ("text-mode-hook" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
-  ("add-hook" .
-   [2 0 0 0 0 0 0 2])
-  ("mapc" .
-   [3 0 0 0])
-  ("this" .
-   [2 0 0 0])
-  ("that" .
-   [1 0 0 0])
-  ("evil-mode" .
-   [1 0 0 0 0 0 0 0 0])
-  ("or" .
-   [1 0])
-  (":bold" .
-   [1 0 0 0 0])
-  (":weight" .
-   [1 0 0 0 0 0 0])
-  ("bold" .
-   [2 0 0 0])
-  ("org-agenda" .
-   [0 0 0 0 0 0 0 0 0 1])
-  ("main" .
-   [1 0 0 0])
-  ("eclim" .
-   [1 0 0 0 1])
-  ("global-eclim-mode" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("custom-set-variables" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
-  ("eclim-eclipse-dirs" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("eclim-executable" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("eclim-mode" .
-   [1 0 0 0 0 0 0 0 0 0])
-  ("lambda" .
-   [1 0 0 0 0 0])
-  ("toggle-frame-fullscreen" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("MLStripper" .
-   [0 0 0 1 0 0 0 0 0 0])
-  ("strip_tags" .
-   [1 0 0 0 0 0 3 3 2 0])
-  ("rawtitle" .
-   [1 0 0 0 1 2 0 2])
-  ("__name__" .
-   [0 0 0 0 0 1 0 0])
-  ("strippedtitle" .
-   [1 0 0 0 0 0 2 0 1 0 0 0 0])
-  ("append" .
-   [2 0 0 0 0 0])
-  ("mylist" .
-   [1 0 0 0 0 0])
-  ("result" .
-   [1 0 0 0 0 0])
-  ("strip_all" .
-   [2 0 0 0 0 0 0 0 0])
-  ("rawentry" .
-   [1 0 0 0 0 0 0 0])
-  ("strippedentry" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0])
-  ("base_url" .
-   [1 0 0 0 0 1 0 0])
-  ("nextlink" .
-   [2 0 0 0 0 0 0 0])
-  ("parse_follow_next_page" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("parse_review_page" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
-  ("expanded_review_url" .
-   [4 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("expanded" .
-   [0 0 0 0 0 0 0 1])
-  ("Review" .
-   [0 0 1 0 0 0])
-  ("Request" .
-   [0 0 0 0 1 0 0])
-  ("callback" .
-   [1 0 0 0 0 0 0 0])
-  ("stripped_entry" .
-   [0 0 0 0 0 0 1 0 0 0 0 0 0 1])
-  ("review" .
-   [3 0 0 0 0 0])
-  ("reviews" .
-   [6 0 0 0 0 0 0])
-  ("raw_entry" .
-   [0 0 0 0 0 0 1 0 0])
-  ("entry" .
-   [2 0 0 0 0])
-  ("en" .
-   [1 0])
-  ("color-theme-sanityinc-solarized-light" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("setq" .
-   [1 0 0 0])
-  ("substring" .
-   [1 0 0 0 0 0 0 0 0])
-  ("current-time-string" .
-   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0])
-  ("dd" .
-   [1 0])
-  ("fill-prefix" .
-   [0 0 0 0 0 1 0 0 0 0 0])
+  ("exec-path-from-shell-initialize" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
   ("fill-column-indicator.el" .
    [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
-  ("exec-path-from-shell-initialize" .
-   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])))
+  ("fill-prefix" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("dd" .
+   [1 0])
+  ("current-time-string" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0])
+  ("substring" .
+   [1 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [1 0 0 0])
+  ("color-theme-sanityinc-solarized-light" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("en" .
+   [1 0])
+  ("entry" .
+   [2 0 0 0 0])
+  ("raw_entry" .
+   [0 0 0 0 0 0 1 0 0])
+  ("reviews" .
+   [6 0 0 0 0 0 0])
+  ("review" .
+   [3 0 0 0 0 0])
+  ("stripped_entry" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 1])
+  ("callback" .
+   [1 0 0 0 0 0 0 0])
+  ("Request" .
+   [0 0 0 0 1 0 0])
+  ("Review" .
+   [0 0 1 0 0 0])
+  ("expanded" .
+   [0 0 0 0 0 0 0 1])
+  ("expanded_review_url" .
+   [4 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("parse_review_page" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("parse_follow_next_page" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("nextlink" .
+   [2 0 0 0 0 0 0 0])
+  ("base_url" .
+   [1 0 0 0 0 1 0 0])
+  ("strippedentry" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("rawentry" .
+   [1 0 0 0 0 0 0 0])
+  ("strip_all" .
+   [2 0 0 0 0 0 0 0 0])
+  ("result" .
+   [1 0 0 0 0 0])
+  ("mylist" .
+   [1 0 0 0 0 0])
+  ("append" .
+   [2 0 0 0 0 0])
+  ("strippedtitle" .
+   [1 0 0 0 0 0 2 0 1 0 0 0 0])
+  ("__name__" .
+   [0 0 0 0 0 1 0 0])
+  ("rawtitle" .
+   [1 0 0 0 1 2 0 2])
+  ("strip_tags" .
+   [1 0 0 0 0 0 3 3 2 0])
+  ("MLStripper" .
+   [0 0 0 1 0 0 0 0 0 0])
+  ("toggle-frame-fullscreen" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("lambda" .
+   [1 0 0 0 0 0])
+  ("eclim-mode" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("eclim-executable" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("eclim-eclipse-dirs" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("custom-set-variables" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("global-eclim-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("eclim" .
+   [1 0 0 0 1])
+  ("main" .
+   [1 0 0 0])
+  ("org-agenda" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("bold" .
+   [2 0 0 0])
+  (":weight" .
+   [1 0 0 0 0 0 0])
+  (":bold" .
+   [1 0 0 0 0])
+  ("or" .
+   [1 0])
+  ("evil-mode" .
+   [1 0 0 0 0 0 0 0 0])
+  ("that" .
+   [1 0 0 0])
+  ("this" .
+   [2 0 0 0])
+  ("mapc" .
+   [3 0 0 0])
+  ("add-hook" .
+   [2 0 0 0 0 0 0 2])
+  ("text-mode-hook" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("turn-on-evil-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("prog" .
+   [1 0 0 0])
+  ("comint" .
+   [1 0 0 0 0 0])
+  ("LaTeX-" .
+   [0 0 0 1 0 0])
+  ("org-agenda-show-log" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("org-agenda-kill-all-agenda-buffers" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("org-agenda-mode" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("flycheck" .
+   [0 0 0 0 0 0 0 1])
+  ("flycheck-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("global-flycheck-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("font-family" .
+   [1 0 0 0 0 0 0 0 0 1 0])
+  ("Essential" .
+   [3 0 0 0 1 1 0 0 0])
+  ("PragmataPro" .
+   [1 0 0 0 3 0 1 0 0 0 0])
+  ("font-size" .
+   [1 0 0 0 0 0 0 0 0])
+  ("define-key" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("evil-insert" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("kbd" .
+   [1 0 0])
+  ("evil-delete-char" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("evil-previous-line" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("evil-next-line" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("evil-forward-word" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("evil-forward-char" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("evil-backward-char" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("evil-end-of-line" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("evil-beginning-of-" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("evil-beginning-of-line" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("require" .
+   [3 0 0 0 0 1 2])
+  ("autoarg" .
+   [0 0 0 0 1 0 0])
+  ("auto-complete-config" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("ac-config-default" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("ac-emacs-eclim-source" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0])
+  ("company" .
+   [1 0 0 0 0 0 1])
+  ("company-emacs-eclim" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0])
+  ("global-company-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("def" .
+   [1 0 0])
+  ("defun" .
+   [1 0 0 0 0])
+  ("company-mode-hook" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("imp" .
+   [1 0 0])
+  ("java" .
+   [2 0 0 0])
+  ("File" .
+   [1 0 0 0])
+  ("myFile : File" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("eshell-mode-hook" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("turn-off-evil-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("auto-complete" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("global-auto-complete-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [1 0 0])
+  ("Crawl" .
+   [0 0 0 1 0])
+  ("scrapy" .
+   [0 0 0 0 2 0])
+  ("Spider" .
+   [0 0 0 1 0 0])
+  ("name" .
+   [1 0 0 0])
+  ("allowed_domains" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("start_urls" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("parse" .
+   [1 0 0 0 0])
+  ("self" .
+   [1 0 1 0])
+  ("resource" .
+   [0 0 0 1 0 0 0 0])
+  ("response" .
+   [5 0 0 0 1 0 1 0])
+  ("sel" .
+   [4 0 0])
+  ("xpath" .
+   [5 0 1 1 0])
+  ("item" .
+   [5 0 0 0])
+  ("TripadvisorreviewItem" .
+   [0 0 0 0 2 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 5])
+  ("extract" .
+   [1 0 0 0 0 0 3])
+  ("yield" .
+   [0 0 0 0 1])
+  ("import" .
+   [0 0 0 0 0 1])
+  ("TripadvisorReview" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("items" .
+   [1 0 0 0 0])
+  ("MySpider" .
+   [0 0 0 0 0 0 0 1])
+  ("BaseSpider" .
+   [0 0 0 0 1 0 0 0 0 0])
+  ("TadvSpider" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("MAX_REVIEWS_PAGES" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("next_page_url" .
+   [2 0 0 0 0 0 0 0 0 1 0 1 0])
+  ("strptime" .
+   [0 0 0 0 1 0 0 0])
+  ("current-time" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("fci-mode" .
+   [1 0 0 0 0 0 0 0])
+  ("x" .
+   [1])))

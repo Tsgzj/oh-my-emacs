@@ -56,6 +56,9 @@
                           (progn
                             (autoload 'auto-indent-delete-char "auto-indent-mode" "" t)
                             (autoload 'auto-indent-kill-line "auto-indent-mode" "" t))))
+ (camcorder status "installed" recipe
+            (:name camcorder :website "https://github.com/Bruce-Connor/camcorder.el" :description "Tool for capturing screencasts directly from Emacs." :type github :pkgname "Bruce-Connor/camcorder.el" :depends
+                   (cl-lib names)))
  (cdlatex status "installed" recipe
           (:name cdlatex :auto-generated t :type elpa :description "Fast input methods for LaTeX environments and math" :repo nil))
  (cdlatex-mode status "installed" recipe
@@ -344,6 +347,8 @@
 (:name markdown-mode :description "Major mode to edit Markdown files in Emacs" :website "http://jblevins.org/projects/markdown-mode/" :type git :url "git://jblevins.org/git/markdown-mode.git" :prepare
 (add-to-list 'auto-mode-alist
 '("\\.\\(md\\|mdown\\|markdown\\)\\'" . markdown-mode))))
+(names status "installed" recipe
+(:name names :description "A Namespace implementation for Emacs-Lisp" :website "https://github.com/Bruce-Connor/names" :type github :depends cl-lib :pkgname "Bruce-Connor/names"))
 (nose status "installed" recipe
 (:type github :pkgname "emacsmirror/nose" :name nose :website "https://bitbucket.org/durin42/nosemacs" :description "Emacs extension to provide easy nosetest integration." :type emacsmirror :pkgname nose))
 (org-mode status "installed" recipe

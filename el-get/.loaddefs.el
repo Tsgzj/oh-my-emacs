@@ -5771,6 +5771,34 @@ Major mode for editing JavaScript code.
 
 ;;;***
 
+;;;### (autoloads nil "js3-mode/js3" "js3-mode/js3.el" (22120 50568
+;;;;;;  0 0))
+;;; Generated autoloads from js3-mode/js3.el
+ (add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+
+(autoload 'js3-mode "js3-mode/js3" "\
+Major mode for editing JavaScript code.
+
+\\{js3-mode-map}
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "js3-mode/js3-mode" "js3-mode/js3-mode.el"
+;;;;;;  (22120 50568 0 0))
+;;; Generated autoloads from js3-mode/js3-mode.el
+ (add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+
+(autoload 'js3-mode "js3-mode/js3-mode" "\
+Major mode for editing JavaScript code.
+
+\\{js3-mode-map}
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads nil "key-chord/key-chord" "key-chord/key-chord.el"
 ;;;;;;  (21864 58969 0 0))
 ;;; Generated autoloads from key-chord/key-chord.el
@@ -6640,6 +6668,17 @@ and a description of their effects, see the variable
 Make sure `make-autoload' understands `define-namespace'.
 Use the `names--inside-make-autoload' variable to indicate to
 `define-namespace' that we're generating autoloads." (require (quote names)) (if (null (eq (car-safe form) (quote define-namespace))) ad-do-it (setq names--inside-make-autoload t) (setq form (macroexpand form)) (setq names--inside-make-autoload nil) (if (version< emacs-version "24.3") (setq ad-return-value (cons (quote progn) (mapcar (lambda (x) (names--make-autoload-compat x file)) (cdr form)))) (ad-set-arg 2 (quote expansion)) (ad-set-arg 0 form) ad-do-it)))
+
+;;;***
+
+;;;### (autoloads nil "nodejs-repl/nodejs-repl" "nodejs-repl/nodejs-repl.el"
+;;;;;;  (22120 50557 0 0))
+;;; Generated autoloads from nodejs-repl/nodejs-repl.el
+
+(autoload 'nodejs-repl "nodejs-repl/nodejs-repl" "\
+Run Node.js REPL.
+
+\(fn)" t nil)
 
 ;;;***
 
@@ -9361,6 +9400,33 @@ Returns non-nil if the new state is enabled.
 \\{tabbar-mwheel-mode-map}
 
 \(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "tern/emacs/tern" "tern/emacs/tern.el" (22120
+;;;;;;  50559 0 0))
+;;; Generated autoloads from tern/emacs/tern.el
+
+(autoload 'tern-use-server "tern/emacs/tern" "\
+
+
+\(fn PORT SERVER)" t nil)
+
+(autoload 'tern-mode "tern/emacs/tern" "\
+Minor mode binding to the Tern JavaScript analyzer
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "tern/emacs/tern-auto-complete" "tern/emacs/tern-auto-complete.el"
+;;;;;;  (22120 50559 0 0))
+;;; Generated autoloads from tern/emacs/tern-auto-complete.el
+
+(autoload 'tern-ac-setup "tern/emacs/tern-auto-complete" "\
+Setup auto-complete for tern-mode.
+
+\(fn)" t nil)
 
 ;;;***
 

@@ -164,6 +164,7 @@ auto-fill."
 (ome-load "core/ome-advanced.org")
 (ome-load "modules/ome-cc.org")
 (ome-load "modules/ome-java.org")
+(ome-load "modules/ome-javascript.org")
 (ome-load "modules/ome-emacs-lisp.org")
 (ome-load "modules/ome-common-lisp.org")
 (ome-load "modules/ome-clojure.org")

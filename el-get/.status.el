@@ -322,6 +322,9 @@
 (js2-mode status "installed" recipe
 (:name js2-mode :website "https://github.com/mooz/js2-mode#readme" :description "An improved JavaScript editing mode" :type github :pkgname "mooz/js2-mode" :prepare
 (autoload 'js2-mode "js2-mode" nil t)))
+(js3-mode status "installed" recipe
+(:name js3-mode :website "https://github.com/thomblake/js3-mode#readme" :description "A chimeric fork of js2-mode and js-mode" :type github :pkgname "thomblake/js3-mode" :prepare
+(autoload 'js3-mode "js3" nil t)))
 (json status "installed" recipe
 (:name json :description "JavaScript Object Notation parser / generator" :type http :builtin "23" :url "http://edward.oconnor.cx/elisp/json.el"))
 (key-chord status "installed" recipe
@@ -349,6 +352,8 @@
 '("\\.\\(md\\|mdown\\|markdown\\)\\'" . markdown-mode))))
 (names status "installed" recipe
 (:name names :description "A Namespace implementation for Emacs-Lisp" :website "https://github.com/Bruce-Connor/names" :type github :depends cl-lib :pkgname "Bruce-Connor/names"))
+(nodejs-repl status "installed" recipe
+(:name nodejs-repl :description "Run Node.js REPL and communicate the process" :type github :pkgname "abicky/nodejs-repl.el"))
 (nose status "installed" recipe
 (:type github :pkgname "emacsmirror/nose" :name nose :website "https://bitbucket.org/durin42/nosemacs" :description "Emacs extension to provide easy nosetest integration." :type emacsmirror :pkgname nose))
 (org-mode status "installed" recipe
@@ -524,6 +529,14 @@ target "prefix" "site-lisp" "site-lisp"))
 (:name swift-mode :description "Major-mode for Apple's Swift programming language" :type github :pkgname "chrisbarrett/swift-mode"))
 (tabbar status "installed" recipe
 (:name tabbar :description "Display a tab bar in the header line." :type github :pkgname "dholm/tabbar" :lazy t))
+(tern status "installed" recipe
+(:name tern :description "A JavaScript code analyzer for deep, cross-editor language support." :type github :pkgname "marijnh/tern" :build
+'(("npm" "--production" "install"))
+:prepare
+(add-to-list 'auto-mode-alist
+'("\\.tern-\\(project\\|\\config\\)\\'" . json-mode))
+:load-path
+("emacs")))
 (undo-tree status "installed" recipe
 (:name undo-tree :description "Treat undo history as a tree" :website "http://www.dr-qubit.org/emacs.php" :type git :url "http://www.dr-qubit.org/git/undo-tree.git/"))
 (wanderlust status "installed" recipe
